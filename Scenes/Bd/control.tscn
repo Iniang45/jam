@@ -1,17 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://rgrhrsct7roi"]
+[gd_scene load_steps=4 format=3 uid="uid://ts1pmad0bh3b"]
 
-[ext_resource type="Script" path="res://Scenes/Bd/control.gd" id="1_tiwcq"]
-[ext_resource type="Texture2D" uid="uid://drbrbvy25j5ey" path="res://Scenes/Bd/soisfranc.PNG" id="1_yhnxj"]
-[ext_resource type="Texture2D" uid="uid://bflvpcpn0d0y4" path="res://Scenes/Bd/Sprites/gokuTB.PNG" id="2_8mg2d"]
-[ext_resource type="PackedScene" uid="uid://d1gbr3rmcg65y" path="res://player.tscn" id="2_rqeeb"]
-[ext_resource type="PackedScene" uid="uid://pqit2ie7qbu8" path="res://Scenes/grosluffy.tscn" id="4_nu1xi"]
-[ext_resource type="PackedScene" uid="uid://drs1w0hshmjl0" path="res://Scenes/Item/Pioche/Pioche.tscn" id="4_saib7"]
-[ext_resource type="Script" path="res://Scenes/Item/Pioche/pioche.gd" id="5_ygtch"]
-[ext_resource type="PackedScene" uid="uid://bovycgk6o6svj" path="res://Scenes/Item/ArbreMagique/ArbreMagique.tscn" id="8_ejjvx"]
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pvgsj"]
-radius = 70.0
-height = 232.0
+[ext_resource type="Script" path="res://Scenes/Bd/control.gd" id="1_hm3nx"]
+[ext_resource type="PackedScene" uid="uid://d1gbr3rmcg65y" path="res://player.tscn" id="2_al0ut"]
+[ext_resource type="PackedScene" uid="uid://bovycgk6o6svj" path="res://Scenes/Item/ArbreMagique/ArbreMagique.tscn" id="3_tyakr"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -20,50 +11,11 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_tiwcq")
-metadata/_edit_use_anchors_ = true
+script = ExtResource("1_hm3nx")
 
-[node name="background" type="TextureRect" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("1_yhnxj")
+[node name="Player" parent="." instance=ExtResource("2_al0ut")]
 
-[node name="area2D" type="Area2D" parent="background"]
-position = Vector2(595, 490.5)
-scale = Vector2(0.5, 0.5)
+[node name="ArbreMagique" parent="." instance=ExtResource("3_tyakr")]
+position = Vector2(237, 47)
 
-[node name="Sprite2D" type="Sprite2D" parent="background/area2D"]
-position = Vector2(98, -79)
-scale = Vector2(1.19445, 1.0757)
-texture = ExtResource("2_8mg2d")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="background/area2D"]
-position = Vector2(100, -78)
-shape = SubResource("CapsuleShape2D_pvgsj")
-
-[node name="Player" parent="." instance=ExtResource("2_rqeeb")]
-position = Vector2(250, 422)
-
-[node name="Pioche" parent="Player" instance=ExtResource("4_saib7")]
-position = Vector2(94, -42)
-script = ExtResource("5_ygtch")
-
-[node name="grosluffy" parent="." instance=ExtResource("4_nu1xi")]
-position = Vector2(863, 457)
-scale = Vector2(0.5, 0.5)
-
-[node name="ArbreMagique" parent="." instance=ExtResource("8_ejjvx")]
-position = Vector2(-85, -89)
-
-[connection signal="area_entered" from="background/area2D" to="Player/Pioche" method="_on_area_2d_area_entered"]
-[connection signal="body_entered" from="background/area2D" to="Player/Pioche" method="_on_area_2d_body_entered"]
-[connection signal="body_shape_entered" from="Player" to="ArbreMagique" method="_on_player_body_shape_entered"]
-[connection signal="piocher" from="Player/Pioche" to="." method="_on_pioche_piocher"]
-[connection signal="area_entered" from="grosluffy" to="Player" method="_on_grosluffy_area_entered"]
 [connection signal="area_entered" from="ArbreMagique" to="Player" method="_on_arbre_magique_area_entered"]
-[connection signal="area_exited" from="ArbreMagique" to="Player" method="_on_arbre_magique_area_exited"]
-[connection signal="body_entered" from="ArbreMagique" to="Player" method="_on_arbre_magique_body_entered"]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://drbrbvy25j5ey"
-path="res://.godot/imported/soisfranc.PNG-83492fa6fc38f4444b0e7d8f75467dbf.ctex"
+uid="uid://b7q5j1h6geql4"
+path="res://.godot/imported/IMG_0437.png-508a6ec8fe6a5357db4a5ac5d0be17d9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/Bd/soisfranc.PNG"
-dest_files=["res://.godot/imported/soisfranc.PNG-83492fa6fc38f4444b0e7d8f75467dbf.ctex"]
+source_file="res://Sprite/IMG_0437.png"
+dest_files=["res://.godot/imported/IMG_0437.png-508a6ec8fe6a5357db4a5ac5d0be17d9.ctex"]
 
 [params]
 

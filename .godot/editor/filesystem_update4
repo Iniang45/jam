@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-res://Scenes/Item/BubbleSpawner/BubbleSpawner.tscn
-res://player.tscn
-res://Scenes/grosluffy.tscn
-res://Scenes/Bd/control.tscn
-res://Scenes/Item/stickgun/stickgun.tscn
-res://Scenes/Player/Scripts/player.gd
-res://Scenes/Item/stickgun/stickgun.gd
-res://Scenes/Item/platform/platform.tscn
-=======
 res://player.tscn
 res://Scenes/Bd/control.tscn
 res://Scenes/grosluffy.tscn
@@ -18,4 +8,5 @@ res://Scenes/Item/ArbreMagique/ArbreSize/ArbreSize.gd
 res://Scenes/Player/Scripts/player.gd
 res://Scenes/Item/BubbleSpawner/BubbleSpawner.tscn
 res://Scenes/Item/Bubble/Bubble.tscn
->>>>>>> 88898d0917c8a357b0171ab363e4885c7ac2fdf6
+res://Scenes/Bd/control.gd
+res://Scenes/Bd/Control.tscn
