@@ -14,7 +14,7 @@ class_name Player
 @export var barrier_min_x: float = 100.0  # Limite gauche de la barrière
 @export var barrier_max_x: float = 900.0  # Limite droite de la barrière
 @export var barrier_min_y: float = 0.0  # Limite supérieure de la barrière
-@export var barrier_max_y: float = 600.0  # Limite inférieure de la barrière
+@export var barrier_max_y: float = 400  # Limite inférieure de la barrière
 
 var speed: float = 10.0
 var direction: Vector2 = Vector2.ZERO
@@ -43,10 +43,17 @@ func _input(event: InputEvent) -> void:
 	print(direction)
 	if direction != Vector2.ZERO:
 		Last_direction = direction
-
+	if speed > 0  and direction[0] == 1:
+		$PlayerSprite.animation =  "walk"
+		$PlayerSprite.play()
+	else:
+		$PlayerSprite.stop()
 	# Gérer le saut
 	if Input.is_action_just_pressed("Jump") and is_on_ground:
 		jump()
+	if check_if_on_ground() and $PlayerSprite.animation == "jump":
+		$PlayerSprite.animation = "idle"
+		
 
 func jump() -> void:
 	# Appliquer une force vers le haut pour sauter
@@ -54,15 +61,16 @@ func jump() -> void:
 	if Input.is_action_just_pressed("Jump"):
 		if check_if_on_ground():
 			velocity.y = jump_force
+			
 		if check_if_on_wall() and Input.is_action_just_pressed("Right"):
 			velocity.y = jump_force
 			velocity.x = -wall_jump_pushback
 		if check_if_on_wall() and Input.is_action_just_pressed("Left"):
 			velocity.y = jump_force
 			velocity.x = wall_jump_pushback
-		
+	$PlayerSprite.animation = "jump"
 	# is_on_ground = false  # Le joueur quitte le sol
-
+	
 func apply_gravity(delta: float) -> void:
 	if not is_on_ground: # and not is_on_ladder:
 		# Appliquer la gravité en ajoutant à la vélocité verticale
@@ -77,7 +85,6 @@ func move(delta: float) -> void:
 		speed = lerp(speed, 0.0, accel_factor)  # Diminue la vitesse quand aucune direction
 	else:
 		speed = lerp(speed, max_speed, accel_factor)  # Accélère progressivement
-	
 	# Mise à jour de la vélocité horizontale
 	velocity.x = Last_direction.x * speed
 	
