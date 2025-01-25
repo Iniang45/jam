@@ -12,7 +12,6 @@ class_name Player
 @export var wall_slide_speed: float = 100.0 # Vitesse de glissement le long des murs
 @export var jump_force: float = 400.0  # Force appliquée au saut
 @export var wall_jump_force: Vector2 = Vector2(300, -350) # Force appliquée au wall jump
-# @export var climb_speed: float = 200.0 # Vitesse d'escalade
 
 @export var barrier_min_x: float = 100.0  # Limite gauche de la barrière
 @export var barrier_max_x: float = 900.0  # Limite droite de la barrière
@@ -34,6 +33,9 @@ var is_on_ground: bool = false
 var is_on_wall_left: bool = false
 var is_on_wall_right: bool = false
 
+var current_direction: int = 0  # Indice de la direction sélectionnée
+var stick_instance: Area2D = null  # Référence à la ventouse active (si existante)
+
 func _ready() -> void:
 	pass
 
@@ -52,7 +54,7 @@ func _input(event: InputEvent) -> void:
 	print(direction)
 	if direction != Vector2.ZERO:
 		Last_direction = direction
-		
+
 		# Déclenche un wall jump si le joueur est sur un mur 
 	if Input.is_action_just_pressed("Jump") and (is_on_wall_left or is_on_wall_right):
 		wall_jump()
@@ -78,8 +80,11 @@ func _input(event: InputEvent) -> void:
 	if check_if_on_ground() and $PlayerSprite.animation == "jump":
 		$PlayerSprite.animation = "idle"
 		$PlayerSprite.play()
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> aa4a7dca0556afb3fcac9029eaf631fee7aadf38
 
 func jump() -> void:
 	# Appliquer une force vers le haut pour sauter
@@ -107,8 +112,6 @@ func apply_gravity(delta: float) -> void:
 			velocity.y += fall_speed * delta
 		# Limiter la vitesse de chute
 			velocity.y = min(velocity.y, max_fall_speed)
-	# elif is_on_ladder and direction.y < 0: # Si on est en train d'escalader
-		# velocity.y = -climb_speedd
 
 func move(delta: float) -> void:
 	if direction == Vector2.ZERO:
@@ -117,10 +120,6 @@ func move(delta: float) -> void:
 		speed = lerp(speed, max_speed, accel_factor)  # Accélère progressivement
 	# Mise à jour de la vélocité horizontale
 	velocity.x = Last_direction.x * speed
-	
-	# Si le joueur est contre un mur et appuie sur la touche pour avancer : le fait grimper
-	# if is_on_ladder and direction.y > 0:
-		# velocity.y = climb_speed # Grimpe si on appuie vers le haut
 		
 	# Mise à jour de la position de l'Area2D
 	position += velocity * delta
