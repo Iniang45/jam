@@ -1,10 +1,17 @@
+<<<<<<< HEAD
+=======
+TextureRect
+AnimatedSprite2D
+>>>>>>> aa4a7dca0556afb3fcac9029eaf631fee7aadf38
 CollisionShape2D
 Sprite2D
 StaticBody2D
 Area2D
+<<<<<<< HEAD
 AnimatedSprite2D
+=======
+>>>>>>> aa4a7dca0556afb3fcac9029eaf631fee7aadf38
 RigidBody2D
-TextureRect
 ReferenceRect
 CanvasLayer
 MarginContainer
