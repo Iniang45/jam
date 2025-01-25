@@ -5,3 +5,4 @@ res://Scenes/Bd/control.tscn
 res://Scenes/Item/stickgun/stickgun.tscn
 res://Scenes/Player/Scripts/player.gd
 res://Scenes/Item/stickgun/stickgun.gd
+res://Scenes/Item/platform/platform.tscn
