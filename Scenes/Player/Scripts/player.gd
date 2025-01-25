@@ -56,7 +56,7 @@ func _input(event: InputEvent) -> void:
 	elif Input.is_action_just_pressed("Jump") and is_on_ground:
 		jump()
 		
-	if speed > 0  and direction[0] == 1:
+	if speed > 0  and direction[0] == 1 and is_on_ground:
 		$PlayerSprite.animation =  "walk"
 		$PlayerSprite.play()
 	elif  speed > 0  and direction[0] == -1 and is_on_ground:

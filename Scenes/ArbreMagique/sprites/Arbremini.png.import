@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dpfdsdrhpn3tw"
-path="res://.godot/imported/Arbremini.png-79066b0104a23f75fdb37dd4866865d1.ctex"
+path="res://.godot/imported/Arbremini.png-a046e19d2618f33c2458675c4df98b1b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/Item/ArbreMagique/sprites/Arbremini.png"
-dest_files=["res://.godot/imported/Arbremini.png-79066b0104a23f75fdb37dd4866865d1.ctex"]
+source_file="res://Scenes/ArbreMagique/sprites/Arbremini.png"
+dest_files=["res://.godot/imported/Arbremini.png-a046e19d2618f33c2458675c4df98b1b.ctex"]
 
 [params]
 
