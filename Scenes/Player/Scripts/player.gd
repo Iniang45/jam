@@ -34,7 +34,7 @@ func _physics_process(delta: float) -> void:
 
 func _input(event: InputEvent) -> void:
 	# Obtient le vecteur de direction
-	direction = Input.get_vector("Left", "Right", "", "")
+	direction = Input.get_vector("Left", "Right","Up","Down")
 	print(direction)
 	if direction != Vector2.ZERO:
 		Last_direction = direction
