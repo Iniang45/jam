@@ -1,2 +1,6 @@
+res://Scenes/grosluffy.tscn
+res://Scenes/Bd/control.tscn
 res://player.tscn
+res://area_2d.gd
+res://Scenes/cake.gd
 res://Scenes/Player/Scripts/player.gd

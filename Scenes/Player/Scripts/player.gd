@@ -1,5 +1,6 @@
 extends Area2D
 
+
 class_name Player
 
 @export_range(0.0, 1.0) var accel_factor: float = 0.1
@@ -15,6 +16,11 @@ class_name Player
 @export var barrier_max_x: float = 900.0  # Limite droite de la barrière
 @export var barrier_min_y: float = 0.0  # Limite supérieure de la barrière
 @export var barrier_max_y: float = 600.0  # Limite inférieure de la barrière
+
+@export var growth_rate: float = 0.1  # Facteur de croissance
+@export var max_scale: float = 2.0  # Taille maximale du joueur
+@export var min_speed: float = 100.0  # Vitesse minimale si le joueur devient trop gros
+
 
 var speed: float = 10.0
 var direction: Vector2 = Vector2.ZERO
@@ -106,4 +112,16 @@ func clamp_position() -> void:
 	# Limiter la position du joueur avec clamp
 	position.x = clamp(position.x, barrier_min_x, barrier_max_x)
 	position.y = clamp(position.y, barrier_min_y, barrier_max_y)
+	
+	
 		
+
+
+
+	
+	# Ajoute ici le comportement (par exemple, grossir ou changer une statistique)
+
+
+
+func _on_grosluffy_area_entered(area: Area2D) -> void:
+	print("Le joueur mange un gâteau !")
