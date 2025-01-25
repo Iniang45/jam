@@ -4,7 +4,7 @@ extends Area2D
 @export var vertical_speed: float = 100.0  # Vitesse verticale
 @export var oscillation_speed: float = 2.0  # Vitesse d'oscillation (Hz)
 @export var oscillation_distance: float = 50.0  # Distance d'oscillation
-@export var horizontal_speed: float = 0.0  # Vitesse horizontale de base
+@export var horizontal_speed: float = 0.0  # Vitesse horizontale
 
 var time_passed: float = 0.0
 
@@ -12,7 +12,10 @@ func _ready():
 	# Convertir l'angle en vitesse horizontale
 	horizontal_speed += tan(deg_to_rad(angle_offset)) * vertical_speed
 	time_passed = 0.0
-	print("Bubble ready with angle_offset =", angle_offset, "and horizontal_speed =", horizontal_speed)  # Debug
+	print("Bubble ready with angle_offset =", angle_offset, "and horizontal_speed =", horizontal_speed)
+
+	# Connecter le signal de collision
+	connect("area_entered", Callable(self, "_on_bubble_collided"))
 
 func _process(delta):
 	# Ajoutez du temps pour les oscillations
@@ -30,3 +33,10 @@ func _process(delta):
 	# Supprimer si la bulle sort de l'écran
 	if position.y < -get_viewport_rect().size.y or position.x < 0 or position.x > get_viewport_rect().size.x:
 		queue_free()
+
+func _on_bubble_collided(other_area):
+	# Vérifier si l'autre zone est une autre bulle
+	if other_area.is_in_group("bubbles"):
+		# Supprimer les deux bulles
+		print("Bubble collided and will be removed!")
+		queue_free()  # Supprimer cette bulle

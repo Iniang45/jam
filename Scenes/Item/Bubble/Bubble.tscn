@@ -4,17 +4,19 @@
 [ext_resource type="Script" path="res://Scenes/Item/Bubble/Script/bubble.gd" id="1_c2chy"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8px7s"]
-radius = 33.0
-height = 70.0
+radius = 79.0
+height = 158.0
 
 [node name="Bubble" type="Area2D"]
 script = ExtResource("1_c2chy")
 
 [node name="BubbleSprite" type="Sprite2D" parent="."]
-position = Vector2(443.25, 385.5)
-scale = Vector2(0.151367, 0.142578)
+position = Vector2(492.75, 341)
+scale = Vector2(0.344726, 0.316406)
 texture = ExtResource("1_amrtd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(443, 385)
+position = Vector2(492, 341)
 shape = SubResource("CapsuleShape2D_8px7s")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

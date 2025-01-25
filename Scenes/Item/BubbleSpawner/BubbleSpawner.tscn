@@ -8,3 +8,4 @@ script = ExtResource("1_84wmu")
 bubble_scene = ExtResource("2_7uajy")
 
 [node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
