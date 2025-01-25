@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://rgrhrsct7roi"]
+[gd_scene load_steps=6 format=3 uid="uid://rgrhrsct7roi"]
 
 [ext_resource type="Texture2D" uid="uid://drbrbvy25j5ey" path="res://Scenes/Bd/soisfranc.PNG" id="1_yhnxj"]
 [ext_resource type="Texture2D" uid="uid://bflvpcpn0d0y4" path="res://Scenes/Bd/Sprites/gokuTB.PNG" id="2_8mg2d"]
@@ -29,13 +29,8 @@ texture = ExtResource("1_yhnxj")
 [node name="area2D" type="Area2D" parent="background"]
 position = Vector2(912, 600)
 
-<<<<<<< HEAD
-[node name="Sprite2D" type="Sprite2D" parent="background/RigidBody2D"]
-position = Vector2(818, 303)
-=======
 [node name="Sprite2D" type="Sprite2D" parent="background/area2D"]
 position = Vector2(33, -17)
->>>>>>> 3b4988f2beb5b01532e178c92598aa1a3a8e911b
 texture = ExtResource("2_8mg2d")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="background/area2D"]
