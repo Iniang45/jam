@@ -60,13 +60,16 @@ func _input(event: InputEvent) -> void:
 	if speed > 0  and direction[0] == 1 and is_on_ground:
 		$PlayerSprite.animation =  "walk"
 		$PlayerSprite.play()
-	elif speed > 0  and direction[0] == -1 and is_on_ground:
+	elif  speed > 0  and direction[0] == -1 and is_on_ground:
 		$PlayerSprite.animation =  "walk"
 		$PlayerSprite.set_flip_h(true)
 		$PlayerSprite.play()
 	else:
 		$PlayerSprite.stop()
-	if direction[0]!= -1:
+		
+	if direction[0]== -1:
+		$PlayerSprite.set_flip_h(true)
+	else:
 		$PlayerSprite.set_flip_h(false)
 
 		

@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://drs1w0hshmjl0"]
+
+[ext_resource type="Texture2D" uid="uid://bjfaub21bbiv1" path="res://Iron_Pickaxe_JE3_BE2.webp" id="1_0radm"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6tw2g"]
+radius = 19.647
+height = 119.867
+
+[node name="Pioche" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1, 2)
+texture = ExtResource("1_0radm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(33, -22)
+rotation = -1.06814
+shape = SubResource("CapsuleShape2D_6tw2g")
