@@ -1,0 +1,19 @@
+<<<<<<< HEAD
+AnimatedSprite2D
+=======
+<<<<<<< HEAD
+CollisionShape2D
+Sprite2D
+=======
+>>>>>>> 2409a3e615204c01b058cd7a3c70a95057ab9393
+Sprite2D
+RigidBody2D
+TextureRect
+CollisionShape2D
+>>>>>>> 7842dc71b5ba21a09e41a7fccf91c1a1ebd8fb49
+Area2D
+ReferenceRect
+CanvasLayer
+MarginContainer
+Node2D
+StaticBody2D
