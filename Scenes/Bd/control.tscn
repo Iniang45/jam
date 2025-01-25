@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://rgrhrsct7roi"]
+[gd_scene load_steps=6 format=3 uid="uid://rgrhrsct7roi"]
 
 [ext_resource type="Texture2D" uid="uid://drbrbvy25j5ey" path="res://Scenes/Bd/soisfranc.PNG" id="1_yhnxj"]
 [ext_resource type="Texture2D" uid="uid://bflvpcpn0d0y4" path="res://Scenes/Bd/Sprites/gokuTB.PNG" id="2_8mg2d"]
 [ext_resource type="PackedScene" uid="uid://d1gbr3rmcg65y" path="res://player.tscn" id="2_rqeeb"]
+[ext_resource type="PackedScene" uid="uid://pqit2ie7qbu8" path="res://Scenes/grosluffy.tscn" id="4_nu1xi"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pvgsj"]
 radius = 70.0
@@ -38,3 +39,9 @@ position = Vector2(29, -29.5)
 shape = SubResource("CapsuleShape2D_pvgsj")
 
 [node name="Player" parent="." instance=ExtResource("2_rqeeb")]
+position = Vector2(237, 294)
+
+[node name="grosluffy" parent="." instance=ExtResource("4_nu1xi")]
+position = Vector2(53, -106)
+
+[connection signal="area_entered" from="grosluffy" to="Player" method="_on_grosluffy_area_entered"]

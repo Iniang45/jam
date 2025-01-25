@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://pqit2ie7qbu8"]
+
+[ext_resource type="Script" path="res://area_2d.gd" id="1_3e83k"]
+[ext_resource type="Texture2D" uid="uid://br4h5rqr76npd" path="res://Sprite/birthday-cake-with-candles-png.webp" id="3_df5ro"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_brx1p"]
+radius = 82.0
+height = 196.0
+
+[node name="grosluffy" type="Area2D"]
+script = ExtResource("1_3e83k")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(691, 523)
+shape = SubResource("CapsuleShape2D_brx1p")
+
+[node name="cake" type="Sprite2D" parent="."]
+position = Vector2(697, 513)
+scale = Vector2(0.510444, 0.4925)
+texture = ExtResource("3_df5ro")
+
+[connection signal="body_shape_entered" from="." to="." method="_on_body_shape_entered"]

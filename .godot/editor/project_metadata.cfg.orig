@@ -1,0 +1,34 @@
+[editor_metadata]
+
+executable_path="Z:/Godot_v4.3-stable_win64.exe"
+use_advanced_connections=false
+
+[dialog_bounds]
+
+create_new_node=Rect2(510, 190, 900, 700)
+project_settings=Rect2(458, 215, 1200, 700)
+editor_settings=Rect2(510, 190, 900, 700)
+
+[script_setup]
+
+last_selected_language="GDScript"
+
+[recent_files]
+
+<<<<<<< HEAD
+scripts=["res://area_2d.gd", "res://player.gd"]
+scenes=["res://player.tscn", "res://Scenes/Bd/control.tscn"]
+=======
+<<<<<<< HEAD
+scripts=["res://Scenes/cake.gd", "res://area_2d.gd", "res://player.gd"]
+scenes=["res://Scenes/Bd/control.tscn", "res://Scenes/grosluffy.tscn", "res://player.tscn"]
+=======
+scripts=["res://node_2d.gd", "res://area_2d.gd", "res://player.gd"]
+scenes=["res://Scenes/Bd/control.tscn", "res://player.tscn"]
+>>>>>>> 3b4988f2beb5b01532e178c92598aa1a3a8e911b
+>>>>>>> 92caa231d3038bbd9ebe5fadbb77dbcc136827ce
+
+[color_picker]
+
+picker_shape=3
+recent_presets=PackedColorArray(0.689879, 0.302178, 0.975554, 1)

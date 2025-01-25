@@ -1,0 +1,15 @@
+<<<<<<< HEAD
+res://Scenes/Bd/control.tscn
+res://player.tscn
+=======
+res://Scenes/grosluffy.tscn
+res://Scenes/Bd/control.tscn
+res://player.tscn
+<<<<<<< HEAD
+res://area_2d.gd
+res://Scenes/cake.gd
+=======
+res://Scenes/Bd/control.tscn
+>>>>>>> 3b4988f2beb5b01532e178c92598aa1a3a8e911b
+>>>>>>> 92caa231d3038bbd9ebe5fadbb77dbcc136827ce
+res://Scenes/Player/Scripts/player.gd
