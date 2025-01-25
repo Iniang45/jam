@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://rgrhrsct7roi"]
 
-[ext_resource type="Texture2D" path="res://Scenes/Bd/soisfranc.PNG" id="1_yhnxj"]
+[ext_resource type="Texture2D" uid="uid://drbrbvy25j5ey" path="res://Scenes/Bd/soisfranc.PNG" id="1_yhnxj"]
 [ext_resource type="Texture2D" uid="uid://bflvpcpn0d0y4" path="res://Scenes/Bd/Sprites/gokuTB.PNG" id="2_8mg2d"]
 [ext_resource type="PackedScene" uid="uid://d1gbr3rmcg65y" path="res://player.tscn" id="2_rqeeb"]
 
