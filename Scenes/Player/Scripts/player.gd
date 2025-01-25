@@ -13,10 +13,10 @@ class_name Player
 @export var jump_force: float = 400.0  # Force appliquée au saut
 @export var wall_jump_force: Vector2 = Vector2(300, -350) # Force appliquée au wall jump
 
-@export var barrier_min_x: float = 100.0  # Limite gauche de la barrière
-@export var barrier_max_x: float = 900.0  # Limite droite de la barrière
+@export var barrier_min_x: float = 0  # Limite gauche de la barrière
+@export var barrier_max_x: float = 1152  # Limite droite de la barrière
 @export var barrier_min_y: float = 0.0  # Limite supérieure de la barrière
-@export var barrier_max_y: float = 400  # Limite inférieure de la barrière
+@export var barrier_max_y: float = 648  # Limite inférieure de la barrière
 
 @export var growth_rate: float = 0.1  # Facteur de croissance
 @export var max_scale: float = 2.0  # Taille maximale du joueur
@@ -82,6 +82,11 @@ func _input(event: InputEvent) -> void:
 		$PlayerSprite.play()
 
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> ba474ea9f20787114f05a59fff582a8ca5f31c77
 
 func jump() -> void:
 	# Appliquer une force vers le haut pour sauter
@@ -132,7 +137,10 @@ func check_if_on_ground():
 func check_if_on_wall():
 	is_on_wall_left = position.x <= barrier_min_x
 	is_on_wall_right = position.x >= barrier_max_x
-	
+	# Assurez-vous que la détection de mur ne reste pas activée en cas de collision avec l'arbre
+	if is_stopped:
+		is_on_wall_left = false
+		is_on_wall_right = false
 	# Si le joueur est au sol, il ne peut pas être en même temps sur un mur 
 	if is_on_ground:
 		is_on_wall_left = false
@@ -155,11 +163,11 @@ func _on_grosluffy_area_entered(area: Area2D) -> void:
 
 
 func _on_arbre_magique_area_entered(area: Area2D) -> void:
-	is_stopped = true  # Bloque le joueur
+	is_stopped = false  # Bloque le joueur
 	print("Est bloquer")
 	
 
 
 func _on_arbre_magique_area_exited(area: Area2D) -> void:
-	is_stopped = false #Debloque joueur
+	is_stopped = true #Debloque joueur
 	print("Est bloquer NON")

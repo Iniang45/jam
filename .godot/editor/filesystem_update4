@@ -1,8 +1,22 @@
+<<<<<<< HEAD
 res://Scenes/Bd/control.tscn
+=======
+>>>>>>> ba474ea9f20787114f05a59fff582a8ca5f31c77
 res://player.tscn
 res://Scenes/Player/Scripts/player.gd
 res://Scenes/grosluffy.tscn
 res://Scenes/Item/Pioche/Pioche.tscn
+<<<<<<< HEAD
 res://Scenes/Item/Pioche/pioche.gd
 res://Scenes/Bd/control.gd
 res://Scenes/Main/main.tscn
+=======
+res://Scenes/Item/ArbreMagique/arbre_magique.gd
+res://Scenes/Item/ArbreMagique/ArbreMagique.tscn
+res://Scenes/Item/ArbreMagique/ArbreSize/ArbreSize.gd
+res://Scenes/Player/Scripts/player.gd
+res://Scenes/Item/BubbleSpawner/BubbleSpawner.tscn
+res://Scenes/Item/Bubble/Bubble.tscn
+res://Scenes/Bd/control.gd
+res://Scenes/Bd/Control.tscn
+>>>>>>> ba474ea9f20787114f05a59fff582a8ca5f31c77

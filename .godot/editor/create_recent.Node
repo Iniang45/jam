@@ -1,7 +1,13 @@
+<<<<<<< HEAD
 Control
 TextureRect
 AnimatedSprite2D
 CollisionShape2D
+=======
+CollisionShape2D
+TextureRect
+AnimatedSprite2D
+>>>>>>> ba474ea9f20787114f05a59fff582a8ca5f31c77
 Sprite2D
 StaticBody2D
 Area2D

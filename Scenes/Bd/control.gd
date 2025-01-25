@@ -6,13 +6,13 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+#func _process(delta: float) -> void:
+	#pass
 		
-	if Input.is_action_just_pressed("use") :
-		$Player/Pioche/Sprite2D.play()
+	#if Input.is_action_just_pressed("use") :
+		#$Player/Pioche/Sprite2D.play()
 			
-func _on_pioche_piocher() -> void:
-	if Input.is_action_just_pressed("use"):
-		$background/area2D/Sprite2D.texture = load("res://Sprite/jiren.PNG")
+#func _on_pioche_piocher() -> void:
+	#if Input.is_action_just_pressed("use"):
+		#$background/area2D/Sprite2D.texture = load("res://Sprite/jiren.PNG")
 	

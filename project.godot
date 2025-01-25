@@ -11,9 +11,19 @@ config_version=5
 [application]
 
 config/name="bubble"
+<<<<<<< HEAD
 run/main_scene="res://Scenes/Main/main.tscn"
+=======
+run/main_scene="res://Scenes/Bd/Control.tscn"
+>>>>>>> ba474ea9f20787114f05a59fff582a8ca5f31c77
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/layer_3=""
+window/layer_2=""
+window/layer_1=""
 
 [input]
 
