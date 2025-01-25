@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://ts1pmad0bh3b"]
+[gd_scene load_steps=5 format=3 uid="uid://rgrhrsct7roi"]
 
 [ext_resource type="Script" path="res://Scenes/Bd/control.gd" id="1_hm3nx"]
 [ext_resource type="PackedScene" uid="uid://d1gbr3rmcg65y" path="res://player.tscn" id="2_al0ut"]
 [ext_resource type="PackedScene" uid="uid://bovycgk6o6svj" path="res://Scenes/Item/ArbreMagique/ArbreMagique.tscn" id="3_tyakr"]
+[ext_resource type="PackedScene" uid="uid://pqit2ie7qbu8" path="res://Scenes/grosluffy.tscn" id="4_nu1xi"]
 
 [node name="Control2" type="Control"]
 layout_mode = 3
@@ -18,4 +19,9 @@ script = ExtResource("1_hm3nx")
 [node name="ArbreMagique" parent="." instance=ExtResource("3_tyakr")]
 position = Vector2(237, 47)
 
+[node name="grosluffy" parent="." instance=ExtResource("4_nu1xi")]
+position = Vector2(121, 494)
+
 [connection signal="area_entered" from="ArbreMagique" to="Player" method="_on_arbre_magique_area_entered"]
+[connection signal="area_entered" from="grosluffy" to="." method="_on_grosluffy_area_entered"]
+[connection signal="area_entered" from="grosluffy" to="Player" method="_on_grosluffy_area_entered"]

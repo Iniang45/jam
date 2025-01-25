@@ -1,13 +1,19 @@
-[gd_scene load_steps=9 format=3 uid="uid://dwo2gy8a48r18"]
+[gd_scene load_steps=13 format=3 uid="uid://dwo2gy8a48r18"]
 
 [ext_resource type="Texture2D" uid="uid://dnj1in444uswr" path="res://Scenes/Bd/Sprites/Capture d’écran 2025-01-25 210305.png" id="1_mnbm2"]
+[ext_resource type="Script" path="res://Scenes/Main/niveau_1.gd" id="2_ll3vj"]
 [ext_resource type="Texture2D" uid="uid://d2m3oxabdvxy3" path="res://Sprite/CIEL.jpeg" id="2_vchtv"]
 [ext_resource type="Texture2D" uid="uid://dltis8ollmlj1" path="res://Sprite/GROUND.png" id="3_l7tyd"]
 [ext_resource type="Texture2D" uid="uid://cdy6phiu4ym3h" path="res://Sprite/NUAGE MENACANT.png" id="4_0dk8k"]
 [ext_resource type="Texture2D" uid="uid://bxfnligbujd0t" path="res://Sprite/CHATEAU BACKGROUND.png" id="5_w2h3f"]
-[ext_resource type="Texture2D" uid="uid://1m0jntyky4js" path="res://Sprite/PLAINE.png" id="6_0aope"]
+[ext_resource type="Texture2D" uid="uid://cgqdt2a1hq4k3" path="res://Sprite/PLAINE.png" id="6_0aope"]
 [ext_resource type="Texture2D" uid="uid://df7agkv2b8ajj" path="res://Sprite/MONTAGNE.png" id="7_3jof0"]
-[ext_resource type="Texture2D" uid="uid://chge2tlu025xx" path="res://Sprite/PAW_BACKGROUND-removebg-preview.png" id="8_uixsl"]
+[ext_resource type="Texture2D" uid="uid://cx5r54me0vghh" path="res://Sprite/bulleBD2.png" id="8_6e0cc"]
+[ext_resource type="PackedScene" uid="uid://d1gbr3rmcg65y" path="res://player.tscn" id="8_ki5ua"]
+[ext_resource type="PackedScene" uid="uid://d26ciriyv0xlb" path="res://Scenes/Main/narrateur.tscn" id="9_34tiq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k2hvy"]
+size = Vector2(38, 155)
 
 [node name="main" type="Control"]
 layout_mode = 3
@@ -28,8 +34,9 @@ offset_left = 6.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_mnbm2")
+metadata/_edit_lock_ = true
 
-[node name="Control" type="Control" parent="cadre"]
+[node name="niveau1" type="Control" parent="cadre"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -40,8 +47,9 @@ offset_right = -18.0
 offset_bottom = -25.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("2_ll3vj")
 
-[node name="background" type="TextureRect" parent="cadre/Control"]
+[node name="background" type="TextureRect" parent="cadre/niveau1"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -54,9 +62,11 @@ grow_vertical = 2
 scale = Vector2(0.9, 0.9)
 texture = ExtResource("2_vchtv")
 expand_mode = 2
+metadata/_edit_lock_ = true
 
-[node name="sol" type="TextureRect" parent="cadre/Control"]
+[node name="sol" type="TextureRect" parent="cadre/niveau1"]
 z_index = 2
+texture_filter = 1
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -69,8 +79,9 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("3_l7tyd")
+metadata/_edit_lock_ = true
 
-[node name="nuages" type="TextureRect" parent="cadre/Control"]
+[node name="nuages" type="TextureRect" parent="cadre/niveau1"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -83,8 +94,9 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("4_0dk8k")
+metadata/_edit_lock_ = true
 
-[node name="chateau" type="TextureRect" parent="cadre/Control"]
+[node name="chateau" type="TextureRect" parent="cadre/niveau1"]
 z_index = 1
 layout_mode = 1
 anchors_preset = 15
@@ -97,8 +109,9 @@ offset_bottom = 173.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("5_w2h3f")
+metadata/_edit_lock_ = true
 
-[node name="montagneVertes" type="TextureRect" parent="cadre/Control"]
+[node name="montagneVertes" type="TextureRect" parent="cadre/niveau1"]
 z_index = 1
 layout_mode = 1
 anchors_preset = 15
@@ -112,8 +125,9 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("6_0aope")
+metadata/_edit_lock_ = true
 
-[node name="Montagne" type="TextureRect" parent="cadre/Control"]
+[node name="Montagne" type="TextureRect" parent="cadre/niveau1"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -126,18 +140,59 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.45, 0.45)
 texture = ExtResource("7_3jof0")
+metadata/_edit_lock_ = true
 
-[node name="bulle" type="TextureRect" parent="cadre/Control"]
-z_index = 1
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -335.0
-offset_top = -174.0
-offset_right = 273.0
-offset_bottom = 171.0
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(0.8, 0.8)
-texture = ExtResource("8_uixsl")
+[node name="bulle" type="TextureRect" parent="cadre/niveau1"]
+z_index = 4
+layout_mode = 0
+offset_left = 578.0
+offset_top = -49.0
+offset_right = 1344.0
+offset_bottom = 610.0
+rotation = 0.125664
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("8_6e0cc")
+flip_h = true
+flip_v = true
+
+[node name="Label" type="Label" parent="cadre/niveau1/bulle"]
+z_index = 4
+layout_mode = 0
+offset_left = 171.504
+offset_top = 256.528
+offset_right = 409.504
+offset_bottom = 395.528
+scale = Vector2(1.8, 1.8)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "je sais pas si vous le 
+savez mais y'a différents
+types de prof"
+autowrap_mode = 2
+
+[node name="Area2D" type="Area2D" parent="cadre/niveau1"]
+position = Vector2(1097, 230)
+
+[node name="Sprite2D" type="Sprite2D" parent="cadre/niveau1/Area2D"]
+z_index = 3
+position = Vector2(4, 42.75)
+scale = Vector2(0.0573357, 0.463964)
+texture = ExtResource("1_mnbm2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cadre/niveau1/Area2D"]
+position = Vector2(5, 42.5)
+shape = SubResource("RectangleShape2D_k2hvy")
+
+[node name="TextureButton" type="TextureButton" parent="cadre/niveau1"]
+layout_mode = 0
+offset_left = 176.0
+offset_top = 60.0
+offset_right = 334.0
+offset_bottom = 196.0
+
+[node name="Player" parent="cadre" instance=ExtResource("8_ki5ua")]
+z_index = 2
+position = Vector2(76, 574)
+
+[node name="Narrateur" parent="cadre" instance=ExtResource("9_34tiq")]
+z_index = 3
+position = Vector2(942, 80)

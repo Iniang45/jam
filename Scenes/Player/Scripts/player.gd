@@ -13,10 +13,10 @@ class_name Player
 @export var jump_force: float = 400.0  # Force appliquée au saut
 @export var wall_jump_force: Vector2 = Vector2(300, -350) # Force appliquée au wall jump
 
-@export var barrier_min_x: float = 0  # Limite gauche de la barrière
-@export var barrier_max_x: float = 1152  # Limite droite de la barrière
-@export var barrier_min_y: float = 0.0  # Limite supérieure de la barrière
-@export var barrier_max_y: float = 648  # Limite inférieure de la barrière
+@export var barrier_min_x: float = 40  # Limite gauche de la barrière
+@export var barrier_max_x: float = 1100  # Limite droite de la barrière
+@export var barrier_min_y: float = 23  # Limite supérieure de la barrière
+@export var barrier_max_y: float = 623  # Limite inférieure de la barrière
 
 @export var growth_rate: float = 0.1  # Facteur de croissance
 @export var max_scale: float = 2.0  # Taille maximale du joueur
@@ -81,12 +81,6 @@ func _input(event: InputEvent) -> void:
 		$PlayerSprite.animation = "idle"
 		$PlayerSprite.play()
 
-
-<<<<<<< HEAD
-=======
-
-
->>>>>>> ba474ea9f20787114f05a59fff582a8ca5f31c77
 
 func jump() -> void:
 	# Appliquer une force vers le haut pour sauter
@@ -153,9 +147,6 @@ func clamp_position() -> void:
 
 
 
-
-func _on_grosluffy_area_entered(area: Area2D) -> void:
-	print("Le joueur mange un gâteau !")
 
 
 
