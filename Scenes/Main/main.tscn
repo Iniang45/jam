@@ -1,0 +1,143 @@
+[gd_scene load_steps=9 format=3 uid="uid://dwo2gy8a48r18"]
+
+[ext_resource type="Texture2D" uid="uid://dnj1in444uswr" path="res://Scenes/Bd/Sprites/Capture d’écran 2025-01-25 210305.png" id="1_mnbm2"]
+[ext_resource type="Texture2D" uid="uid://d2m3oxabdvxy3" path="res://Sprite/CIEL.jpeg" id="2_vchtv"]
+[ext_resource type="Texture2D" uid="uid://dltis8ollmlj1" path="res://Sprite/GROUND.png" id="3_l7tyd"]
+[ext_resource type="Texture2D" uid="uid://cdy6phiu4ym3h" path="res://Sprite/NUAGE MENACANT.png" id="4_0dk8k"]
+[ext_resource type="Texture2D" uid="uid://bxfnligbujd0t" path="res://Sprite/CHATEAU BACKGROUND.png" id="5_w2h3f"]
+[ext_resource type="Texture2D" uid="uid://1m0jntyky4js" path="res://Sprite/PLAINE.png" id="6_0aope"]
+[ext_resource type="Texture2D" uid="uid://df7agkv2b8ajj" path="res://Sprite/MONTAGNE.png" id="7_3jof0"]
+[ext_resource type="Texture2D" uid="uid://chge2tlu025xx" path="res://Sprite/PAW_BACKGROUND-removebg-preview.png" id="8_uixsl"]
+
+[node name="main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+metadata/_edit_horizontal_guides_ = [-321.0]
+
+[node name="cadre" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 6.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_mnbm2")
+
+[node name="Control" type="Control" parent="cadre"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 27.0
+offset_top = 25.0
+offset_right = -18.0
+offset_bottom = -25.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="background" type="TextureRect" parent="cadre/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_right = 115.0
+offset_bottom = 73.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("2_vchtv")
+expand_mode = 2
+
+[node name="sol" type="TextureRect" parent="cadre/Control"]
+z_index = 2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -4.0
+offset_top = -16.0
+offset_right = 1099.0
+offset_bottom = 632.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_l7tyd")
+
+[node name="nuages" type="TextureRect" parent="cadre/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_top = 2.0
+offset_right = 1114.0
+offset_bottom = 904.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_0dk8k")
+
+[node name="chateau" type="TextureRect" parent="cadre/Control"]
+z_index = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -699.0
+offset_top = -419.0
+offset_right = 200.0
+offset_bottom = 173.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_w2h3f")
+
+[node name="montagneVertes" type="TextureRect" parent="cadre/Control"]
+z_index = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -3.0
+offset_top = -207.0
+offset_right = 1098.0
+offset_bottom = 961.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_0aope")
+
+[node name="Montagne" type="TextureRect" parent="cadre/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 22.0
+offset_top = -87.0
+offset_right = 1310.0
+offset_bottom = 1088.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.45, 0.45)
+texture = ExtResource("7_3jof0")
+
+[node name="bulle" type="TextureRect" parent="cadre/Control"]
+z_index = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -335.0
+offset_top = -174.0
+offset_right = 273.0
+offset_bottom = 171.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("8_uixsl")

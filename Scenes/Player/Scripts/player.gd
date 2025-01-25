@@ -80,11 +80,8 @@ func _input(event: InputEvent) -> void:
 	if check_if_on_ground() and $PlayerSprite.animation == "jump":
 		$PlayerSprite.animation = "idle"
 		$PlayerSprite.play()
-<<<<<<< HEAD
-=======
 
 
->>>>>>> aa4a7dca0556afb3fcac9029eaf631fee7aadf38
 
 func jump() -> void:
 	# Appliquer une force vers le haut pour sauter
