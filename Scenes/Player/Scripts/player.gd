@@ -57,7 +57,7 @@ func _input(event: InputEvent) -> void:
 	elif Input.is_action_just_pressed("Jump") and is_on_ground:
 		jump()
 		
-	if speed > 0  and direction[0] == 1 and is_on_ground:
+	if speed > 0  and direction[0] == 1:
 		$PlayerSprite.animation =  "walk"
 		$PlayerSprite.play()
 	elif  speed > 0  and direction[0] == -1 and is_on_ground:
@@ -72,13 +72,17 @@ func _input(event: InputEvent) -> void:
 	else:
 		$PlayerSprite.set_flip_h(false)
 
+	
+	if check_if_on_ground() and $PlayerSprite.animation == "jump":
+		$PlayerSprite.animation = "idle"
+		$PlayerSprite.play()
 		
 
 func jump() -> void:
 	# Appliquer une force vers le haut pour sauter
 	velocity.y = -jump_force
 	is_on_ground = false  # Le joueur quitte le sol
-	$PlayerSprite.animation = "jump"
+
 func wall_jump() -> void:
 	#Appliquer une force de saut directionnelle en fonction du mur
 	if is_on_wall_left:
