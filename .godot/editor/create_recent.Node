@@ -1,9 +1,9 @@
+TextureRect
+AnimatedSprite2D
 CollisionShape2D
 Sprite2D
 Area2D
-AnimatedSprite2D
 RigidBody2D
-TextureRect
 ReferenceRect
 CanvasLayer
 MarginContainer

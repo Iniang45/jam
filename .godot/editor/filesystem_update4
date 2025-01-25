@@ -3,8 +3,5 @@ res://player.tscn
 res://Scenes/Player/Scripts/player.gd
 res://Scenes/grosluffy.tscn
 res://Scenes/Item/Pioche/Pioche.tscn
-res://Scenes/Item/Bubble/Bubble.tscn
-res://Scenes/Item/BubbleSpawner/bubble_spawner.gd
-res://area_2d.gd
-res://Scenes/Player/Scripts/player.gd
-res://Scenes/Item/Bubble/Script/bubble.gd
+res://Scenes/Item/Pioche/pioche.gd
+res://Scenes/Bd/control.gd

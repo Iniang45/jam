@@ -48,10 +48,10 @@ animations = [{
 "speed": 5.0
 }, {
 "frames": [{
-"duration": 1.0,
+"duration": 5.0,
 "texture": SubResource("AtlasTexture_7oxuj")
 }],
-"loop": true,
+"loop": false,
 "name": &"jump",
 "speed": 5.0
 }, {
@@ -91,8 +91,10 @@ script = ExtResource("1_oahe0")
 position = Vector2(-9.24999, 1)
 scale = Vector2(0.563542, 0.541667)
 sprite_frames = SubResource("SpriteFrames_je1g4")
-animation = &"walk"
+animation = &"jump"
 
 [node name="hitboxPlayer" type="CollisionShape2D" parent="."]
 position = Vector2(-14, 20)
 shape = SubResource("RectangleShape2D_laowv")
+
+[connection signal="animation_looped" from="PlayerSprite" to="." method="_on_player_sprite_animation_looped"]

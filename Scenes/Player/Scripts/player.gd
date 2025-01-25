@@ -22,8 +22,7 @@ class_name Player
 @export var growth_rate: float = 0.1  # Facteur de croissance
 @export var max_scale: float = 2.0  # Taille maximale du joueur
 @export var min_speed: float = 100.0  # Vitesse minimale si le joueur devient trop gros
-
-
+var laPioche = true
 var speed: float = 10.0
 var direction: Vector2 = Vector2.ZERO
 var Last_direction: Vector2 = Vector2.ZERO
@@ -76,7 +75,8 @@ func _input(event: InputEvent) -> void:
 	if check_if_on_ground() and $PlayerSprite.animation == "jump":
 		$PlayerSprite.animation = "idle"
 		$PlayerSprite.play()
-		
+
+
 
 func jump() -> void:
 	# Appliquer une force vers le haut pour sauter
