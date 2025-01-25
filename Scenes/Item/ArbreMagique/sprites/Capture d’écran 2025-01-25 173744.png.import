@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://tkph5b3ajsvn"
-path="res://.godot/imported/Capture d’écran 2025-01-25 173744.png-e5a2e56edeac81ae39934e3050911209.ctex"
+path="res://.godot/imported/Capture d’écran 2025-01-25 173744.png-9b0daa4df804f93db63954756c8e586e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/ArbreMagique/sprites/Capture d’écran 2025-01-25 173744.png"
-dest_files=["res://.godot/imported/Capture d’écran 2025-01-25 173744.png-e5a2e56edeac81ae39934e3050911209.ctex"]
+source_file="res://Scenes/Item/ArbreMagique/sprites/Capture d’écran 2025-01-25 173744.png"
+dest_files=["res://.godot/imported/Capture d’écran 2025-01-25 173744.png-9b0daa4df804f93db63954756c8e586e.ctex"]
 
 [params]
 
