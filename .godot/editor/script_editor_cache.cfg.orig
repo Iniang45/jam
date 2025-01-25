@@ -1,0 +1,49 @@
+[res://Scenes/Player/Scripts/player.gd]
+
+state={
+"bookmarks": PackedInt32Array(),
+"breakpoints": PackedInt32Array(),
+<<<<<<< HEAD
+"column": 25,
+"folded_lines": Array[int]([]),
+"h_scroll_position": 0,
+"row": 50,
+"scroll_position": 37.0,
+=======
+"column": 2,
+"folded_lines": Array[int]([]),
+"h_scroll_position": 0,
+"row": 62,
+"scroll_position": 0.0,
+>>>>>>> 3b4988f2beb5b01532e178c92598aa1a3a8e911b
+"selection": false,
+"syntax_highlighter": "GDScript"
+}
+
+[res://area_2d.gd]
+
+state={
+"bookmarks": PackedInt32Array(),
+"breakpoints": PackedInt32Array(),
+"column": 0,
+"folded_lines": Array[int]([]),
+"h_scroll_position": 0,
+"row": 11,
+"scroll_position": 0.0,
+"selection": false,
+"syntax_highlighter": "GDScript"
+}
+
+[res://node_2d.gd]
+
+state={
+"bookmarks": PackedInt32Array(),
+"breakpoints": PackedInt32Array(),
+"column": 0,
+"folded_lines": Array[int]([]),
+"h_scroll_position": 0,
+"row": 0,
+"scroll_position": 0.0,
+"selection": false,
+"syntax_highlighter": "GDScript"
+}
