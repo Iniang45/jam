@@ -1,3 +1,22 @@
-[gd_scene format=3 uid="uid://dttawbr7lv423"]
+[gd_scene load_steps=4 format=3 uid="uid://dttawbr7lv423"]
 
-[node name="Stickgun" type="Node2D"]
+[ext_resource type="Script" path="res://Scenes/Item/stickgun/stickgun.gd" id="1_0y65b"]
+[ext_resource type="Texture2D" uid="uid://dn6xga5u7r4qo" path="res://Stick.webp" id="2_hvpw1"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_k7kl8"]
+radius = 6.36394
+height = 73.5391
+
+[node name="Stickgun" type="Area2D"]
+script = ExtResource("1_0y65b")
+
+[node name="Stick" type="Sprite2D" parent="."]
+position = Vector2(153, 92)
+rotation = 0.792379
+scale = Vector2(0.38125, 0.38125)
+texture = ExtResource("2_hvpw1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(153, 95)
+rotation = -1.58127
+shape = SubResource("CapsuleShape2D_k7kl8")

@@ -12,7 +12,10 @@ class_name Player
 @export var wall_slide_speed: float = 100.0 # Vitesse de glissement le long des murs
 @export var jump_force: float = 400.0  # Force appliquée au saut
 @export var wall_jump_force: Vector2 = Vector2(300, -350) # Force appliquée au wall jump
-# @export var climb_speed: float = 200.0 # Vitesse d'escalade
+
+@export var shoot_speed: float = 1000.0  # Vitesse de tir
+@export var stickgun_scene: PackedScene  # Scène de la ventouse/bâton
+@export var platform_scene: PackedScene  # Scène de la plateforme créée après l'attachement
 
 @export var barrier_min_x: float = 100.0  # Limite gauche de la barrière
 @export var barrier_max_x: float = 900.0  # Limite droite de la barrière
@@ -34,7 +37,13 @@ var is_on_ground: bool = false
 var is_on_wall_left: bool = false
 var is_on_wall_right: bool = false
 
+var current_direction: int = 0  # Indice de la direction sélectionnée
+var stick_instance: Area2D = null  # Référence à la ventouse active (si existante)
+
 func _ready() -> void:
+	# Vérification si la scène du bâton est assignée 
+	if stickgun_scene == null: 
+		print("ERREUR : stick_scene n'est pas assigné")
 	pass
 
 func _physics_process(delta: float) -> void:
@@ -50,6 +59,10 @@ func _input(event: InputEvent) -> void:
 	print(direction)
 	if direction != Vector2.ZERO:
 		Last_direction = direction
+	
+	#Gérer le tir 
+	if Input.is_action_just_pressed("use"):
+		shoot()
 		
 		# Déclenche un wall jump si le joueur est sur un mur 
 	if Input.is_action_just_pressed("Jump") and (is_on_wall_left or is_on_wall_right):
@@ -66,7 +79,26 @@ func _input(event: InputEvent) -> void:
 	if check_if_on_ground() and $PlayerSprite.animation == "jump":
 		$PlayerSprite.animation = "idle"
 		$PlayerSprite.play()
-		
+
+func shoot() -> void:
+	if stickgun_scene == null:
+		print("Aucune scène de bâton assignée !!!")
+		return # Vérifier qu'une scène de bâton est bien attribuée
+	
+	# Calculer la direction du tir à partir de la position de la souris
+	var mouse_position = get_global_mouse_position()
+	var shoot_direction = (mouse_position - global_position).normalized()
+	
+	#Instancier le bâton
+	var stick = stickgun_scene.instantiate()
+	stick.position = global_position # Départ du tir depuis la position du joueur
+	stick.velocity = shoot_direction * shoot_speed # Appliquer la direction et la vitesse
+	
+	# Ajouter le bâton à la scène 
+	get_parent().add_child(stick)
+	
+	# Debug : afficher une confirmation 
+	print("Tir d'un bâton dans la direction : ", shoot_direction)
 
 func jump() -> void:
 	# Appliquer une force vers le haut pour sauter
@@ -94,8 +126,6 @@ func apply_gravity(delta: float) -> void:
 			velocity.y += fall_speed * delta
 		# Limiter la vitesse de chute
 			velocity.y = min(velocity.y, max_fall_speed)
-	# elif is_on_ladder and direction.y < 0: # Si on est en train d'escalader
-		# velocity.y = -climb_speedd
 
 func move(delta: float) -> void:
 	if direction == Vector2.ZERO:
@@ -104,10 +134,6 @@ func move(delta: float) -> void:
 		speed = lerp(speed, max_speed, accel_factor)  # Accélère progressivement
 	# Mise à jour de la vélocité horizontale
 	velocity.x = Last_direction.x * speed
-	
-	# Si le joueur est contre un mur et appuie sur la touche pour avancer : le fait grimper
-	# if is_on_ladder and direction.y > 0:
-		# velocity.y = climb_speed # Grimpe si on appuie vers le haut
 		
 	# Mise à jour de la position de l'Area2D
 	position += velocity * delta
