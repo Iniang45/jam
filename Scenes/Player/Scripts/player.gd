@@ -26,6 +26,7 @@ var speed: float = 10.0
 var direction: Vector2 = Vector2.ZERO
 var Last_direction: Vector2 = Vector2.ZERO
 var velocity: Vector2 = Vector2.ZERO
+var is_stopped: bool = true
 
 # Variable pour savoir si le joueur est au sol ou contre un mur
 var is_on_ground: bool = false
@@ -39,10 +40,12 @@ func _ready() -> void:
 	pass
 
 func _physics_process(delta: float) -> void:
+	
 	check_if_on_ground()
 	check_if_on_wall()
 	apply_gravity(delta)
-	move(delta)
+	if is_stopped  :
+		move(delta)
 	clamp_position()  # Appliquer les limites de la barrière
 
 func _input(event: InputEvent) -> void:
@@ -142,16 +145,24 @@ func clamp_position() -> void:
 	# Limiter la position du joueur avec clamp
 	position.x = clamp(position.x, barrier_min_x, barrier_max_x)
 	position.y = clamp(position.y, barrier_min_y, barrier_max_y)
-	
-	
-		
 
-
-
-	
-	# Ajoute ici le comportement (par exemple, grossir ou changer une statistique)
 
 
 
 func _on_grosluffy_area_entered(area: Area2D) -> void:
 	print("Le joueur mange un gâteau !")
+
+
+
+
+
+
+func _on_arbre_magique_area_entered(area: Area2D) -> void:
+	is_stopped = true  # Bloque le joueur
+	print("Est bloquer")
+	
+
+
+func _on_arbre_magique_area_exited(area: Area2D) -> void:
+	is_stopped = false #Debloque joueur
+	print("Est bloquer NON")

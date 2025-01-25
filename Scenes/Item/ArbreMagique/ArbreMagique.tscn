@@ -1,0 +1,56 @@
+[gd_scene load_steps=16 format=3 uid="uid://bovycgk6o6svj"]
+
+[ext_resource type="Script" path="res://Scenes/Item/ArbreMagique/arbre_magique.gd" id="1_4pw2p"]
+[ext_resource type="Script" path="res://Scenes/Item/ArbreMagique/ArbreSize/ArbreSize.gd" id="2_pvhjj"]
+[ext_resource type="Texture2D" uid="uid://dpfdsdrhpn3tw" path="res://Scenes/Item/ArbreMagique/sprites/Arbremini.png" id="2_yi1ci"]
+[ext_resource type="Texture2D" uid="uid://cq7kauqy6mkbp" path="res://Scenes/Item/ArbreMagique/sprites/Capture d’écran 2025-01-25 193740.png" id="3_15j2q"]
+[ext_resource type="Texture2D" uid="uid://tkph5b3ajsvn" path="res://Scenes/Item/ArbreMagique/sprites/Capture d’écran 2025-01-25 173744.png" id="4_qld30"]
+[ext_resource type="Texture2D" uid="uid://do061485c0moh" path="res://Scenes/Item/ArbreMagique/sprites/Capture d’écran 2025-01-25 173759.png" id="5_gq6a5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kieop"]
+size = Vector2(120, 111)
+
+[sub_resource type="Resource" id="Resource_jy6k8"]
+script = ExtResource("2_pvhjj")
+texture = ExtResource("3_15j2q")
+shape = SubResource("RectangleShape2D_kieop")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_esl58"]
+size = Vector2(175, 181)
+
+[sub_resource type="Resource" id="Resource_f4ve3"]
+script = ExtResource("2_pvhjj")
+texture = ExtResource("2_yi1ci")
+shape = SubResource("RectangleShape2D_esl58")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a2lvw"]
+size = Vector2(175, 302)
+
+[sub_resource type="Resource" id="Resource_7ryf8"]
+script = ExtResource("2_pvhjj")
+texture = ExtResource("4_qld30")
+shape = SubResource("RectangleShape2D_a2lvw")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2qmcc"]
+size = Vector2(175, 503)
+
+[sub_resource type="Resource" id="Resource_aehl1"]
+script = ExtResource("2_pvhjj")
+texture = ExtResource("5_gq6a5")
+shape = SubResource("RectangleShape2D_2qmcc")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_753bp"]
+size = Vector2(175, 182.375)
+
+[node name="ArbreMagique" type="Area2D"]
+collision_layer = 2
+script = ExtResource("1_4pw2p")
+Arbre_Size_array = Array[ExtResource("2_pvhjj")]([SubResource("Resource_jy6k8"), SubResource("Resource_f4ve3"), SubResource("Resource_7ryf8"), SubResource("Resource_aehl1")])
+
+[node name="ArbreSprite" type="Sprite2D" parent="."]
+position = Vector2(573.5, 516.5)
+texture = ExtResource("2_yi1ci")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(574.5, 512.5)
+shape = SubResource("RectangleShape2D_753bp")
