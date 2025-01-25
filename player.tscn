@@ -1,8 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://d1gbr3rmcg65y"]
 
 [ext_resource type="Script" path="res://Scenes/Player/Scripts/player.gd" id="1_oahe0"]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_q7wwe"]
+[ext_resource type="Texture2D" uid="uid://5wrjq82tsim5" path="res://Scenes/Player/Sprites/PlayerTest.png" id="2_q24nn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_laowv"]
 size = Vector2(264, 260)
@@ -11,9 +10,9 @@ size = Vector2(264, 260)
 position = Vector2(554, 289)
 script = ExtResource("1_oahe0")
 
-[node name="PlayerSprite" type="AnimatedSprite2D" parent="."]
+[node name="PlayerSprite" type="Sprite2D" parent="."]
 position = Vector2(-8, -1)
-sprite_frames = SubResource("SpriteFrames_q7wwe")
+texture = ExtResource("2_q24nn")
 
 [node name="hitboxPlayer" type="CollisionShape2D" parent="."]
 position = Vector2(-5, 0)
