@@ -11,9 +11,17 @@ position = Vector2(554, 289)
 script = ExtResource("1_oahe0")
 
 [node name="PlayerSprite" type="Sprite2D" parent="."]
-position = Vector2(-8, -1)
+position = Vector2(1, 1)
 texture = ExtResource("2_q24nn")
 
 [node name="hitboxPlayer" type="CollisionShape2D" parent="."]
-position = Vector2(-5, 0)
+position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_laowv")
+
+[node name="RayCast2D_Left" type="RayCast2D" parent="."]
+position = Vector2(1, 2)
+target_position = Vector2(-175, 0)
+
+[node name="RayCast2D_Right" type="RayCast2D" parent="."]
+position = Vector2(2, 1)
+target_position = Vector2(177, 0)
