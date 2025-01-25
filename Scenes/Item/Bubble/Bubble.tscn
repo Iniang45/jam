@@ -8,6 +8,7 @@ radius = 79.0
 height = 158.0
 
 [node name="Bubble" type="Area2D"]
+collision_layer = 4
 script = ExtResource("1_c2chy")
 
 [node name="BubbleSprite" type="Sprite2D" parent="."]

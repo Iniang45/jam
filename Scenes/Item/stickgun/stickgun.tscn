@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://dttawbr7lv423"]
+
+[ext_resource type="Script" path="res://Scenes/Item/stickgun/stickgun.gd" id="1_0y65b"]
+[ext_resource type="Texture2D" uid="uid://cm2k35wkwh40a" path="res://Sprite/VENTOUSE.png" id="2_k2bfd"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_k7kl8"]
+radius = 28.9042
+height = 178.0
+
+[node name="Stickgun" type="Area2D"]
+script = ExtResource("1_0y65b")
+
+[node name="Stick" type="Sprite2D" parent="."]
+position = Vector2(287, 98)
+rotation = 0.00698132
+scale = Vector2(0.38125, 0.38125)
+texture = ExtResource("2_k2bfd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(295, 104)
+rotation = -1.5708
+shape = SubResource("CapsuleShape2D_k7kl8")
