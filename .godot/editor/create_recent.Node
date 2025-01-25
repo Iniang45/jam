@@ -1,6 +1,7 @@
+Sprite2D
+RigidBody2D
 TextureRect
 CollisionShape2D
-Sprite2D
 Area2D
 ReferenceRect
 CanvasLayer
@@ -8,4 +9,3 @@ MarginContainer
 Node2D
 StaticBody2D
 AnimatedSprite2D
-RigidBody2D

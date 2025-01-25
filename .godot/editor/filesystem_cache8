@@ -1,13 +1,14 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1737799473
+::res://::1737800593
+area_2d.gd::GDScript::-1::1737798200::0::1::::<>Area2D<>::
 icon.svg::CompressedTexture2D::5147926291349915005::1737754034::1737798072::1::::<><>::
 player.tscn::PackedScene::8996650825145303072::1737799473::0::1::::<><>::res://Scenes/Player/Scripts/player.gd<>uid://5wrjq82tsim5::::res://Scenes/Player/Sprites/PlayerTest.png
-area_2d.gd::GDScript::-1::1737798200::0::1::::<>Area2D<>::
 ::res://GameJam/::1737754923
 ::res://Scenes/::1737798814
 ::res://Scenes/Bd/::1737799674
 control.tscn::PackedScene::1206642218626244376::1737799474::0::1::::<><>::uid://drbrbvy25j5ey::::res://Scenes/Bd/soisfranc.PNG<>uid://d1gbr3rmcg65y::::res://player.tscn
-::res://Scenes/Bd/Sprites/::1737799686
+::res://Scenes/Bd/Sprites/::1737800390
+gokuTB.PNG::CompressedTexture2D::2761375029777572793::1737800389::1737800390::1::::<><>::
 soisfranc.PNG::CompressedTexture2D::8355571886683742368::1737798855::1737799679::1::::<><>::
 ::res://Scenes/Player/::1737797997
 README.md::TextFile::-1::1737797997::0::1::::<><>::
@@ -15,3 +16,8 @@ README.md::TextFile::-1::1737797997::0::1::::<><>::
 player.gd::GDScript::-1::1737799472::0::1::::Player<>Area2D<>::
 ::res://Scenes/Player/Sprites/::1737798072
 PlayerTest.png::CompressedTexture2D::2152130773357472566::1737797997::1737798072::1::::<><>::
+::res://Sprite/::1737800593
+FALL.png::CompressedTexture2D::9189067106104653672::1737800535::1737800599::1::::<><>::
+IDLE.png::CompressedTexture2D::545283439746710788::1737800535::1737800599::1::::<><>::
+JUMP.png::CompressedTexture2D::5853001717094565904::1737800535::1737800599::1::::<><>::
+WALK.png::CompressedTexture2D::8378065104872262541::1737800536::1737800600::1::::<><>::
