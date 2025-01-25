@@ -43,17 +43,20 @@ func _input(event: InputEvent) -> void:
 	print(direction)
 	if direction != Vector2.ZERO:
 		Last_direction = direction
-	if speed > 0  and direction[0] == 1:
+	if speed > 0  and direction[0] == 1 and is_on_ground:
 		$PlayerSprite.animation =  "walk"
 		$PlayerSprite.play()
+	elif speed > 0  and direction[0] == -1 and is_on_ground:
+		$PlayerSprite.animation =  "walk"
+		$PlayerSprite.set_flip_h(true)
+		$PlayerSprite.play()
 	else:
+		$PlayerSprite.set_flip_h(false)
 		$PlayerSprite.stop()
 	# Gérer le saut
 	if Input.is_action_just_pressed("Jump") and is_on_ground:
 		jump()
-	if check_if_on_ground() and $PlayerSprite.animation == "jump":
-		$PlayerSprite.animation = "idle"
-		$PlayerSprite.play()
+
 		
 
 func jump() -> void:
