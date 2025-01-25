@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://rgrhrsct7roi"]
+[gd_scene load_steps=10 format=3 uid="uid://rgrhrsct7roi"]
 
 [ext_resource type="Script" path="res://Scenes/Bd/control.gd" id="1_tiwcq"]
 [ext_resource type="Texture2D" uid="uid://drbrbvy25j5ey" path="res://Scenes/Bd/soisfranc.PNG" id="1_yhnxj"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://pqit2ie7qbu8" path="res://Scenes/grosluffy.tscn" id="4_nu1xi"]
 [ext_resource type="PackedScene" uid="uid://drs1w0hshmjl0" path="res://Scenes/Item/Pioche/Pioche.tscn" id="4_saib7"]
 [ext_resource type="Script" path="res://Scenes/Item/Pioche/pioche.gd" id="5_ygtch"]
+[ext_resource type="PackedScene" uid="uid://bovycgk6o6svj" path="res://Scenes/Item/ArbreMagique/ArbreMagique.tscn" id="8_ejjvx"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pvgsj"]
 radius = 70.0
@@ -55,7 +56,14 @@ script = ExtResource("5_ygtch")
 position = Vector2(863, 457)
 scale = Vector2(0.5, 0.5)
 
+[node name="ArbreMagique" parent="." instance=ExtResource("8_ejjvx")]
+position = Vector2(-85, -89)
+
 [connection signal="area_entered" from="background/area2D" to="Player/Pioche" method="_on_area_2d_area_entered"]
 [connection signal="body_entered" from="background/area2D" to="Player/Pioche" method="_on_area_2d_body_entered"]
+[connection signal="body_shape_entered" from="Player" to="ArbreMagique" method="_on_player_body_shape_entered"]
 [connection signal="piocher" from="Player/Pioche" to="." method="_on_pioche_piocher"]
 [connection signal="area_entered" from="grosluffy" to="Player" method="_on_grosluffy_area_entered"]
+[connection signal="area_entered" from="ArbreMagique" to="Player" method="_on_arbre_magique_area_entered"]
+[connection signal="area_exited" from="ArbreMagique" to="Player" method="_on_arbre_magique_area_exited"]
+[connection signal="body_entered" from="ArbreMagique" to="Player" method="_on_arbre_magique_body_entered"]

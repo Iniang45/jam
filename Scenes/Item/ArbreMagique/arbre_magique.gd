@@ -2,6 +2,7 @@
 extends Area2D
 
 enum SIZE {
+	SEED,
 	SMALL,
 	MEDIUM,
 	BIG
@@ -11,15 +12,11 @@ enum SIZE {
 @onready var collision_shape: CollisionShape2D = $CollisionShape2D
 
 @export var Arbre_Size_array: Array[ArbreSize]
-@export var size: SIZE = SIZE.BIG  # Correction ici
+@export var size: SIZE = SIZE.SEED  # Taille par défaut à SEED
 
 signal size_changed
 
 func _ready() -> void:
-	if Engine.is_editor_hint():
-		set_physics_process(false)
-	else:
-		set_physics_process(true)
 	size_changed.connect(update_size)
 	update_size()
 
@@ -29,13 +26,15 @@ func set_size(value: SIZE) -> void:
 		emit_signal("size_changed")
 
 func _input(event: InputEvent) -> void:
-	if Input.is_action_just_pressed("Jump") and (is_on_wall_left or is_on_wall_right):
-	if event is InputEventMouseButton and event.button_index == MouseButton.LEFT and event.pressed:
+	if Input.is_action_just_pressed("use"):  # Par exemple, "use" est une action mappée dans ton Input Map.
 		# Passe à la taille suivante
-		size = SIZE((size + 1) % SIZE.values().size())
+		size = int(size) + 1  # Incrémentation de la taille
+		if size >= SIZE.values().size():  # Si on dépasse la dernière taille
+			size = SIZE.SEED  # Reviens à SEED
 		emit_signal("size_changed")
 
 func update_size() -> void:
-	var arbre_size = Arbre_Size_array[size]
+	# Récupère l'objet ArbreSize correspondant à la taille actuelle
+	var arbre_size = Arbre_Size_array[int(size)]
 	sprite.texture = arbre_size.texture
-	collision_shape.shape = arbre_size.shape
+	collision_shape.shape = arbre_size.shape  # Vérifie que cette propriété existe dans ArbreSize
