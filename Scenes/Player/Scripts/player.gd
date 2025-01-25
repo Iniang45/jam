@@ -53,6 +53,7 @@ func _input(event: InputEvent) -> void:
 		jump()
 	if check_if_on_ground() and $PlayerSprite.animation == "jump":
 		$PlayerSprite.animation = "idle"
+		$PlayerSprite.play()
 		
 
 func jump() -> void:
