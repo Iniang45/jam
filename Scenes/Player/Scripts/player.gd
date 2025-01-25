@@ -23,14 +23,14 @@ var velocity: Vector2 = Vector2.ZERO
 
 # Variable pour savoir si le joueur est au sol ou contre un mur
 var is_on_ground: bool = false
-var is_on_wall: bool = false
+var is_on_ladder: bool = false
 
 func _ready() -> void:
 	pass
 
 func _physics_process(delta: float) -> void:
 	check_if_on_ground()
-	check_if_on_wall()
+	check_if_on_ladder()
 	apply_gravity(delta)
 	move(delta)
 	clamp_position()  # Appliquer les limites de la barrière
@@ -52,12 +52,12 @@ func jump() -> void:
 	is_on_ground = false  # Le joueur quitte le sol
 
 func apply_gravity(delta: float) -> void:
-	if not is_on_ground and not is_on_wall:
+	if not is_on_ground and not is_on_ladder:
 		# Appliquer la gravité en ajoutant à la vélocité verticale
 		velocity.y += fall_speed * delta
 		# Limiter la vitesse de chute
 		velocity.y = min(velocity.y, max_fall_speed)
-	elif is_on_wall and direction.y < 0: # Si on est en train d'escalader
+	elif is_on_ladder and direction.y < 0: # Si on est en train d'escalader
 		velocity.y = -climb_speed
 
 func move(delta: float) -> void:
@@ -70,7 +70,7 @@ func move(delta: float) -> void:
 	velocity.x = Last_direction.x * speed
 	
 	# Si le joueur est contre un mur et appuie sur la touche pour avancer : le fait grimper
-	if is_on_wall and direction.y > 0:
+	if is_on_ladder and direction.y > 0:
 		velocity.y = climb_speed # Grimpe si on appuie vers le haut
 
 	# Mise à jour de la position de l'Area2D
@@ -84,11 +84,11 @@ func check_if_on_ground() -> void:
 	else:
 		is_on_ground = false
 
-func check_if_on_wall() -> void:
+func check_if_on_ladder() -> void:
 	# Vérifie si le joueur est contre un mur 
-	is_on_wall = false
+	is_on_ladder = false
 	if position.x <= barrier_min_x or position.x >= barrier_max_x:
-		is_on_wall = true
+		is_on_ladder = true
 
 func clamp_position() -> void:
 	# Limiter la position du joueur avec clamp
