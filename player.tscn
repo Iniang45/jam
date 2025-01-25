@@ -1,0 +1,81 @@
+[gd_scene load_steps=13 format=3 uid="uid://d1gbr3rmcg65y"]
+
+[ext_resource type="Texture2D" uid="uid://kgigkh7ytnp1" path="res://gokuTB.PNG" id="1_1n5c2"]
+[ext_resource type="Texture2D" uid="uid://cos0araxby642" path="res://soisfranc.PNG" id="1_f36am"]
+[ext_resource type="Script" path="res://player.gd" id="1_oahe0"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_iafhh"]
+radius = 17.0
+height = 46.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2pse4"]
+atlas = ExtResource("1_1n5c2")
+region = Rect2(0, 0, 144, 251)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0rvw5"]
+atlas = ExtResource("1_f36am")
+region = Rect2(0, 0, 249, 328)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_syatx"]
+atlas = ExtResource("1_f36am")
+region = Rect2(249, 0, 249, 328)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gk8yv"]
+atlas = ExtResource("1_f36am")
+region = Rect2(498, 0, 249, 328)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kgffx"]
+atlas = ExtResource("1_f36am")
+region = Rect2(0, 328, 249, 328)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aos1k"]
+atlas = ExtResource("1_f36am")
+region = Rect2(249, 328, 249, 328)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b3eig"]
+atlas = ExtResource("1_f36am")
+region = Rect2(498, 328, 249, 328)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_eacov"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2pse4")
+}],
+"loop": true,
+"name": &"goku",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0rvw5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_syatx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gk8yv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kgffx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aos1k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b3eig")
+}],
+"loop": true,
+"name": &"soisfranc",
+"speed": 5.0
+}]
+
+[node name="Player" type="Area2D"]
+script = ExtResource("1_oahe0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_iafhh")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_eacov")
+animation = &"soisfranc"
