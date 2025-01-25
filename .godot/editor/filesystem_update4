@@ -1,4 +1,4 @@
-res://Scenes/Bd/control.tscn
+res://Scenes/Item/BubbleSpawner/BubbleSpawner.tscn
 res://player.tscn
-res://Scenes/Player/Scripts/player.gd
 res://Scenes/grosluffy.tscn
+res://Scenes/Bd/control.tscn
