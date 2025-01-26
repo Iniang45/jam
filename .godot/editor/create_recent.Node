@@ -1,3 +1,4 @@
+RayCast2D
 StaticBody2D
 CollisionShape2D
 Area2D
@@ -6,8 +7,6 @@ CollisionShape2D
 TextureRect
 Area2D
 Control
-RayCast2D
-RayCast2D
 CharacterBody2D
 Control
 Label
