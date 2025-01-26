@@ -1,6 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://d26ciriyv0xlb"]
+[gd_scene load_steps=11 format=3 uid="uid://d26ciriyv0xlb"]
 
 [ext_resource type="Texture2D" uid="uid://b4dp8on60a8na" path="res://Sprite/GAME MASTER.png" id="1_5kfab"]
+[ext_resource type="Script" path="res://Scenes/Main/narrateur.gd" id="1_psrwu"]
 [ext_resource type="Texture2D" uid="uid://bn58cuf50sr5h" path="res://Sprite/GAME_MASTER_TALK.png" id="2_kmtss"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3hyvq"]
@@ -34,7 +35,31 @@ animations = [{
 "speed": 5.0
 }, {
 "frames": [{
+"duration": 1.1,
+"texture": SubResource("AtlasTexture_30xjr")
+}, {
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_2hvs6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ckwu4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1lh6w")
+}, {
+"duration": 1.1,
+"texture": SubResource("AtlasTexture_30xjr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2hvs6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ckwu4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1lh6w")
+}, {
+"duration": 1.1,
 "texture": SubResource("AtlasTexture_30xjr")
 }, {
 "duration": 1.0,
@@ -46,7 +71,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_1lh6w")
 }],
-"loop": true,
+"loop": false,
 "name": &"talk",
 "speed": 5.0
 }]
@@ -56,6 +81,7 @@ radius = 89.0056
 
 [node name="Narrateur" type="Area2D"]
 position = Vector2(955, 82)
+script = ExtResource("1_psrwu")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(10, 33)

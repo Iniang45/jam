@@ -1,25 +1,25 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1737849306
-area_2d.gd::GDScript::-1::1737812468::0::1::::<>Area2D<>::
+::res://::1737891579
+area_2d.gd::GDScript::-1::1737886775::0::1::::<>Area2D<>::
 icon.svg::CompressedTexture2D::5147926291349915005::1737754034::1737803065::1::::<><>::
 Iron_Pickaxe_JE3_BE2.webp::CompressedTexture2D::3028477976499565340::1737806909::1737807789::1::::<><>::
 node_2d.gd::GDScript::-1::1737811456::0::1::::<>Area2D<>::
 pioche2-removebg-preview.png::CompressedTexture2D::3180842902055675080::1737825162::1737825176::1::::<><>::
 pioche2.jpg::CompressedTexture2D::4954591816409944652::1737822929::1737822965::1::::<><>::
-player.tscn::PackedScene::8996650825145303072::1737849306::0::1::::<><>::res://Scenes/Player/Scripts/player.gd<>uid://h1e0d2mxnag7::::res://Sprite/IDLE.png<>uid://d36iuffnyv1hk::::res://Sprite/FALL.png<>uid://bd4udq4wl7meh::::res://Sprite/GROS CHEVALIER.png<>uid://cpnic3d8nfdx5::::res://Sprite/JUMP.png<>uid://drmnrjrlr0yfl::::res://Sprite/WALK.png<>uid://bjmaoba8mfinp::::res://Sprite/GROS CHEVALIER UPDATE.png
+player.tscn::PackedScene::8996650825145303072::1737891579::0::1::::<><>::res://Scenes/Player/Scripts/player.gd<>uid://h1e0d2mxnag7::::res://Sprite/IDLE.png<>uid://d36iuffnyv1hk::::res://Sprite/FALL.png<>uid://bd4udq4wl7meh::::res://Sprite/GROS CHEVALIER.png<>uid://cpnic3d8nfdx5::::res://Sprite/JUMP.png<>uid://drmnrjrlr0yfl::::res://Sprite/WALK.png<>uid://bjmaoba8mfinp::::res://Sprite/GROS CHEVALIER UPDATE.png
 Stick.webp::CompressedTexture2D::8137119981642941226::1737811456::1737811466::1::::<><>::
 ::res://GameJam/::1737754923
-::res://Scenes/::1737848979
+::res://Scenes/::1737891580
 cake.gd::GDScript::-1::1737812468::0::1::::<>Sprite2D<>::
-grosluffy.tscn::PackedScene::1086383795375791309::1737848979::0::1::::<><>::res://area_2d.gd<>uid://br4h5rqr76npd::::res://Sprite/birthday-cake-with-candles-png.webp
-::res://Scenes/Bd/::1737848978
-control.tscn::PackedScene::1206642218626244376::1737848978::0::1::::<><>::res://Scenes/Bd/control.gd<>uid://d1gbr3rmcg65y::::res://player.tscn<>uid://bovycgk6o6svj::::res://Scenes/Item/ArbreMagique/ArbreMagique.tscn<>uid://pqit2ie7qbu8::::res://Scenes/grosluffy.tscn
-control.gd::GDScript::-1::1737848962::0::1::::<>Control<>::
+grosluffy.tscn::PackedScene::1086383795375791309::1737891580::0::1::::<><>::res://area_2d.gd<>uid://br4h5rqr76npd::::res://Sprite/birthday-cake-with-candles-png.webp
+::res://Scenes/Bd/::1737891579
+control.gd::GDScript::-1::1737890042::0::1::::<>Control<>::
+control.tscn::PackedScene::1206642218626244376::1737891579::0::1::::<><>::res://Scenes/Bd/control.gd<>uid://d1gbr3rmcg65y::::res://player.tscn<>uid://drs1w0hshmjl0::::res://Scenes/Item/Pioche/Pioche.tscn<>res://Scenes/Item/Pioche/pioche.gd<>uid://pqit2ie7qbu8::::res://Scenes/grosluffy.tscn<>uid://o6dglgsccja7::::res://Sprite/gokuTB.PNG
 ::res://Scenes/Bd/Sprites/::1737839794
 Capture d’écran 2025-01-25 210305.png::CompressedTexture2D::8091890075283498005::1737835643::1737835660::1::::<><>::
 ::res://Scenes/Item/::1737835643
-::res://Scenes/Item/ArbreMagique/::1737839792
-ArbreMagique.tscn::PackedScene::3413877538891606483::1737839792::0::1::::<><>::res://Scenes/Item/ArbreMagique/arbre_magique.gd<>res://Scenes/Item/ArbreMagique/ArbreSize/ArbreSize.gd<>uid://dpfdsdrhpn3tw::::res://Scenes/Item/ArbreMagique/sprites/Arbremini.png<>uid://cq7kauqy6mkbp::::res://Scenes/Item/ArbreMagique/sprites/Capture d’écran 2025-01-25 193740.png<>uid://tkph5b3ajsvn::::res://Scenes/Item/ArbreMagique/sprites/Capture d’écran 2025-01-25 173744.png<>uid://do061485c0moh::::res://Scenes/Item/ArbreMagique/sprites/Capture d’écran 2025-01-25 173759.png
+::res://Scenes/Item/ArbreMagique/::1737891585
+ArbreMagique.tscn::PackedScene::3413877538891606483::1737891585::0::1::::<><>::res://Scenes/Item/ArbreMagique/arbre_magique.gd<>uid://dpfdsdrhpn3tw::::res://Scenes/Item/ArbreMagique/sprites/Arbremini.png<>uid://cq7kauqy6mkbp::::res://Scenes/Item/ArbreMagique/sprites/Capture d’écran 2025-01-25 193740.png<>uid://tkph5b3ajsvn::::res://Scenes/Item/ArbreMagique/sprites/Capture d’écran 2025-01-25 173744.png<>uid://do061485c0moh::::res://Scenes/Item/ArbreMagique/sprites/Capture d’écran 2025-01-25 173759.png
 arbre_magique.gd::GDScript::-1::1737839792::0::1::::<>Area2D<>::
 ::res://Scenes/Item/ArbreMagique/ArbreSize/::1737835643
 ArbreSize.gd::GDScript::-1::1737835643::0::1::::ArbreSize<>Resource<>::
@@ -29,34 +29,38 @@ Capture d’écran 2025-01-25 173744.png::CompressedTexture2D::13551566406299201
 Capture d’écran 2025-01-25 173759.png::CompressedTexture2D::8195445538802970875::1737835646::1737835660::1::::<><>::
 Capture d’écran 2025-01-25 193740.png::CompressedTexture2D::5962531199968531113::1737835643::1737835660::1::::<><>::
 ::res://Scenes/Item/Bubble/::1737835643
-Bubble.tscn::PackedScene::9045895937763321051::1737820644::0::1::::<><>::uid://bgcugepmdusao::::res://Scenes/Item/Bubble/Sprite/cercle.png<>res://Scenes/Item/Bubble/Script/bubble.gd
+Bubble.tscn::PackedScene::9045895937763321051::1737835643::0::1::::<><>::uid://bgcugepmdusao::::res://Scenes/Item/Bubble/Sprite/cercle.png<>res://Scenes/Item/Bubble/Script/bubble.gd
 ::res://Scenes/Item/Bubble/Script/::1737822039
 bubble.gd::GDScript::-1::1737822039::0::1::::<>Area2D<>::
 ::res://Scenes/Item/Bubble/Sprite/::1737820931
 cercle.png::CompressedTexture2D::2812907789463681382::1737820644::1737820931::1::::<><>::
 ::res://Scenes/Item/BubbleSpawner/::1737822039
-BubbleSpawner.tscn::PackedScene::8664327685318820808::1737820644::0::1::::<><>::res://Scenes/Item/BubbleSpawner/bubble_spawner.gd<>uid://d145t4welyq2v::::res://Scenes/Item/Bubble/Bubble.tscn
+BubbleSpawner.tscn::PackedScene::8664327685318820808::1737822039::0::1::::<><>::res://Scenes/Item/BubbleSpawner/bubble_spawner.gd<>uid://d145t4welyq2v::::res://Scenes/Item/Bubble/Bubble.tscn
 bubble_spawner.gd::GDScript::-1::1737822039::0::1::::<>Node2D<>::
-::res://Scenes/Item/Pioche/::1737848979
-Pioche.tscn::PackedScene::8391250446501824387::1737848979::0::1::::<><>::uid://bjfaub21bbiv1::::res://Iron_Pickaxe_JE3_BE2.webp<>uid://blk3auwmgfq1m::::res://pioche2-removebg-preview.png
-pioche.gd::GDScript::-1::1737827100::0::1::::<>Area2D<>::
+::res://Scenes/Item/Pioche/::1737891581
+pioche.gd::GDScript::-1::1737890071::0::1::::<>Area2D<>::
+Pioche.tscn::PackedScene::8391250446501824387::1737891581::0::1::::<><>::uid://kxn4b2jqkdjw::::res://Sprite/PIOCHE.png<>uid://cuqcxd33n8v3u::::res://Sprite/PIOCHE2-removebg-preview.png
 ::res://Scenes/Item/platform/::1737835643
 platform.tscn::PackedScene::28291896906767413::1737835643::0::1::::<><>::uid://cm2k35wkwh40a::::res://Sprite/VENTOUSE.png
 ::res://Scenes/Item/stickgun/::1737835643
 stickgun.gd::GDScript::-1::1737835643::0::1::::<>Area2D<>::
 stickgun.tscn::PackedScene::8532112625249480254::1737835643::0::1::::<><>::res://Scenes/Item/stickgun/stickgun.gd<>uid://cm2k35wkwh40a::::res://Sprite/VENTOUSE.png
-::res://Scenes/Main/::1737849276
-main.tscn::PackedScene::8733969284819996913::1737849276::0::1::::<><>::uid://dnj1in444uswr::::res://Scenes/Bd/Sprites/Capture d’écran 2025-01-25 210305.png<>res://Scenes/Main/niveau_1.gd<>uid://hsrpqqmo50eh::::res://Sprite/NIVEAU 2.jpeg<>uid://b2pg12w3ngl5n::::res://Sprite/BD BULLE.png<>uid://xgwd4b5ieil6::::res://Sprite/BULLE RONDE.png<>uid://d1gbr3rmcg65y::::res://player.tscn<>uid://d26ciriyv0xlb::::res://Scenes/Main/narrateur.tscn
-narrateur.tscn::PackedScene::9118493166393713259::1737848981::0::1::::<><>::uid://b4dp8on60a8na::::res://Sprite/GAME MASTER.png<>uid://bn58cuf50sr5h::::res://Sprite/GAME_MASTER_TALK.png
-niveau_1.gd::GDScript::-1::1737844606::0::1::::<>Control<>::
+::res://Scenes/Main/::1737891584
+grosluffy_bulle.tscn::PackedScene::1821950623589947833::1737891584::0::1::::<><>::uid://xgwd4b5ieil6::::res://Sprite/BULLE RONDE.png
+main.gd::GDScript::-1::1737891535::0::1::::<>Control<>::
+main.tscn::PackedScene::8733969284819996913::1737891581::0::1::::<><>::res://Scenes/Main/main.gd<>uid://dnj1in444uswr::::res://Scenes/Bd/Sprites/Capture d’écran 2025-01-25 210305.png<>res://Scenes/Main/niveau_1.gd<>uid://hsrpqqmo50eh::::res://Sprite/NIVEAU 2.jpeg<>uid://b2pg12w3ngl5n::::res://Sprite/BD BULLE.png<>uid://bhjj23gnrfygc::::res://Scenes/Main/piocheBulle.tscn<>uid://drs1w0hshmjl0::::res://Scenes/Item/Pioche/Pioche.tscn<>uid://pqit2ie7qbu8::::res://Scenes/grosluffy.tscn<>uid://07ti4h3yjr4t::::res://Scenes/Main/grosluffy_bulle.tscn<>uid://d1gbr3rmcg65y::::res://player.tscn<>uid://d26ciriyv0xlb::::res://Scenes/Main/narrateur.tscn
+narrateur.tscn::PackedScene::9118493166393713259::1737891583::0::1::::<><>::uid://b4dp8on60a8na::::res://Sprite/GAME MASTER.png<>res://Scenes/Main/narrateur.gd<>uid://bn58cuf50sr5h::::res://Sprite/GAME_MASTER_TALK.png
+niveau_1.gd::GDScript::-1::1737891536::0::1::::<>Control<>::
+piocheBulle.tscn::PackedScene::2896918138852429318::1737891583::0::1::::<><>::uid://xgwd4b5ieil6::::res://Sprite/BULLE RONDE.png
+narrateur.gd::GDScript::-1::1737890714::0::1::::<>Area2D<>::
 ::res://Scenes/Player/::1737797997
 README.md::TextFile::-1::1737797997::0::1::::<><>::
-::res://Scenes/Player/Scripts/::1737846003
-player.gd::GDScript::-1::1737846002::0::1::::Player<>Area2D<>::
+::res://Scenes/Player/Scripts/::1737853644
+player.gd::GDScript::-1::1737853644::0::1::::Player<>Area2D<>::
 ::res://Scenes/Player/Sprites/::1737844761
 GROS_CHEVALIER.png::CompressedTexture2D::6052288543323529245::1737826633::1737844761::1::::<><>::
 PlayerTest.png::CompressedTexture2D::2152130773357472566::1737797997::1737803065::1::::<><>::
-::res://Sprite/::1737849496
+::res://Sprite/::1737892960
 ARALETE VENTOUSE.png::CompressedTexture2D::7468674297843106126::1737826631::1737835661::1::::<><>::
 BD BULLE.png::CompressedTexture2D::4312897314234962997::1737845406::1737845434::1::::<><>::
 birthday-cake-with-candles-png.webp::CompressedTexture2D::3639977491604119245::1737812468::1737812570::1::::<><>::
@@ -80,6 +84,7 @@ FALL.png::CompressedTexture2D::9189067106104653672::1737800765::1737803066::1:::
 GAME MASTER.png::CompressedTexture2D::4429060725399882606::1737811456::1737820931::1::::<><>::
 GAME_MASTER_TALK.png::CompressedTexture2D::3362815275546642663::1737811456::1737820933::1::::<><>::
 GATEAU.png::CompressedTexture2D::3670545622170009793::1737826632::1737835661::1::::<><>::
+gokuTB.PNG::CompressedTexture2D::1046832974896312628::1737758630::1737889019::1::::<><>::
 GRAINE ITEM.png::CompressedTexture2D::1546971819742917986::1737837043::1737839804::1::::<><>::
 GRASS 1.png::CompressedTexture2D::7535401611808882371::1737826632::1737835662::1::::<><>::
 GRASS 2.png::CompressedTexture2D::5417962901463154679::1737826633::1737835661::1::::<><>::
@@ -94,6 +99,7 @@ IMG_0438.png::CompressedTexture2D::6495465946082902467::1737837044::1737839806::
 IMG_0440.png::CompressedTexture2D::205507816709824952::1737837044::1737839807::1::::<><>::
 jiren.PNG::CompressedTexture2D::8797753577037894573::1737824314::1737824321::1::::<><>::
 JUMP.png::CompressedTexture2D::5853001717094565904::1737800765::1737803066::1::::<><>::
+look_to_the_horizon.png::CompressedTexture2D::1486638716540920799::1737892954::1737892968::1::::<><>::
 MONTAGNE.png::CompressedTexture2D::7576277631066591603::1737826633::1737835661::1::::<><>::
 NIVEAU 1 EXEMPLE.jpeg::CompressedTexture2D::754118081751768900::1737845406::1737845434::1::::<><>::
 NIVEAU 2.jpeg::CompressedTexture2D::529540546480520899::1737845406::1737845434::1::::<><>::

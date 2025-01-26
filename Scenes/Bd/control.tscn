@@ -1,9 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://rgrhrsct7roi"]
+[gd_scene load_steps=8 format=3 uid="uid://rgrhrsct7roi"]
 
 [ext_resource type="Script" path="res://Scenes/Bd/control.gd" id="1_hm3nx"]
 [ext_resource type="PackedScene" uid="uid://d1gbr3rmcg65y" path="res://player.tscn" id="2_al0ut"]
-[ext_resource type="PackedScene" uid="uid://bovycgk6o6svj" path="res://Scenes/Item/ArbreMagique/ArbreMagique.tscn" id="3_tyakr"]
+[ext_resource type="PackedScene" uid="uid://drs1w0hshmjl0" path="res://Scenes/Item/Pioche/Pioche.tscn" id="3_roxj6"]
+[ext_resource type="Script" path="res://Scenes/Item/Pioche/pioche.gd" id="4_f3q83"]
 [ext_resource type="PackedScene" uid="uid://pqit2ie7qbu8" path="res://Scenes/grosluffy.tscn" id="4_nu1xi"]
+[ext_resource type="Texture2D" uid="uid://o6dglgsccja7" path="res://Sprite/gokuTB.PNG" id="6_20fc3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xu7f0"]
+radius = 84.006
 
 [node name="Control2" type="Control"]
 layout_mode = 3
@@ -16,12 +21,26 @@ script = ExtResource("1_hm3nx")
 
 [node name="Player" parent="." instance=ExtResource("2_al0ut")]
 
-[node name="ArbreMagique" parent="." instance=ExtResource("3_tyakr")]
-position = Vector2(237, 47)
+[node name="Pioche" parent="Player" instance=ExtResource("3_roxj6")]
+position = Vector2(84, -146)
+script = ExtResource("4_f3q83")
 
 [node name="grosluffy" parent="." instance=ExtResource("4_nu1xi")]
 position = Vector2(121, 494)
 
-[connection signal="area_entered" from="ArbreMagique" to="Player" method="_on_arbre_magique_area_entered"]
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(880, 361)
+
+[node name="TextureRect" type="TextureRect" parent="Area2D"]
+offset_right = 144.0
+offset_bottom = 251.0
+texture = ExtResource("6_20fc3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(75, 58)
+shape = SubResource("CircleShape2D_xu7f0")
+
 [connection signal="area_entered" from="grosluffy" to="." method="_on_grosluffy_area_entered"]
 [connection signal="area_entered" from="grosluffy" to="Player" method="_on_grosluffy_area_entered"]
+[connection signal="area_entered" from="Area2D" to="Player/Pioche" method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="Player/Pioche" method="_on_area_2d_area_exited"]

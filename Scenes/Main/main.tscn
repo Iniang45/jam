@@ -138,6 +138,7 @@ position = Vector2(90, -136)
 z_index = 3
 position = Vector2(942, 80)
 
+[connection signal="textChanged" from="cadre/niveau1" to="." method="_on_niveau_1_text_changed"]
 [connection signal="pressed" from="cadre/niveau1/piocheBulle" to="." method="_on_pioche_bulle_pressed"]
 [connection signal="area_entered" from="cadre/niveau1/grosluffy" to="cadre/Player" method="_on_grosluffy_area_entered"]
 [connection signal="pressed" from="cadre/niveau1/grosluffyBulle" to="." method="_on_grosluffy_bulle_pressed"]

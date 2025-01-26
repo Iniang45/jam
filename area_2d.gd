@@ -1,4 +1,4 @@
 extends Area2D
 
 func _ready() -> void:
-	pass
+	$CollisionShape2D.set_disabled(true)
