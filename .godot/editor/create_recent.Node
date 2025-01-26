@@ -1,9 +1,21 @@
+<<<<<<< HEAD
 AudioStreamPlayer2D
 AudioListener2D
+=======
+<<<<<<< HEAD
+RayCast2D
+=======
+<<<<<<< HEAD
+>>>>>>> d34df79adacce421cd37a4fbc41ad895d72f2cfb
 Sprite2D
 CollisionShape2D
 Area2D
 StaticBody2D
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> ddc1fa447ae19f833c3d1d0f552b4507a7d48a89
+>>>>>>> d34df79adacce421cd37a4fbc41ad895d72f2cfb
 StaticBody2D
 CollisionShape2D
 Area2D
@@ -12,3 +24,9 @@ CollisionShape2D
 TextureRect
 Area2D
 Control
+<<<<<<< HEAD
+=======
+CharacterBody2D
+Control
+Label
+>>>>>>> d34df79adacce421cd37a4fbc41ad895d72f2cfb

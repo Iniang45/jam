@@ -32,18 +32,17 @@ var direction: Vector2 = Vector2.ZERO
 var Last_direction: Vector2 = Vector2.ZERO
 var is_stopped: bool = true
 
-# Variables pour savoir si le joueur est au sol ou contre un mur
-
 signal ilamange 
-# Variable pour savoir si le joueur est au sol ou contre un mur
 
 var is_on_ground: bool = false
 var is_on_wall_left: bool = false
 var is_on_wall_right: bool = false
-var is_on_tree: bool = false  # Nouveau booléen pour savoir si le joueur est sur un arbre
+var is_on_tree: bool = false
 var is_on_bubble: bool = false
 
-@onready var area = $Area2D  # Référence à l'Area2D pour détecter les arbres
+@onready var area = $Area2D
+@onready var wall_ray_left = $RayCast2D_Left
+@onready var wall_ray_right = $RayCast2D_Right
 
 func _ready() -> void:
 
@@ -70,7 +69,11 @@ func _input(event: InputEvent) -> void:
 	if direction != Vector2.ZERO:
 		Last_direction = direction
 
-	if Input.is_action_just_pressed("Jump") and (is_on_wall_left or is_on_wall_right):
+	if Input.is_action_just_pressed("Jump") and (is_on_wall_left):
+		print('sucess')
+		wall_jump()
+	elif Input.is_action_just_pressed("Jump") and (is_on_wall_right):
+		print('sucess')
 		wall_jump()
 	elif Input.is_action_just_pressed("Jump") and is_on_tree:
 		jump()
@@ -118,11 +121,14 @@ func jump() -> void:
 func wall_jump() -> void:
 	if is_on_wall_left:
 		velocity = Vector2(wall_jump_force.x, wall_jump_force.y)
+	
 	elif is_on_wall_right:
 		velocity = Vector2(-wall_jump_force.x, wall_jump_force.y)
+	
 
 	is_on_wall_left = false
 	is_on_wall_right = false
+	move_and_slide()
 
 func apply_gravity(delta: float) -> void:
 	if not is_on_ground and not is_on_tree and not is_on_bubble:
@@ -163,14 +169,8 @@ func check_if_on_ground():
 	return is_on_ground
 
 func check_if_on_wall():
-	is_on_wall_left = position.x <= barrier_min_x
-	is_on_wall_right = position.x >= barrier_max_x
-	if is_stopped:
-		is_on_wall_left = false
-		is_on_wall_right = false
-	if is_on_ground:
-		is_on_wall_left = false
-		is_on_wall_right = false
+	is_on_wall_left = is_on_wall()
+	is_on_wall_right = is_on_wall()
 
 func clamp_position() -> void:
 	position.x = clamp(position.x, barrier_min_x, barrier_max_x)
