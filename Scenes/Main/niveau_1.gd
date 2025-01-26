@@ -1,7 +1,7 @@
 extends Control
 var objetPorte = ""
 signal textChanged
-
+var estcasse = false
 @onready var texte = $bulle/Label
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -39,3 +39,8 @@ func _on_main_button_click(nom_button: Variant, niveau: Variant) -> void:
 func _on_pioche_bulle_pressed() -> void:
 	var parent = get_parent().get_parent()
 	parent.buttonClick.emit("piocheBulle","niveau1")
+
+
+func _on_grab_bulle_pressed() -> void:
+	var parent = get_parent().get_parent()
+	parent.buttonClick.emit("GrabBulle","niveau1")

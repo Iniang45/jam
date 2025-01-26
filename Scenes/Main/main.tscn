@@ -25,11 +25,11 @@
 [ext_resource type="Texture2D" uid="uid://csox5mtuwk5e8" path="res://porteFermee.png" id="18_pbd25"]
 [ext_resource type="Texture2D" uid="uid://c34355x36oww0" path="res://key (1).png" id="19_34don"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_k2hvy"]
-size = Vector2(38, 155)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nnuhi"]
 size = Vector2(71.5, 278.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5m4k5"]
+size = Vector2(128, 204)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jfy1v"]
 radius = 160.449
@@ -129,12 +129,8 @@ autowrap_mode = 2
 
 [node name="StaticBody2D" type="StaticBody2D" parent="cadre/niveau1"]
 position = Vector2(1097, 230)
-collision_layer = 32
+collision_layer = 160
 collision_mask = 33
-
-[node name="CollisionSortie" type="CollisionShape2D" parent="cadre/niveau1/StaticBody2D"]
-position = Vector2(-11, -107)
-shape = SubResource("RectangleShape2D_k2hvy")
 
 [node name="CollisionMur" type="CollisionShape2D" parent="cadre/niveau1/StaticBody2D"]
 position = Vector2(-50.75, 76.25)
@@ -184,6 +180,12 @@ offset_top = 102.0
 offset_right = 1077.0
 offset_bottom = 1552.0
 scale = Vector2(0.1, 0.1)
+
+[node name="Area2D" type="Area2D" parent="cadre/niveau1"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cadre/niveau1/Area2D"]
+position = Vector2(1079, 65)
+shape = SubResource("RectangleShape2D_5m4k5")
 
 [node name="Narrateur" parent="cadre" instance=ExtResource("9_34tiq")]
 z_index = 3
@@ -343,6 +345,7 @@ scale = Vector2(0.1, 0.1)
 [node name="Player" parent="." instance=ExtResource("8_ki5ua")]
 z_index = 4
 position = Vector2(80, 471)
+collision_mask = 134
 
 [node name="Pioche" parent="Player" instance=ExtResource("7_kj7fc")]
 visible = false
@@ -494,5 +497,7 @@ texture = ExtResource("1_mnbm2")
 [connection signal="pressed" from="cadre/niveau1/piocheBulle" to="cadre/niveau1" method="_on_pioche_bulle_pressed"]
 [connection signal="area_entered" from="cadre/niveau1/grosluffy" to="Player" method="_on_grosluffy_area_entered"]
 [connection signal="pressed" from="cadre/niveau1/grosluffyBulle" to="." method="_on_grosluffy_bulle_pressed"]
+[connection signal="pressed" from="cadre/niveau1/GrabBulle" to="cadre/niveau1" method="_on_grab_bulle_pressed"]
+[connection signal="area_entered" from="cadre/niveau1/Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="pressed" from="niveau2/piocheBulle" to="cadre/niveau1" method="_on_pioche_bulle_pressed"]
 [connection signal="ilamange" from="Player" to="." method="_on_player_ilamange"]

@@ -25,7 +25,7 @@ class_name Player
 @export var growth_rate: float = 0.1  # Facteur de croissance
 @export var max_scale: float = 2.0  # Taille maximale du joueur
 @export var min_speed: float = 100.0  # Vitesse minimale si le joueur devient trop gros
-
+var peutClaw = false
 var laPioche = true
 var speed: float = 10.0
 var direction: Vector2 = Vector2.ZERO
@@ -33,7 +33,7 @@ var Last_direction: Vector2 = Vector2.ZERO
 var is_stopped: bool = true
 signal peutclaw
 signal ilamange 
-
+var bar = 1100
 var is_on_ground: bool = false
 var is_on_wall_left: bool = false
 var is_on_wall_right: bool = false
@@ -68,16 +68,16 @@ func _input(event: InputEvent) -> void:
 	direction = Input.get_vector("Left", "Right", "Up", "Down")
 	if direction != Vector2.ZERO:
 		Last_direction = direction
-
-	if Input.is_action_just_pressed("Jump") and (is_on_wall_left):
-		print('sucess')
-		if peutclaw:
-			wall_jump()
-	elif Input.is_action_just_pressed("Jump") and (is_on_wall_right):
-		print('sucess')
-		if peutclaw:
-			wall_jump()
-	elif Input.is_action_just_pressed("Jump") and is_on_tree:
+	if peutClaw:
+		if Input.is_action_just_pressed("Jump") and (is_on_wall_left):
+			print('sucess')
+			if peutclaw:
+				wall_jump()
+		elif Input.is_action_just_pressed("Jump") and (is_on_wall_right):
+			print('sucess')
+			if peutclaw:
+				wall_jump()
+	if Input.is_action_just_pressed("Jump") and is_on_tree:
 		jump()
 
 	elif Input.is_action_just_pressed("Jump") and is_on_ground :
@@ -170,7 +170,7 @@ func check_if_on_wall():
 	is_on_wall_right = is_on_wall()
 
 func clamp_position() -> void:
-	position.x = clamp(position.x, barrier_min_x, barrier_max_x)
+	position.x = clamp(position.x, barrier_min_x, 2500 )
 	position.y = clamp(position.y, barrier_min_y, barrier_max_y)
 
 

@@ -38,10 +38,13 @@ func gros_luffy() -> void:
 	$cadre/niveau1/grosluffy/CollisionShape2D.set_disabled(false)
 	$cadre/niveau1/grosluffyBulle.visible = false
 	$cadre/niveau1/grosluffy.visible = true
-	objetPorte = "grosLuffy"
-	listeItems[objetPorte] = true
+	objetPorte = "grosluffyBulle"
+	listeItems[str(objetPorte)] = true
 	
-	
+func grab():
+	$Player.peutClaw = true 
+	objetPorte ="GrabBulle"
+	listeItems[str(objetPorte)] = true
 
 
 func _on_player_ilamange() -> void:
@@ -55,3 +58,11 @@ func _on_button_click(nom_button: Variant, niveau: Variant) -> void:
 	match nom_button:
 		"piocheBulle":
 			pioche("niveau1")
+		"GrabBulle":
+			grab()
+
+
+func _on_area_2d_area_entered(area: Area2D) -> void:
+	$Camera2D.position.x = 1724
+	$Camera2D.position.y = 330
+	

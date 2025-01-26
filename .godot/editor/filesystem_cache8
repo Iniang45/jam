@@ -1,152 +1,150 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1737915229
-area_2d.gd::GDScript::-1::1737895778::0::1::::<>Area2D<>::
-export_presets.cfg::TextFile::-1::1737910246::0::1::::<><>::
-Falaise.png::CompressedTexture2D::9020477003986140249::1737912589::1737912597::1::::<><>::
-icon.svg::CompressedTexture2D::5147926291349915005::1737887570::1737887655::1::::<><>::
-Iron_Pickaxe_JE3_BE2.webp::CompressedTexture2D::3028477976499565340::1737887566::1737887655::1::::<><>::
-key (1).png::CompressedTexture2D::6799751206278650877::1737895778::1737895793::1::::<><>::
-node_2d.gd::GDScript::-1::1737887570::0::1::::<>Area2D<>::
-pioche2-removebg-preview.png::CompressedTexture2D::3180842902055675080::1737887570::1737887656::1::::<><>::
-pioche2.jpg::CompressedTexture2D::4954591816409944652::1737887570::1737887656::1::::<><>::
-player.tscn::PackedScene::8996650825145303072::1737914945::0::1::::<><>::res://Scenes/Player/Scripts/player.gd<>uid://h1e0d2mxnag7::::res://Sprite/IDLE.png<>uid://d36iuffnyv1hk::::res://Sprite/FALL.png<>uid://bd4udq4wl7meh::::res://Sprite/GROS CHEVALIER.png<>uid://cpnic3d8nfdx5::::res://Sprite/JUMP.png<>uid://drmnrjrlr0yfl::::res://Sprite/WALK.png<>uid://bjmaoba8mfinp::::res://Sprite/GROS CHEVALIER UPDATE.png
-PONT LEVI BASE.png::CompressedTexture2D::5857922966433454424::1737915198::1737915210::1::::<><>::
-PONT LEVI.png::CompressedTexture2D::9106492619202905815::1737915217::1737915229::1::::<><>::
-porteFermee.png::CompressedTexture2D::6066592566648418833::1737906044::1737906051::1::::<><>::
-porteOuverte.png::CompressedTexture2D::5466976745841479304::1737905946::1737905942::1::::<><>::
-Stick.webp::CompressedTexture2D::8137119981642941226::1737887570::1737887656::1::::<><>::
-stones.png::CompressedTexture2D::7139279025487109339::1737895778::1737895793::1::::<><>::
-trap1.png::CompressedTexture2D::822316774401100760::1737895778::1737895793::1::::<><>::
-trap2.png::CompressedTexture2D::5982617959608492732::1737895778::1737895793::1::::<><>::
-trap3.png::CompressedTexture2D::4899185898167298648::1737895778::1737895793::1::::<><>::
-trap4.png::CompressedTexture2D::209916740951379678::1737895778::1737895793::1::::<><>::
-trap5.png::CompressedTexture2D::4017534425377534754::1737895778::1737895793::1::::<><>::
-::res://audio/::1737910322
-devillaught.mp3::AudioStreamMP3::297252024388071588::1737910246::1737910317::1::::<><>::
-jump.wav::AudioStreamWAV::869354622260196404::1737910246::1737910319::1::::<><>::
-meme.mp3::AudioStreamMP3::4556893889548015035::1737910246::1737910317::1::::<><>::
-MUSIQUE JAM.wav::AudioStreamWAV::231520133925110631::1737910246::1737910322::1::::<><>::
-pioche.wav::AudioStreamWAV::7044983953802522767::1737910246::1737910319::1::::<><>::
-run.mp3::AudioStreamMP3::2590322390970531767::1737910246::1737910317::1::::<><>::
-::res://Scenes/::1737895776
-cake.gd::GDScript::-1::1737887567::0::1::::<>Sprite2D<>::
-grosluffy.tscn::PackedScene::1086383795375791309::1737893656::0::1::::<><>::res://area_2d.gd<>uid://br4h5rqr76npd::::res://Sprite/birthday-cake-with-candles-png.webp
-::res://Scenes/Bd/::1737895776
-control.gd::GDScript::-1::1737895776::0::1::::<>Control<>::
-control.tscn::PackedScene::-1::1737887567::0::1::::<><>::
-::res://Scenes/Bd/Sprites/::1737887656
-Capture d’écran 2025-01-25 210305.png::CompressedTexture2D::8091890075283498005::1737887567::1737887656::1::::<><>::
-::res://Scenes/Item/::1737887567
-::res://Scenes/Item/ArbreMagique/::1737895942
-ArbreMagique.tscn::PackedScene::3413877538891606483::1737895942::0::1::::<><>::res://Scenes/Item/ArbreMagique/arbre_magique.gd<>uid://dpfdsdrhpn3tw::::res://Scenes/Item/ArbreMagique/sprites/Arbremini.png<>uid://cq7kauqy6mkbp::::res://Scenes/Item/ArbreMagique/sprites/Capture d’écran 2025-01-25 193740.png<>uid://tkph5b3ajsvn::::res://Scenes/Item/ArbreMagique/sprites/Capture d’écran 2025-01-25 173744.png<>uid://do061485c0moh::::res://Scenes/Item/ArbreMagique/sprites/Capture d’écran 2025-01-25 173759.png
-arbre_magique.gd::GDScript::-1::1737887567::0::1::::<>StaticBody2D<>::
-::res://Scenes/Item/ArbreMagique/ArbreSize/::1737887567
-ArbreSize.gd::GDScript::-1::1737887567::0::1::::ArbreSize<>Resource<>::
-::res://Scenes/Item/ArbreMagique/sprites/::1737887656
-Arbremini.png::CompressedTexture2D::8222631073859037828::1737887567::1737887656::1::::<><>::
-Capture d’écran 2025-01-25 173744.png::CompressedTexture2D::1355156640629920167::1737887567::1737887656::1::::<><>::
-Capture d’écran 2025-01-25 173759.png::CompressedTexture2D::8195445538802970875::1737887567::1737887656::1::::<><>::
-Capture d’écran 2025-01-25 193740.png::CompressedTexture2D::5962531199968531113::1737887567::1737887656::1::::<><>::
-::res://Scenes/Item/Bubble/::1737904098
-Bubble.tscn::PackedScene::9045895937763321051::1737904098::0::1::::<><>::uid://bgcugepmdusao::::res://Scenes/Item/Bubble/Sprite/cercle.png<>res://Scenes/Item/Bubble/Script/bubble.gd
-::res://Scenes/Item/Bubble/Script/::1737904098
-bubble.gd::GDScript::-1::1737904098::0::1::::<>Area2D<>::
-::res://Scenes/Item/Bubble/Sprite/::1737887656
-cercle.png::CompressedTexture2D::2812907789463681382::1737887567::1737887656::1::::<><>::
-::res://Scenes/Item/BubbleSpawner/::1737893657
-BubbleSpawner.tscn::PackedScene::8664327685318820808::1737893657::0::1::::<><>::res://Scenes/Item/BubbleSpawner/bubble_spawner.gd<>uid://d145t4welyq2v::::res://Scenes/Item/Bubble/Bubble.tscn
-bubble_spawner.gd::GDScript::-1::1737887567::0::1::::<>Node2D<>::
-::res://Scenes/Item/Pioche/::1737895776
-pioche.gd::GDScript::-1::1737895776::0::1::::<>Area2D<>::
-Pioche.tscn::PackedScene::8391250446501824387::1737893656::0::1::::<><>::uid://kxn4b2jqkdjw::::res://Sprite/PIOCHE.png<>uid://cuqcxd33n8v3u::::res://Sprite/PIOCHE2-removebg-preview.png
-::res://Scenes/Item/platform/::1737887567
-platform.tscn::PackedScene::28291896906767413::1737887567::0::1::::<><>::uid://cm2k35wkwh40a::::res://Sprite/VENTOUSE.png
-::res://Scenes/Item/stickgun/::1737895768
-stickgun.gd::GDScript::-1::1737887567::0::1::::<>Area2D<>::
-stickgun.tscn::PackedScene::8532112625249480254::1737893660::0::1::::<><>::res://Scenes/Item/stickgun/stickgun.gd<>uid://b4fjqm1ps0u4g::::res://Sprite/VENTOUSE.png
-::res://Scenes/Main/::1737914947
-arbre_bulle.tscn::PackedScene::8099551615036446592::1737914942::0::1::::<><>::uid://xgwd4b5ieil6::::res://Sprite/BULLE RONDE.png
-grab_bulle.tscn::PackedScene::7596070927124037079::1737914943::0::1::::<><>::uid://xgwd4b5ieil6::::res://Sprite/BULLE RONDE.png
-grosluffy_bulle.tscn::PackedScene::1821950623589947833::1737893661::0::1::::<><>::uid://xgwd4b5ieil6::::res://Sprite/BULLE RONDE.png
-lanceurBulle_bulle.tscn::PackedScene::8814238475353367786::1737914944::0::1::::<><>::uid://xgwd4b5ieil6::::res://Sprite/BULLE RONDE.png
-lanceVentouse_bulle.tscn::PackedScene::1249912173865578346::1737914942::0::1::::<><>::uid://xgwd4b5ieil6::::res://Sprite/BULLE RONDE.png
-main.gd::GDScript::-1::1737914799::0::1::::<>Control<>::
-main.tscn::PackedScene::8733969284819996913::1737914947::0::1::::<><>::res://Scenes/Main/main.gd<>uid://dnj1in444uswr::::res://Scenes/Bd/Sprites/Capture d’écran 2025-01-25 210305.png<>res://Scenes/Main/niveau_1.gd<>uid://hsrpqqmo50eh::::res://Sprite/NIVEAU 2.jpeg<>uid://b2pg12w3ngl5n::::res://Sprite/BD BULLE.png<>uid://bhjj23gnrfygc::::res://Scenes/Main/piocheBulle.tscn<>uid://drs1w0hshmjl0::::res://Scenes/Item/Pioche/Pioche.tscn<>uid://pqit2ie7qbu8::::res://Scenes/grosluffy.tscn<>uid://07ti4h3yjr4t::::res://Scenes/Main/grosluffy_bulle.tscn<>uid://d1gbr3rmcg65y::::res://player.tscn<>uid://d26ciriyv0xlb::::res://Scenes/Main/narrateur.tscn<>uid://dxtxhqhpjk6sk::::res://Scenes/Main/lanceurBulle_bulle.tscn<>uid://cxk6q5ppsubl0::::res://Sprite/EXEMPLE BACKGROUND.jpeg<>uid://r2p4u0oqce7k::::res://Scenes/Main/lanceVentouse_bulle.tscn<>uid://vgeytfumrjyd::::res://Sprite/look_to_the_horizon.png<>uid://dnnqoxdef3t3m::::res://Scenes/Main/arbre_bulle.tscn<>uid://c8yk5afks4th0::::res://stones.png<>uid://dghugcgwdgkap::::res://Scenes/Main/grab_bulle.tscn<>res://Scenes/Main/niveau_2.gd<>uid://dkfdq2w6n1mp::::res://audio/MUSIQUE JAM.wav<>uid://cfr6rnmkyj0ea::::res://Sprite/Gros luffy map1.png<>uid://fqvwwd70ppqb::::res://Sprite/pilone.png<>uid://csox5mtuwk5e8::::res://porteFermee.png<>uid://c34355x36oww0::::res://key (1).png
-narrateur.gd::GDScript::-1::1737895776::0::1::::<>Area2D<>::
-narrateur.tscn::PackedScene::9118493166393713259::1737895776::0::1::::<><>::uid://b4dp8on60a8na::::res://Sprite/GAME MASTER.png<>uid://bn58cuf50sr5h::::res://Sprite/GAME_MASTER_TALK.png
-niveau_1.gd::GDScript::-1::1737914048::0::1::::<>Control<>::
-niveau_2.gd::GDScript::-1::1737913964::0::1::::<>Control<>::
-piocheBulle.tscn::PackedScene::2896918138852429318::1737914941::0::1::::<><>::uid://xgwd4b5ieil6::::res://Sprite/BULLE RONDE.png
-pioche_bulle.gd::GDScript::-1::1737913964::0::1::::<>TextureButton<>::
-::res://Scenes/Player/::1737887567
-README.md::TextFile::-1::1737887567::0::1::::<><>::
-::res://Scenes/Player/Scripts/::1737914686
-player.gd::GDScript::-1::1737914685::0::1::::Player<>CharacterBody2D<>::
-::res://Scenes/Player/Sprites/::1737887657
-GROS_CHEVALIER.png::CompressedTexture2D::6052288543323529245::1737887567::1737887656::1::::<><>::
-PlayerTest.png::CompressedTexture2D::2152130773357472566::1737887567::1737887656::1::::<><>::
-::res://Scenes/Test/::1737914944
-test.gd::GDScript::-1::1737895776::0::1::::<>Control<>::
-Test.tscn::PackedScene::2995348690220249464::1737914944::0::1::::<><>::res://Scenes/Test/test.gd<>uid://d1gbr3rmcg65y::::res://player.tscn<>uid://bovycgk6o6svj::::res://Scenes/Item/ArbreMagique/ArbreMagique.tscn<>uid://dvpchgbgwd8ns::::res://Scenes/Item/BubbleSpawner/BubbleSpawner.tscn<>uid://d145t4welyq2v::::res://Scenes/Item/Bubble/Bubble.tscn
-::res://Sprite/::1737915312
-ARALETE VENTOUSE.png::CompressedTexture2D::7468674297843106126::1737887567::1737887657::1::::<><>::
-BACKGROUND NIV2.jpeg::CompressedTexture2D::2543953910107174350::1737915312::1737915326::1::::<><>::
-BD BULLE.png::CompressedTexture2D::4312897314234962997::1737887567::1737887657::1::::<><>::
-birthday-cake-with-candles-png.webp::CompressedTexture2D::3639977491604119245::1737887570::1737887657::1::::<><>::
-BUBBLE ITEM.png::CompressedTexture2D::4354096982151897349::1737887567::1737887657::1::::<><>::
-BUBBLE Object2.png::CompressedTexture2D::6042286893410923274::1737887567::1737887657::1::::<><>::
-BUBBLE Object.png::CompressedTexture2D::269331695982508150::1737887567::1737887657::1::::<><>::
-BUBBLE POP.png::CompressedTexture2D::7959693504484737398::1737887567::1737887658::1::::<><>::
-BUBBLE.png::CompressedTexture2D::211571222863862776::1737887567::1737887659::1::::<><>::
-BUBLLE.png::CompressedTexture2D::7719953861579134512::1737887567::1737887659::1::::<><>::
-BULLE RONDE.png::CompressedTexture2D::1628072327517559253::1737887567::1737887659::1::::<><>::
-bulleBD2.png::CompressedTexture2D::6450203408307706821::1737887570::1737887658::1::::<><>::
-bulleBD3.png::CompressedTexture2D::6909592812030603114::1737887570::1737887658::1::::<><>::
-bulleBD.png::CompressedTexture2D::6802462542999480141::1737887570::1737887658::1::::<><>::
-bulleObject.png::CompressedTexture2D::5211192047171850145::1737887570::1737887658::1::::<><>::
-CHATEAU BACKGROUND.png::CompressedTexture2D::4011895370305210521::1737887568::1737887660::1::::<><>::
-CIEL.jpeg::CompressedTexture2D::9080859647354374944::1737887568::1737887659::1::::<><>::
-ECHELLE.png::CompressedTexture2D::4973018055875879753::1737887568::1737887658::1::::<><>::
-EXEMPLE BACKGROUND.jpeg::CompressedTexture2D::6409740947658727027::1737887568::1737887659::1::::<><>::
-EXEMPLE DECOR.jpeg::CompressedTexture2D::177542484606307347::1737887568::1737887659::1::::<><>::
-FALL.png::CompressedTexture2D::9189067106104653672::1737887568::1737887659::1::::<><>::
-GAME MASTER.png::CompressedTexture2D::4429060725399882606::1737887568::1737887659::1::::<><>::
-GAME_MASTER_TALK.png::CompressedTexture2D::3362815275546642663::1737887568::1737887660::1::::<><>::
-GATEAU.png::CompressedTexture2D::3670545622170009793::1737887568::1737887659::1::::<><>::
-gokuTB.PNG::CompressedTexture2D::1046832974896312628::1737895778::1737895793::1::::<><>::
-GRAINE ITEM.png::CompressedTexture2D::1546971819742917986::1737887568::1737887659::1::::<><>::
-GRASS 1.png::CompressedTexture2D::7535401611808882371::1737887569::1737887654::1::::<><>::
-GRASS 2.png::CompressedTexture2D::5417962901463154679::1737887569::1737887654::1::::<><>::
-GRASS 3.png::CompressedTexture2D::4314065984596890573::1737887569::1737887654::1::::<><>::
-GROS CHEVALIER UPDATE.png::CompressedTexture2D::3042917864637739761::1737887569::1737887653::1::::<><>::
-GROS CHEVALIER.png::CompressedTexture2D::2658074752900456815::1737887569::1737887653::1::::<><>::
-Gros luffy map1.png::CompressedTexture2D::5160793294495537780::1737895776::1737895794::1::::<><>::
-Gros luffy map2.png::CompressedTexture2D::7283392376223437243::1737895777::1737895794::1::::<><>::
-Gros luffy map3.png::CompressedTexture2D::4954179796627414853::1737895777::1737895794::1::::<><>::
-Gros luffy map4.png::CompressedTexture2D::3116357232707560156::1737895777::1737895794::1::::<><>::
-GROUND.png::CompressedTexture2D::7971082144070005608::1737887569::1737887654::1::::<><>::
-IDLE.png::CompressedTexture2D::545283439746710788::1737887569::1737887653::1::::<><>::
-IMG_0436.png::CompressedTexture2D::2174432912636298657::1737887569::1737887653::1::::<><>::
-IMG_0437.png::CompressedTexture2D::8650191066798330675::1737887569::1737887653::1::::<><>::
-IMG_0438.png::CompressedTexture2D::6495465946082902467::1737887569::1737887654::1::::<><>::
-IMG_0440.png::CompressedTexture2D::205507816709824952::1737887569::1737887653::1::::<><>::
-jiren.PNG::CompressedTexture2D::8797753577037894573::1737887570::1737887653::1::::<><>::
-JUMP.png::CompressedTexture2D::5853001717094565904::1737887569::1737887653::1::::<><>::
-look_to_the_horizon.png::CompressedTexture2D::1486638716540920799::1737895778::1737895793::1::::<><>::
-MONTAGNE.png::CompressedTexture2D::7576277631066591603::1737887569::1737887654::1::::<><>::
-NIVEAU 1 EXEMPLE.jpeg::CompressedTexture2D::754118081751768900::1737887569::1737887654::1::::<><>::
-NIVEAU 2.jpeg::CompressedTexture2D::529540546480520899::1737887569::1737887654::1::::<><>::
-NUAGE MENACANT.png::CompressedTexture2D::5034862359052374399::1737887570::1737887654::1::::<><>::
-PAW BACKGROUND.jpeg::CompressedTexture2D::7795445759897024052::1737887570::1737887653::1::::<><>::
-PAW_BACKGROUND-removebg-preview.png::CompressedTexture2D::5276841639663000389::1737887570::1737887654::1::::<><>::
-PENSEE NUAGE.png::CompressedTexture2D::1139524535675534321::1737887570::1737887655::1::::<><>::
-PENSEE.png::CompressedTexture2D::4752801263136609986::1737887570::1737887655::1::::<><>::
-pilone.png::CompressedTexture2D::385289768205187621::1737904098::1737910318::1::::<><>::
-PIOCHE2-removebg-preview.png::CompressedTexture2D::6209810993572612344::1737887570::1737887654::1::::<><>::
-PIOCHE.png::CompressedTexture2D::750210328316671108::1737887570::1737887654::1::::<><>::
-PLAINE.png::CompressedTexture2D::5227221973663637268::1737887570::1737887655::1::::<><>::
-PONT LEVI BASE.png::CompressedTexture2D::7091333279214673549::1737915312::1737915326::1::::<><>::
-PONT LEVI EXEMPLE.png::CompressedTexture2D::5087722355470814187::1737915312::1737915326::1::::<><>::
-PONT LEVI.png::CompressedTexture2D::6647968368912885009::1737915312::1737915326::1::::<><>::
-VENTOUSE.png::CompressedTexture2D::4432794734755424248::1737887570::1737887655::1::::<><>::
-WALK.png::CompressedTexture2D::8378065104872262541::1737887570::1737887655::1::::<><>::
+::res://::1737915669
+area_2d.gd::GDScript::-1::1737915638::0::1::::<>Area2D<>::
+export_presets.cfg::TextFile::-1::1737915641::0::1::::<><>::
+Falaise.png::CompressedTexture2D::9020477003986140249::1737915632::1737915715::1::::<><>::
+icon.svg::CompressedTexture2D::5147926291349915005::1737915641::1737915714::1::::<><>::
+Iron_Pickaxe_JE3_BE2.webp::CompressedTexture2D::3028477976499565340::1737915632::1737915714::1::::<><>::
+key (1).png::CompressedTexture2D::6799751206278650877::1737915641::1737915714::1::::<><>::
+node_2d.gd::GDScript::-1::1737915641::0::1::::<>Area2D<>::
+pioche2-removebg-preview.png::CompressedTexture2D::3180842902055675080::1737915641::1737915714::1::::<><>::
+pioche2.jpg::CompressedTexture2D::4954591816409944652::1737915641::1737915714::1::::<><>::
+player.tscn::PackedScene::8996650825145303072::1737915641::0::1::::<><>::res://Scenes/Player/Scripts/player.gd<>uid://h1e0d2mxnag7::::res://Sprite/IDLE.png<>uid://d36iuffnyv1hk::::res://Sprite/FALL.png<>uid://bd4udq4wl7meh::::res://Sprite/GROS CHEVALIER.png<>uid://cpnic3d8nfdx5::::res://Sprite/JUMP.png<>uid://drmnrjrlr0yfl::::res://Sprite/WALK.png<>uid://bjmaoba8mfinp::::res://Sprite/GROS CHEVALIER UPDATE.png
+porteFermee.png::CompressedTexture2D::6066592566648418833::1737915641::1737915714::1::::<><>::
+porteOuverte.png::CompressedTexture2D::5466976745841479304::1737915641::1737915714::1::::<><>::
+Stick.webp::CompressedTexture2D::8137119981642941226::1737915638::1737915714::1::::<><>::
+stones.png::CompressedTexture2D::7139279025487109339::1737915641::1737915714::1::::<><>::
+trap1.png::CompressedTexture2D::822316774401100760::1737915641::1737915714::1::::<><>::
+trap2.png::CompressedTexture2D::5982617959608492732::1737915641::1737915714::1::::<><>::
+trap3.png::CompressedTexture2D::4899185898167298648::1737915641::1737915714::1::::<><>::
+trap4.png::CompressedTexture2D::209916740951379678::1737915641::1737915714::1::::<><>::
+trap5.png::CompressedTexture2D::4017534425377534754::1737915641::1737915714::1::::<><>::
+::res://audio/::1737915641
+devillaught.mp3::AudioStreamMP3::297252024388071588::1737915641::1737915712::1::::<><>::
+jump.wav::AudioStreamWAV::869354622260196404::1737915641::1737915726::1::::<><>::
+meme.mp3::AudioStreamMP3::4556893889548015035::1737915641::1737915712::1::::<><>::
+MUSIQUE JAM.wav::AudioStreamWAV::231520133925110631::1737915641::1737915730::1::::<><>::
+pioche.wav::AudioStreamWAV::7044983953802522767::1737915641::1737915726::1::::<><>::
+run.mp3::AudioStreamMP3::2590322390970531767::1737915641::1737915712::1::::<><>::
+::res://Scenes/::1737915632
+cake.gd::GDScript::-1::1737915632::0::1::::<>Sprite2D<>::
+grosluffy.tscn::PackedScene::1086383795375791309::1737915632::0::1::::<><>::res://area_2d.gd<>uid://br4h5rqr76npd::::res://Sprite/birthday-cake-with-candles-png.webp
+::res://Scenes/Bd/::1737915632
+control.gd::GDScript::-1::1737915632::0::1::::<>Control<>::
+control.tscn::PackedScene::1206642218626244376::1737915632::0::1::::<><>::res://Scenes/Bd/control.gd<>uid://d1gbr3rmcg65y::::res://player.tscn<>uid://drs1w0hshmjl0::::res://Scenes/Item/Pioche/Pioche.tscn<>res://Scenes/Item/Pioche/pioche.gd<>uid://pqit2ie7qbu8::::res://Scenes/grosluffy.tscn<>uid://o6dglgsccja7::::res://Sprite/gokuTB.PNG
+::res://Scenes/Bd/Sprites/::1737915632
+Capture d’écran 2025-01-25 210305.png::CompressedTexture2D::8091890075283498005::1737915632::1737915719::1::::<><>::
+::res://Scenes/Item/::1737915632
+::res://Scenes/Item/ArbreMagique/::1737915632
+ArbreMagique.tscn::PackedScene::3413877538891606483::1737915632::0::1::::<><>::res://Scenes/Item/ArbreMagique/arbre_magique.gd<>uid://dpfdsdrhpn3tw::::res://Scenes/Item/ArbreMagique/sprites/Arbremini.png<>uid://cq7kauqy6mkbp::::res://Scenes/Item/ArbreMagique/sprites/Capture d’écran 2025-01-25 193740.png<>uid://tkph5b3ajsvn::::res://Scenes/Item/ArbreMagique/sprites/Capture d’écran 2025-01-25 173744.png<>uid://do061485c0moh::::res://Scenes/Item/ArbreMagique/sprites/Capture d’écran 2025-01-25 173759.png
+arbre_magique.gd::GDScript::-1::1737915632::0::1::::<>StaticBody2D<>::
+::res://Scenes/Item/ArbreMagique/ArbreSize/::1737915632
+ArbreSize.gd::GDScript::-1::1737915632::0::1::::ArbreSize<>Resource<>::
+::res://Scenes/Item/ArbreMagique/sprites/::1737915632
+Arbremini.png::CompressedTexture2D::8222631073859037828::1737915632::1737915719::1::::<><>::
+Capture d’écran 2025-01-25 173744.png::CompressedTexture2D::1355156640629920167::1737915632::1737915719::1::::<><>::
+Capture d’écran 2025-01-25 173759.png::CompressedTexture2D::8195445538802970875::1737915632::1737915719::1::::<><>::
+Capture d’écran 2025-01-25 193740.png::CompressedTexture2D::5962531199968531113::1737915632::1737915719::1::::<><>::
+::res://Scenes/Item/Bubble/::1737915632
+Bubble.tscn::PackedScene::9045895937763321051::1737915632::0::1::::<><>::res://Scenes/Item/Bubble/Script/bubble.gd<>uid://dh8urodsobqea::::res://Sprite/BUBLLE.png<>uid://dlny8vnkx4dpu::::res://Sprite/BUBBLE POP.png
+::res://Scenes/Item/Bubble/Script/::1737915632
+bubble.gd::GDScript::-1::1737915632::0::1::::<>StaticBody2D<>::
+::res://Scenes/Item/Bubble/Sprite/::1737915632
+cercle.png::CompressedTexture2D::2812907789463681382::1737915632::1737915719::1::::<><>::
+::res://Scenes/Item/BubbleSpawner/::1737915632
+BubbleSpawner.tscn::PackedScene::8664327685318820808::1737915632::0::1::::<><>::res://Scenes/Item/BubbleSpawner/bubble_spawner.gd<>uid://d145t4welyq2v::::res://Scenes/Item/Bubble/Bubble.tscn
+bubble_spawner.gd::GDScript::-1::1737915632::0::1::::<>Node2D<>::
+::res://Scenes/Item/Pioche/::1737915632
+pioche.gd::GDScript::-1::1737915632::0::1::::<>Area2D<>::
+Pioche.tscn::PackedScene::8391250446501824387::1737915632::0::1::::<><>::uid://kxn4b2jqkdjw::::res://Sprite/PIOCHE.png<>uid://cuqcxd33n8v3u::::res://Sprite/PIOCHE2-removebg-preview.png
+::res://Scenes/Item/platform/::1737915632
+platform.tscn::PackedScene::28291896906767413::1737915632::0::1::::<><>::uid://cm2k35wkwh40a::::res://Sprite/VENTOUSE.png
+::res://Scenes/Item/stickgun/::1737915632
+stickgun.gd::GDScript::-1::1737915632::0::1::::<>Area2D<>::
+stickgun.tscn::PackedScene::8532112625249480254::1737915632::0::1::::<><>::res://Scenes/Item/stickgun/stickgun.gd<>uid://cm2k35wkwh40a::::res://Sprite/VENTOUSE.png
+::res://Scenes/Main/::1737915632
+arbre_bulle.tscn::PackedScene::8099551615036446592::1737915632::0::1::::<><>::uid://xgwd4b5ieil6::::res://Sprite/BULLE RONDE.png
+grab_bulle.tscn::PackedScene::7596070927124037079::1737915632::0::1::::<><>::uid://xgwd4b5ieil6::::res://Sprite/BULLE RONDE.png
+grosluffy_bulle.tscn::PackedScene::1821950623589947833::1737915632::0::1::::<><>::uid://xgwd4b5ieil6::::res://Sprite/BULLE RONDE.png
+lanceurBulle_bulle.tscn::PackedScene::8814238475353367786::1737915632::0::1::::<><>::uid://xgwd4b5ieil6::::res://Sprite/BULLE RONDE.png
+lanceVentouse_bulle.tscn::PackedScene::1249912173865578346::1737915632::0::1::::<><>::uid://xgwd4b5ieil6::::res://Sprite/BULLE RONDE.png
+main.gd::GDScript::-1::1737915632::0::1::::<>Control<>::
+main.tscn::PackedScene::8733969284819996913::1737915632::0::1::::<><>::res://Scenes/Main/main.gd<>uid://dnj1in444uswr::::res://Scenes/Bd/Sprites/Capture d’écran 2025-01-25 210305.png<>res://Scenes/Main/niveau_1.gd<>uid://hsrpqqmo50eh::::res://Sprite/NIVEAU 2.jpeg<>uid://b2pg12w3ngl5n::::res://Sprite/BD BULLE.png<>uid://bhjj23gnrfygc::::res://Scenes/Main/piocheBulle.tscn<>uid://drs1w0hshmjl0::::res://Scenes/Item/Pioche/Pioche.tscn<>uid://pqit2ie7qbu8::::res://Scenes/grosluffy.tscn<>uid://07ti4h3yjr4t::::res://Scenes/Main/grosluffy_bulle.tscn<>uid://d1gbr3rmcg65y::::res://player.tscn<>uid://d26ciriyv0xlb::::res://Scenes/Main/narrateur.tscn<>uid://dxtxhqhpjk6sk::::res://Scenes/Main/lanceurBulle_bulle.tscn<>uid://cxk6q5ppsubl0::::res://Sprite/EXEMPLE BACKGROUND.jpeg<>uid://r2p4u0oqce7k::::res://Scenes/Main/lanceVentouse_bulle.tscn<>uid://vgeytfumrjyd::::res://Sprite/look_to_the_horizon.png<>uid://dnnqoxdef3t3m::::res://Scenes/Main/arbre_bulle.tscn<>uid://c8yk5afks4th0::::res://stones.png<>uid://dghugcgwdgkap::::res://Scenes/Main/grab_bulle.tscn<>res://Scenes/Main/niveau_2.gd<>uid://dkfdq2w6n1mp::::res://audio/MUSIQUE JAM.wav<>uid://cfr6rnmkyj0ea::::res://Sprite/Gros luffy map1.png<>uid://fqvwwd70ppqb::::res://Sprite/pilone.png<>uid://csox5mtuwk5e8::::res://porteFermee.png<>uid://c34355x36oww0::::res://key (1).png
+narrateur.gd::GDScript::-1::1737915632::0::1::::<>Area2D<>::
+narrateur.tscn::PackedScene::9118493166393713259::1737915632::0::1::::<><>::uid://b4dp8on60a8na::::res://Sprite/GAME MASTER.png<>res://Scenes/Main/narrateur.gd<>uid://bn58cuf50sr5h::::res://Sprite/GAME_MASTER_TALK.png
+niveau_1.gd::GDScript::-1::1737915632::0::1::::<>Control<>::
+niveau_2.gd::GDScript::-1::1737915632::0::1::::<>Control<>::
+piocheBulle.tscn::PackedScene::2896918138852429318::1737915632::0::1::::<><>::uid://xgwd4b5ieil6::::res://Sprite/BULLE RONDE.png
+pioche_bulle.gd::GDScript::-1::1737915632::0::1::::<>TextureButton<>::
+::res://Scenes/Player/::1737915632
+README.md::TextFile::-1::1737915632::0::1::::<><>::
+::res://Scenes/Player/Scripts/::1737915632
+player.gd::GDScript::-1::1737915632::0::1::::Player<>CharacterBody2D<>::
+::res://Scenes/Player/Sprites/::1737915632
+GROS_CHEVALIER.png::CompressedTexture2D::6052288543323529245::1737915632::1737915719::1::::<><>::
+PlayerTest.png::CompressedTexture2D::2152130773357472566::1737915632::1737915719::1::::<><>::
+::res://Scenes/Test/::1737915632
+test.gd::GDScript::-1::1737915632::0::1::::<>Control<>::
+Test.tscn::PackedScene::2995348690220249464::1737915632::0::1::::<><>::res://Scenes/Test/test.gd<>uid://d1gbr3rmcg65y::::res://player.tscn<>uid://bovycgk6o6svj::::res://Scenes/Item/ArbreMagique/ArbreMagique.tscn<>uid://dvpchgbgwd8ns::::res://Scenes/Item/BubbleSpawner/BubbleSpawner.tscn<>uid://d145t4welyq2v::::res://Scenes/Item/Bubble/Bubble.tscn
+::res://Sprite/::1737915638
+ARALETE VENTOUSE.png::CompressedTexture2D::7468674297843106126::1737915632::1737915719::1::::<><>::
+BACKGROUND NIV2.jpeg::CompressedTexture2D::2543953910107174350::1737915632::1737915719::1::::<><>::
+BD BULLE.png::CompressedTexture2D::4312897314234962997::1737915633::1737915719::1::::<><>::
+birthday-cake-with-candles-png.webp::CompressedTexture2D::3639977491604119245::1737915638::1737915719::1::::<><>::
+BUBBLE ITEM.png::CompressedTexture2D::4354096982151897349::1737915633::1737915719::1::::<><>::
+BUBBLE Object2.png::CompressedTexture2D::6042286893410923274::1737915633::1737915718::1::::<><>::
+BUBBLE Object.png::CompressedTexture2D::269331695982508150::1737915633::1737915718::1::::<><>::
+BUBBLE POP.png::CompressedTexture2D::7959693504484737398::1737915633::1737915719::1::::<><>::
+BUBBLE.png::CompressedTexture2D::211571222863862776::1737915633::1737915720::1::::<><>::
+BUBLLE.png::CompressedTexture2D::7719953861579134512::1737915633::1737915720::1::::<><>::
+BULLE RONDE.png::CompressedTexture2D::1628072327517559253::1737915633::1737915720::1::::<><>::
+bulleBD2.png::CompressedTexture2D::6450203408307706821::1737915638::1737915718::1::::<><>::
+bulleBD3.png::CompressedTexture2D::6909592812030603114::1737915638::1737915723::1::::<><>::
+bulleBD.png::CompressedTexture2D::6802462542999480141::1737915638::1737915723::1::::<><>::
+bulleObject.png::CompressedTexture2D::5211192047171850145::1737915638::1737915723::1::::<><>::
+CHATEAU BACKGROUND.png::CompressedTexture2D::4011895370305210521::1737915633::1737915724::1::::<><>::
+CIEL.jpeg::CompressedTexture2D::9080859647354374944::1737915633::1737915723::1::::<><>::
+ECHELLE.png::CompressedTexture2D::4973018055875879753::1737915634::1737915723::1::::<><>::
+EXEMPLE BACKGROUND.jpeg::CompressedTexture2D::6409740947658727027::1737915634::1737915724::1::::<><>::
+EXEMPLE DECOR.jpeg::CompressedTexture2D::177542484606307347::1737915634::1737915724::1::::<><>::
+FALL.png::CompressedTexture2D::9189067106104653672::1737915634::1737915723::1::::<><>::
+GAME MASTER.png::CompressedTexture2D::4429060725399882606::1737915634::1737915723::1::::<><>::
+GAME_MASTER_TALK.png::CompressedTexture2D::3362815275546642663::1737915634::1737915724::1::::<><>::
+GATEAU.png::CompressedTexture2D::3670545622170009793::1737915634::1737915722::1::::<><>::
+gokuTB.PNG::CompressedTexture2D::1046832974896312628::1737915638::1737915720::1::::<><>::
+GRAINE ITEM.png::CompressedTexture2D::1546971819742917986::1737915634::1737915720::1::::<><>::
+GRASS 1.png::CompressedTexture2D::7535401611808882371::1737915634::1737915721::1::::<><>::
+GRASS 2.png::CompressedTexture2D::5417962901463154679::1737915634::1737915721::1::::<><>::
+GRASS 3.png::CompressedTexture2D::4314065984596890573::1737915634::1737915721::1::::<><>::
+GROS CHEVALIER UPDATE.png::CompressedTexture2D::3042917864637739761::1737915634::1737915720::1::::<><>::
+GROS CHEVALIER.png::CompressedTexture2D::2658074752900456815::1737915634::1737915719::1::::<><>::
+Gros luffy map1.png::CompressedTexture2D::5160793294495537780::1737915635::1737915721::1::::<><>::
+Gros luffy map2.png::CompressedTexture2D::7283392376223437243::1737915635::1737915720::1::::<><>::
+Gros luffy map3.png::CompressedTexture2D::4954179796627414853::1737915636::1737915716::1::::<><>::
+Gros luffy map4.png::CompressedTexture2D::3116357232707560156::1737915636::1737915715::1::::<><>::
+GROUND.png::CompressedTexture2D::7971082144070005608::1737915635::1737915715::1::::<><>::
+IDLE.png::CompressedTexture2D::545283439746710788::1737915636::1737915715::1::::<><>::
+IMG_0436.png::CompressedTexture2D::2174432912636298657::1737915637::1737915714::1::::<><>::
+IMG_0437.png::CompressedTexture2D::8650191066798330675::1737915637::1737915714::1::::<><>::
+IMG_0438.png::CompressedTexture2D::6495465946082902467::1737915637::1737915715::1::::<><>::
+IMG_0440.png::CompressedTexture2D::205507816709824952::1737915637::1737915714::1::::<><>::
+jiren.PNG::CompressedTexture2D::8797753577037894573::1737915638::1737915714::1::::<><>::
+JUMP.png::CompressedTexture2D::5853001717094565904::1737915637::1737915714::1::::<><>::
+look_to_the_horizon.png::CompressedTexture2D::1486638716540920799::1737915638::1737915714::1::::<><>::
+MONTAGNE.png::CompressedTexture2D::7576277631066591603::1737915637::1737915715::1::::<><>::
+NIVEAU 1 EXEMPLE.jpeg::CompressedTexture2D::754118081751768900::1737915637::1737915715::1::::<><>::
+NIVEAU 2.jpeg::CompressedTexture2D::529540546480520899::1737915637::1737915715::1::::<><>::
+NUAGE MENACANT.png::CompressedTexture2D::5034862359052374399::1737915637::1737915715::1::::<><>::
+PAW BACKGROUND.jpeg::CompressedTexture2D::7795445759897024052::1737915637::1737915715::1::::<><>::
+PAW_BACKGROUND-removebg-preview.png::CompressedTexture2D::5276841639663000389::1737915637::1737915714::1::::<><>::
+PENSEE NUAGE.png::CompressedTexture2D::1139524535675534321::1737915637::1737915715::1::::<><>::
+PENSEE.png::CompressedTexture2D::4752801263136609986::1737915637::1737915715::1::::<><>::
+pilone.png::CompressedTexture2D::385289768205187621::1737915638::1737915714::1::::<><>::
+PIOCHE2-removebg-preview.png::CompressedTexture2D::6209810993572612344::1737915637::1737915714::1::::<><>::
+PIOCHE.png::CompressedTexture2D::750210328316671108::1737915637::1737915718::1::::<><>::
+PLAINE.png::CompressedTexture2D::5227221973663637268::1737915637::1737915719::1::::<><>::
+PONT LEVI BASE.png::CompressedTexture2D::7091333279214673549::1737915637::1737915718::1::::<><>::
+PONT LEVI EXEMPLE.png::CompressedTexture2D::5087722355470814187::1737915638::1737915718::1::::<><>::
+PONT LEVI.png::CompressedTexture2D::6647968368912885009::1737915638::1737915719::1::::<><>::
+VENTOUSE.png::CompressedTexture2D::4432794734755424248::1737915638::1737915718::1::::<><>::
+WALK.png::CompressedTexture2D::8378065104872262541::1737915638::1737915718::1::::<><>::
