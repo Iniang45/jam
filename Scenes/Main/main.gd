@@ -1,9 +1,14 @@
 extends Control
+
+@onready var music_player = $BackgroundMusic  # Référence au nœud AudioStreamPlayer
+
 var objetPorte = ""
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	# Démarrer la musique lorsque la scène est prête
+	if not music_player.playing:
+		music_player.play()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

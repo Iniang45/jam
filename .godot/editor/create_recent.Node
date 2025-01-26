@@ -1,4 +1,17 @@
+<<<<<<< HEAD
 RayCast2D
+=======
+<<<<<<< HEAD
+AudioStreamPlayer2D
+AudioListener2D
+=======
+<<<<<<< HEAD
+RayCast2D
+=======
+<<<<<<< HEAD
+>>>>>>> d34df79adacce421cd37a4fbc41ad895d72f2cfb
+Sprite2D
+>>>>>>> 4be33dffc665ba395590e4f8afc36a088e82231f
 CollisionShape2D
 Area2D
 CharacterBody2D
@@ -7,5 +20,27 @@ Node2D
 VisibleOnScreenNotifier2D
 Sprite2D
 StaticBody2D
+<<<<<<< HEAD
 StaticBody2D
 Camera2D
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> ddc1fa447ae19f833c3d1d0f552b4507a7d48a89
+>>>>>>> d34df79adacce421cd37a4fbc41ad895d72f2cfb
+StaticBody2D
+CollisionShape2D
+Area2D
+Camera2D
+CollisionShape2D
+TextureRect
+Area2D
+Control
+<<<<<<< HEAD
+=======
+CharacterBody2D
+Control
+Label
+>>>>>>> d34df79adacce421cd37a4fbc41ad895d72f2cfb
+>>>>>>> 4be33dffc665ba395590e4f8afc36a088e82231f
