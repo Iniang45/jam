@@ -1,6 +1,6 @@
-TextureRect
 CollisionShape2D
 Area2D
+TextureRect
 Control
 AudioStreamPlayer2D
 AudioListener2D
