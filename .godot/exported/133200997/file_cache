@@ -1,0 +1,17 @@
+res://Scenes/Item/ArbreMagique/ArbreMagique.tscn::385f1ddccbd8bfcf711bec1b9b811c0d::1737899450::res://.godot/exported/133200997/export-47e3b5dc0e2a8c038f192c7dd0ede548-ArbreMagique.scn
+res://Scenes/Item/Bubble/Bubble.tscn::325482d6580eaa98cfbce6113996e483::1737903774::res://.godot/exported/133200997/export-ed4ff3ab48934f486aad83dbb0128da6-Bubble.scn
+res://Scenes/Item/BubbleSpawner/BubbleSpawner.tscn::1ce2e3ccdf1bcee2a04a236677283f63::1737899450::res://.godot/exported/133200997/export-9f51be29bb0a8ecef2b0586d37f5a2d6-BubbleSpawner.scn
+res://Scenes/Item/Pioche/Pioche.tscn::c6a3a2f6392a5914cdf38c27d0cd39b0::1737899449::res://.godot/exported/133200997/export-c3b4f759404f9b09d217d08c6b69ec44-Pioche.scn
+res://Scenes/Item/platform/platform.tscn::d491141a9b1352c8902c6ba5ee8cc256::1737896906::res://.godot/exported/133200997/export-6a8b2d7de1cb8be14e9f8eed55cf2da3-platform.scn
+res://Scenes/Item/stickgun/stickgun.tscn::0b968311b51c7c4d0805491f2135113b::1737896906::res://.godot/exported/133200997/export-d18249b81765d77ca8d28a4e7f60f83e-stickgun.scn
+res://Scenes/Main/arbre_bulle.tscn::26f053b5dbe1ca9c5babf93ce187758e::1737896906::res://.godot/exported/133200997/export-5f4f2c07efa324fb6127f9e43b145eb0-arbre_bulle.scn
+res://Scenes/Main/grab_bulle.tscn::b2e70a063327af6e47b55f904167c75e::1737896906::res://.godot/exported/133200997/export-59fd3c2b29d3a4e94dff12566150f25e-grab_bulle.scn
+res://Scenes/Main/grosluffy_bulle.tscn::8612ef146fa62438301db2973da1214b::1737896906::res://.godot/exported/133200997/export-537a8a986c328f084248607c30106dfe-grosluffy_bulle.scn
+res://Scenes/Main/lanceurBulle_bulle.tscn::dae470a923958344702bc3dba838dd1f::1737896906::res://.godot/exported/133200997/export-13304ab40440fbfb0fba98933c6d6cd4-lanceurBulle_bulle.scn
+res://Scenes/Main/lanceVentouse_bulle.tscn::00d3109e6aa0bb46c32cca646b684a43::1737896906::res://.godot/exported/133200997/export-c28c6225a02c27348881a154866612a8-lanceVentouse_bulle.scn
+res://Scenes/Main/main.tscn::cc97fe38495e1e69c431d8834f8ee7b0::1737903775::res://.godot/exported/133200997/export-0c6835a2b535eafd02a3b62c0a86d578-main.scn
+res://Scenes/Main/narrateur.tscn::c0bff06f399c740f4522970a55754243::1737896906::res://.godot/exported/133200997/export-33c83c908fab0719f34d45e21cbbd5d5-narrateur.scn
+res://Scenes/Main/piocheBulle.tscn::15c02e99c343e5e3ed79905e60b0299a::1737896906::res://.godot/exported/133200997/export-0f9a6bafbb5c027cdc78d9947d341355-piocheBulle.scn
+res://Scenes/Test/Test.tscn::8ae4ee42d7fe925e8791cf56a3584f9f::1737903774::res://.godot/exported/133200997/export-26347c1ed03fdca884abc6c236fca442-Test.scn
+res://Scenes/grosluffy.tscn::e0bb6ffcd324e8647d1bc50a57c60b6d::1737903773::res://.godot/exported/133200997/export-ccc72eeb02b0efb01a0a6707f7cace66-grosluffy.scn
+res://player.tscn::5a4e192e383575ceca21719cf53a0d80::1737903773::res://.godot/exported/133200997/export-36a25e342948d0ceacc500772b5412b3-player.scn
