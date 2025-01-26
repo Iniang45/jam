@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 Area2D
 CollisionShape2D
+=======
+CollisionShape2D
+Area2D
+>>>>>>> e174cf53221012124daa4987e3d65f679fb86348
 TextureRect
 Control
 AudioStreamPlayer2D

@@ -342,6 +342,9 @@ offset_right = 2280.0
 offset_bottom = 1478.0
 scale = Vector2(0.1, 0.1)
 
+[node name="Area2D" type="Area2D" parent="niveau2"]
+position = Vector2(-1156, 0)
+
 [node name="Player" parent="." instance=ExtResource("8_ki5ua")]
 z_index = 4
 position = Vector2(80, 471)
