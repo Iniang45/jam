@@ -1,13 +1,17 @@
 extends Control
 @onready var touche = false
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$Player/PlayerSprite.animation = "idle"
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta: float) -> void:
-	#pass
+func _process(delta: float) -> void:
+	if Input.is_action_just_pressed("use"):
+		$Player/Pioche/Sprite2D.play()
+		if $Player/Pioche.peutcasser:
+			$Area2D/TextureRect.texture = load("res://Sprite/jiren.PNG")
 		
 	#if Input.is_action_just_pressed("use") :
 		#$Player/Pioche/Sprite2D.play()

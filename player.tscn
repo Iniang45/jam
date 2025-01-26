@@ -136,3 +136,4 @@ shape = SubResource("SegmentShape2D_o2xva")
 position = Vector2(12, -26)
 target_position = Vector2(-2, 46)
 collision_mask = 7
+collide_with_areas = true

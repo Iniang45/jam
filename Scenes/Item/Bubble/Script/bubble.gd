@@ -1,4 +1,4 @@
-extends Area2D
+extends StaticBody2D
 
 @export var angle_offset: float = 0.0  # Inclinaison (en degrés)
 @export var vertical_speed: float = 100.0  # Vitesse verticale
@@ -15,7 +15,7 @@ func _ready():
 	print("Bubble ready with angle_offset =", angle_offset, "and horizontal_speed =", horizontal_speed)
 
 	# Connecter le signal de collision
-	connect("area_entered", Callable(self, "_on_bubble_collided"))
+	$Area2D.connect("area_entered", Callable(self, "_on_area_entered"))
 
 func _process(delta):
 	# Ajoutez du temps pour les oscillations
@@ -40,3 +40,10 @@ func _on_bubble_collided(other_area):
 		# Supprimer les deux bulles
 		print("Bubble collided and will be removed!")
 		queue_free()  # Supprimer cette bulle
+
+
+func _on_area_entered(area: Area2D) -> void:
+	if area.is_in_group("bubbles"):
+		print("Collision avec une autre bulle !")
+		queue_free()
+		area.queue_free()
