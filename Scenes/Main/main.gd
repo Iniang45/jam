@@ -29,7 +29,7 @@ func _process(delta: float) -> void:
 func pioche(niveau) -> void:
 	print("piocheBulle")
 	$Player/Pioche.visible = true
-	objetPorte = "Pioche"
+	objetPorte = "piocheBulle"
 	listeItems[str(objetPorte)] = true
 
 

@@ -83,10 +83,10 @@ script = ExtResource("2_ll3vj")
 top_level = true
 z_index = 3
 layout_mode = 1
-offset_left = 260.0
-offset_top = 30.0
-offset_right = 1156.0
-offset_bottom = 1502.0
+offset_left = 239.0
+offset_top = 7.0
+offset_right = 1135.0
+offset_bottom = 1479.0
 scale = Vector2(0.1, 0.1)
 
 [node name="TextureRect" type="TextureRect" parent="cadre/niveau1"]
@@ -106,12 +106,11 @@ metadata/_edit_lock_ = true
 [node name="bulle" type="TextureRect" parent="cadre/niveau1"]
 z_index = 4
 layout_mode = 0
-offset_left = 514.0
-offset_top = -13.0
-offset_right = 2849.0
-offset_bottom = 2035.0
-rotation = -0.251327
-scale = Vector2(0.15, 0.15)
+offset_left = 619.0
+offset_top = -40.0
+offset_right = 2954.0
+offset_bottom = 2008.0
+scale = Vector2(0.1, 0.1)
 texture = ExtResource("4_ot828")
 
 [node name="Label" type="Label" parent="cadre/niveau1/bulle"]
@@ -148,18 +147,18 @@ scale = Vector2(0.5, 0.5)
 
 [node name="grosluffyBulle" parent="cadre/niveau1" instance=ExtResource("8_1eftr")]
 layout_mode = 1
-offset_left = 53.0
-offset_top = 2.00001
-offset_right = 1000.0
-offset_bottom = 1452.0
+offset_left = 39.0
+offset_top = -16.0
+offset_right = 986.0
+offset_bottom = 1434.0
 scale = Vector2(0.1, 0.1)
 
 [node name="LanceurBulleBulle" parent="cadre/niveau1" instance=ExtResource("9_fhi41")]
 layout_mode = 1
-offset_left = 419.0
-offset_top = -21.0
-offset_right = 1366.0
-offset_bottom = 1429.0
+offset_left = 371.0
+offset_top = -20.0
+offset_right = 1318.0
+offset_bottom = 1430.0
 scale = Vector2(0.1, 0.1)
 
 [node name="LanceVentouseBulle" parent="cadre/niveau1" instance=ExtResource("10_cs6xd")]
@@ -172,23 +171,23 @@ scale = Vector2(0.1, 0.1)
 
 [node name="ArbreBulle" parent="cadre/niveau1" instance=ExtResource("11_ii2gb")]
 layout_mode = 1
-offset_left = 304.0
-offset_top = 123.0
-offset_right = 1251.0
-offset_bottom = 1573.0
+offset_left = 293.0
+offset_top = 102.0
+offset_right = 1240.0
+offset_bottom = 1552.0
 scale = Vector2(0.1, 0.1)
 
 [node name="GrabBulle" parent="cadre/niveau1" instance=ExtResource("12_nfcxv")]
 layout_mode = 1
-offset_left = 116.0
-offset_top = 112.0
-offset_right = 1063.0
-offset_bottom = 1562.0
+offset_left = 130.0
+offset_top = 102.0
+offset_right = 1077.0
+offset_bottom = 1552.0
 scale = Vector2(0.1, 0.1)
 
 [node name="Narrateur" parent="cadre" instance=ExtResource("9_34tiq")]
 z_index = 3
-position = Vector2(942, 80)
+position = Vector2(916, 102)
 
 [node name="niveau2" type="Control" parent="." groups=["niveaux"]]
 anchors_preset = 0
@@ -273,65 +272,73 @@ shape = SubResource("CircleShape2D_jfy1v")
 
 [node name="grosluffyBulle" parent="niveau2" instance=ExtResource("8_1eftr")]
 layout_mode = 1
-offset_left = 265.0
-offset_top = 1.0
-offset_right = 1167.0
-offset_bottom = 1401.0
-
-[node name="piocheBulle" parent="niveau2" instance=ExtResource("4_ovarf")]
-layout_mode = 1
-offset_left = 157.0
-offset_top = 113.0
-offset_right = 1104.0
-offset_bottom = 1563.0
+offset_left = 58.0
+offset_top = 8.00002
+offset_right = 960.0
+offset_bottom = 1408.0
+scale = Vector2(0.1, 0.1)
 
 [node name="LanceVentouseBulle" parent="niveau2" instance=ExtResource("10_cs6xd")]
 layout_mode = 0
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 0.0
-offset_top = 0.0
-offset_right = 947.0
-offset_bottom = 1450.0
+offset_left = 358.0
+offset_top = 137.0
+offset_right = 2406.0
+offset_bottom = 2185.0
 grow_horizontal = 1
 grow_vertical = 1
+scale = Vector2(0.1, 0.1)
 
 [node name="LanceurBulleBulle" parent="niveau2" instance=ExtResource("9_fhi41")]
 layout_mode = 0
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 0.0
-offset_top = 0.0
-offset_right = 896.0
-offset_bottom = 1400.0
+offset_left = 395.0
+offset_top = 12.0
+offset_right = 2443.0
+offset_bottom = 2060.0
 grow_horizontal = 1
 grow_vertical = 1
+scale = Vector2(0.1, 0.1)
 
 [node name="GrabBulle" parent="niveau2" instance=ExtResource("12_nfcxv")]
 layout_mode = 0
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 0.0
-offset_top = 0.0
-offset_right = 896.0
-offset_bottom = 1400.0
+offset_left = -5.00002
+offset_top = 126.0
+offset_right = 2043.0
+offset_bottom = 2174.0
 grow_horizontal = 1
 grow_vertical = 1
+scale = Vector2(0.1, 0.1)
 
 [node name="ArbreBulle" parent="niveau2" instance=ExtResource("11_ii2gb")]
 layout_mode = 0
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 0.0
-offset_top = 0.0
-offset_right = 896.0
-offset_bottom = 1400.0
+offset_left = 175.0
+offset_top = 138.0
+offset_right = 2223.0
+offset_bottom = 2186.0
 grow_horizontal = 1
 grow_vertical = 1
+scale = Vector2(0.1, 0.1)
+
+[node name="piocheBulle" parent="niveau2" instance=ExtResource("4_ovarf")]
+top_level = true
+z_index = 3
+layout_mode = 1
+offset_left = 1384.0
+offset_top = 6.0
+offset_right = 2280.0
+offset_bottom = 1478.0
+scale = Vector2(0.1, 0.1)
 
 [node name="Player" parent="." instance=ExtResource("8_ki5ua")]
 z_index = 4
@@ -487,5 +494,5 @@ texture = ExtResource("1_mnbm2")
 [connection signal="pressed" from="cadre/niveau1/piocheBulle" to="cadre/niveau1" method="_on_pioche_bulle_pressed"]
 [connection signal="area_entered" from="cadre/niveau1/grosluffy" to="Player" method="_on_grosluffy_area_entered"]
 [connection signal="pressed" from="cadre/niveau1/grosluffyBulle" to="." method="_on_grosluffy_bulle_pressed"]
-[connection signal="pressed" from="niveau2/piocheBulle" to="niveau2" method="_on_pioche_bulle_pressed"]
+[connection signal="pressed" from="niveau2/piocheBulle" to="cadre/niveau1" method="_on_pioche_bulle_pressed"]
 [connection signal="ilamange" from="Player" to="." method="_on_player_ilamange"]
