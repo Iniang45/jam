@@ -38,6 +38,9 @@ var is_on_bubble: bool = false
 @onready var area = $Area2D
 @onready var wall_ray_left = $RayCast2D_Left
 @onready var wall_ray_right = $RayCast2D_Right
+@export var stickgun_scene: PackedScene
+
+
 
 func _ready() -> void:
 
@@ -54,9 +57,8 @@ func _physics_process(delta: float) -> void:
 	apply_gravity(delta)
 	if is_stopped:
 		move(delta)
-	clamp_position()  # Appliquer les limites de la barrière*
-	if is_on_wall():
-		print("Collision avec un mur")
+	clamp_position()  
+	
 
 
 func _input(event: InputEvent) -> void:
@@ -65,10 +67,10 @@ func _input(event: InputEvent) -> void:
 		Last_direction = direction
 
 	if Input.is_action_just_pressed("Jump") and (is_on_wall_left):
-		print('sucess')
+		
 		wall_jump()
 	elif Input.is_action_just_pressed("Jump") and (is_on_wall_right):
-		print('sucess')
+		
 		wall_jump()
 	elif Input.is_action_just_pressed("Jump") and is_on_tree:
 		jump()
@@ -101,6 +103,22 @@ func _input(event: InputEvent) -> void:
 	if check_if_on_ground() and $PlayerSprite.animation == "jump":
 		$PlayerSprite.animation = "idle"
 		$PlayerSprite.play()
+	if event.is_action_pressed("use"):  # Lorsque tu presses l'action pour tirer
+		print("Tir de la ventouse")
+		shoot_stickgun()
+
+func shoot_stickgun():
+	# Instancier la scène Stickgun
+	var stickgun = stickgun_scene.instantiate()
+	
+	# Positionner la ventouse à l'endroit exact du Player
+	stickgun.global_position = global_position
+	
+	# Ajouter la ventouse comme enfant de la scène principale
+	get_parent().add_child(stickgun)
+
+	# Déclencher le mouvement de la ventouse
+	stickgun.is_moving = true
 
 
 
@@ -144,7 +162,6 @@ func move(delta: float) -> void:
 func check_if_on_ground():
 	if $RayCast2D.is_colliding():
 		var collider = $RayCast2D.get_collider()
-		print("RayCast collision avec :", collider)
 		if collider and collider.is_in_group("ArbreMagique"):  # Vérifie le groupe
 			is_on_tree = true
 			return false
@@ -188,13 +205,13 @@ func _on_area_2d_area_exited(area: Area2D) -> void:
 
 func _on_arbre_magique_area_entered(area: Area2D) -> void:
 	is_stopped = false  # Bloque le joueur
-	print("Est bloquer")
+	
 	
 
 
 func _on_arbre_magique_area_exited(area: Area2D) -> void:
 	is_stopped = true #Debloque joueur
-	print("Est bloquer NON")
+	
 
 
 func _on_grosluffy_area_entered(area: Area2D) -> void:

@@ -1,6 +1,7 @@
-[gd_scene load_steps=19 format=3 uid="uid://d1gbr3rmcg65y"]
+[gd_scene load_steps=20 format=3 uid="uid://d1gbr3rmcg65y"]
 
 [ext_resource type="Script" path="res://Scenes/Player/Scripts/player.gd" id="1_oahe0"]
+[ext_resource type="PackedScene" uid="uid://dttawbr7lv423" path="res://Scenes/Item/stickgun/stickgun.tscn" id="2_6cwso"]
 [ext_resource type="Texture2D" uid="uid://h1e0d2mxnag7" path="res://Sprite/IDLE.png" id="2_nithq"]
 [ext_resource type="Texture2D" uid="uid://d36iuffnyv1hk" path="res://Sprite/FALL.png" id="2_wgxf6"]
 [ext_resource type="Texture2D" uid="uid://bd4udq4wl7meh" path="res://Sprite/GROS CHEVALIER.png" id="3_lel7g"]
@@ -106,42 +107,44 @@ radius = 58.0
 height = 192.0
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_o2xva"]
-a = Vector2(-86, 26)
-b = Vector2(170, 28)
+a = Vector2(-54, 0)
+b = Vector2(68, 2)
 
 [node name="Player" type="CharacterBody2D"]
-position = Vector2(554, 289)
 scale = Vector2(0.5, 0.5)
-collision_mask = 38
+collision_mask = 166
 script = ExtResource("1_oahe0")
+stickgun_scene = ExtResource("2_6cwso")
 
 [node name="PlayerSprite" type="AnimatedSprite2D" parent="."]
-position = Vector2(10, -124)
+position = Vector2(10, -68)
 scale = Vector2(0.563542, 0.541667)
 sprite_frames = SubResource("SpriteFrames_je1g4")
 animation = &"idle"
 
 [node name="hitboxPlayer" type="CollisionShape2D" parent="."]
-position = Vector2(8, -100)
+position = Vector2(12, -34)
 shape = SubResource("CapsuleShape2D_s3tls")
 
 [node name="Area2D" type="Area2D" parent="."]
+position = Vector2(10, 62)
 collision_mask = 7
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-22, -22)
 shape = SubResource("SegmentShape2D_o2xva")
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
-position = Vector2(12, -26)
+position = Vector2(10, 16)
 target_position = Vector2(-2, 46)
-collision_mask = 7
+collision_mask = 231
 collide_with_areas = true
 
 [node name="RayCast2D_Left" type="RayCast2D" parent="."]
-position = Vector2(4, -78)
+position = Vector2(4, -2)
 target_position = Vector2(-52, 0)
+collision_mask = 225
 
 [node name="RayCast2D_Right" type="RayCast2D" parent="."]
-position = Vector2(6, -78)
+position = Vector2(6, -2)
 target_position = Vector2(60, 2)
+collision_mask = 225

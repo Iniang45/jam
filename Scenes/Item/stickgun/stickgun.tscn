@@ -1,22 +1,30 @@
 [gd_scene load_steps=4 format=3 uid="uid://dttawbr7lv423"]
 
 [ext_resource type="Script" path="res://Scenes/Item/stickgun/stickgun.gd" id="1_0y65b"]
-[ext_resource type="Texture2D" uid="uid://cm2k35wkwh40a" path="res://Sprite/VENTOUSE.png" id="2_k2bfd"]
+[ext_resource type="Texture2D" uid="uid://b4fjqm1ps0u4g" path="res://Sprite/VENTOUSE.png" id="2_k2bfd"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_k7kl8"]
-radius = 28.9042
-height = 178.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_t2bel"]
+height = 154.0
 
-[node name="Stickgun" type="Area2D"]
+[node name="Stickgun" type="CharacterBody2D"]
+position = Vector2(1, -1)
+collision_layer = 128
+collision_mask = 97
 script = ExtResource("1_0y65b")
 
 [node name="Stick" type="Sprite2D" parent="."]
-position = Vector2(287, 98)
+position = Vector2(2.00005, -2.99999)
 rotation = 0.00698132
 scale = Vector2(0.38125, 0.38125)
 texture = ExtResource("2_k2bfd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(295, 104)
+position = Vector2(1, 0)
 rotation = -1.5708
-shape = SubResource("CapsuleShape2D_k7kl8")
+shape = SubResource("CapsuleShape2D_t2bel")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2(52, 0)
+target_position = Vector2(30, 0)
+collision_mask = 33
+collide_with_areas = true
