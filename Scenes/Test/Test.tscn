@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://biw77qlgpy8yu"]
+[gd_scene load_steps=6 format=3 uid="uid://biw77qlgpy8yu"]
 
 [ext_resource type="Script" path="res://Scenes/Test/test.gd" id="1_bfxd5"]
 [ext_resource type="PackedScene" uid="uid://d1gbr3rmcg65y" path="res://player.tscn" id="2_ew3d1"]
 [ext_resource type="PackedScene" uid="uid://bovycgk6o6svj" path="res://Scenes/Item/ArbreMagique/ArbreMagique.tscn" id="3_p8xag"]
+[ext_resource type="PackedScene" uid="uid://dvpchgbgwd8ns" path="res://Scenes/Item/BubbleSpawner/BubbleSpawner.tscn" id="4_rqw4e"]
+[ext_resource type="PackedScene" uid="uid://d145t4welyq2v" path="res://Scenes/Item/Bubble/Bubble.tscn" id="5_s4pcq"]
 
 [node name="Test" type="Control"]
 layout_mode = 3
@@ -12,3 +14,7 @@ script = ExtResource("1_bfxd5")
 [node name="Player" parent="." instance=ExtResource("2_ew3d1")]
 
 [node name="ArbreMagique" parent="." instance=ExtResource("3_p8xag")]
+
+[node name="BubbleSpawner" parent="." instance=ExtResource("4_rqw4e")]
+
+[node name="Bubble" parent="." instance=ExtResource("5_s4pcq")]

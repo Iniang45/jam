@@ -6,3 +6,4 @@ res://Scenes/Item/ArbreMagique/ArbreMagique.tscn
 res://Scenes/Item/BubbleSpawner/BubbleSpawner.tscn
 res://Scenes/Item/Bubble/Bubble.tscn
 res://Scenes/Main/main.tscn
+res://Scenes/Player/Scripts/player.gd

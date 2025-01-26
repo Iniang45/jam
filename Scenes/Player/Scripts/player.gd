@@ -36,6 +36,7 @@ var is_on_ground: bool = false
 var is_on_wall_left: bool = false
 var is_on_wall_right: bool = false
 var is_on_tree: bool = false  # Nouveau booléen pour savoir si le joueur est sur un arbre
+var is_on_bubble: bool = false
 
 @onready var area = $Area2D  # Référence à l'Area2D pour détecter les arbres
 
@@ -67,6 +68,8 @@ func _input(event: InputEvent) -> void:
 		jump()
 
 	elif Input.is_action_just_pressed("Jump") and is_on_ground :
+		jump()
+	elif Input.is_action_just_pressed("Jump") and is_on_bubble:
 		jump()
 
 	if speed > 0 and direction.x == 1:
@@ -101,6 +104,7 @@ func jump() -> void:
 	velocity.y = -jump_force
 	is_on_ground = false
 	is_on_tree = false
+	is_on_bubble = false
 
 func wall_jump() -> void:
 	if is_on_wall_left:
@@ -112,7 +116,7 @@ func wall_jump() -> void:
 	is_on_wall_right = false
 
 func apply_gravity(delta: float) -> void:
-	if not is_on_ground and not is_on_tree:
+	if not is_on_ground and not is_on_tree and not is_on_bubble:
 		if is_on_wall_left or is_on_wall_right:
 			velocity.y = min(velocity.y + fall_speed * delta, wall_slide_speed)
 		else:
@@ -135,7 +139,11 @@ func check_if_on_ground():
 		if collider and collider.is_in_group("ArbreMagique"):  # Vérifie le groupe
 			is_on_tree = true
 			return false
+		if collider and collider.is_in_group("bubbles"):  # Vérifie le groupe
+			is_on_bubble = true
+			return false
 	is_on_tree = false
+	is_on_bubble = false
 	is_on_ground = position.y >= barrier_max_y
 	return is_on_ground
 
@@ -160,11 +168,15 @@ func clamp_position() -> void:
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	if area.is_in_group("ArbreMagique"):
 		is_on_tree = true
+	if area.is_in_group("bubbles"):
+		is_on_bubble = true
 
 
 func _on_area_2d_area_exited(area: Area2D) -> void:
 	if area.is_in_group("ArbreMagique"):
 		is_on_tree = false
+	if area.is_in_group("bubbles"):
+		is_on_bubble = false
 
 
 
