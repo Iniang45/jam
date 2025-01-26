@@ -55,7 +55,10 @@ func _physics_process(delta: float) -> void:
 	apply_gravity(delta)
 	if is_stopped:
 		move(delta)
-	clamp_position()  # Appliquer les limites de la barrière
+	clamp_position()  # Appliquer les limites de la barrière*
+	if is_on_wall():
+		print("Collision avec un mur")
+
 
 func _input(event: InputEvent) -> void:
 	direction = Input.get_vector("Left", "Right", "Up", "Down")

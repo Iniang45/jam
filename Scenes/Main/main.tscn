@@ -108,14 +108,16 @@ savez mais y'a différents
 types de prof"
 autowrap_mode = 2
 
-[node name="Area2D" type="Area2D" parent="cadre/niveau1"]
+[node name="StaticBody2D" type="StaticBody2D" parent="cadre/niveau1"]
 position = Vector2(1097, 230)
+collision_layer = 32
+collision_mask = 33
 
-[node name="CollisionSortie" type="CollisionShape2D" parent="cadre/niveau1/Area2D"]
+[node name="CollisionSortie" type="CollisionShape2D" parent="cadre/niveau1/StaticBody2D"]
 position = Vector2(-11, -107)
 shape = SubResource("RectangleShape2D_k2hvy")
 
-[node name="CollisionMur" type="CollisionShape2D" parent="cadre/niveau1/Area2D"]
+[node name="CollisionMur" type="CollisionShape2D" parent="cadre/niveau1/StaticBody2D"]
 position = Vector2(-50.75, 76.25)
 shape = SubResource("RectangleShape2D_nnuhi")
 
