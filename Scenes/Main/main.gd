@@ -35,3 +35,19 @@ func _on_player_ilamange() -> void:
 
 func _on_niveau_1_text_changed() -> void:
 	$cadre/Narrateur/AnimatedSprite2D.play()
+
+
+func _on_lance_ventouse_bulle_pressed() -> void:
+	pass # Replace with function body.
+
+
+func _on_lanceur_bulle_bulle_pressed() -> void:
+	pass # Replace with function body.
+
+
+func _on_grab_bulle_pressed() -> void:
+	pass # Replace with function body.
+
+
+func _on_arbre_bulle_pressed() -> void:
+	pass # Replace with function body.
