@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d20iura4h2h0b"
-path="res://.godot/imported/PONT LEVI.png-9cb4c7a5345a05ef84dfda26e6738887.ctex"
+uid="uid://c1ylcklclgh18"
+path="res://.godot/imported/PONT LEVI.png-e4b9fd36a967eaf94413faa13eb92574.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://PONT LEVI.png"
-dest_files=["res://.godot/imported/PONT LEVI.png-9cb4c7a5345a05ef84dfda26e6738887.ctex"]
+source_file="res://Sprite/PONT LEVI.png"
+dest_files=["res://.godot/imported/PONT LEVI.png-e4b9fd36a967eaf94413faa13eb92574.ctex"]
 
 [params]
 

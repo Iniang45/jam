@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1737915217
+::res://::1737915229
 area_2d.gd::GDScript::-1::1737895778::0::1::::<>Area2D<>::
 export_presets.cfg::TextFile::-1::1737910246::0::1::::<><>::
 Falaise.png::CompressedTexture2D::9020477003986140249::1737912589::1737912597::1::::<><>::
@@ -88,8 +88,9 @@ PlayerTest.png::CompressedTexture2D::2152130773357472566::1737887567::1737887656
 ::res://Scenes/Test/::1737914944
 test.gd::GDScript::-1::1737895776::0::1::::<>Control<>::
 Test.tscn::PackedScene::2995348690220249464::1737914944::0::1::::<><>::res://Scenes/Test/test.gd<>uid://d1gbr3rmcg65y::::res://player.tscn<>uid://bovycgk6o6svj::::res://Scenes/Item/ArbreMagique/ArbreMagique.tscn<>uid://dvpchgbgwd8ns::::res://Scenes/Item/BubbleSpawner/BubbleSpawner.tscn<>uid://d145t4welyq2v::::res://Scenes/Item/Bubble/Bubble.tscn
-::res://Sprite/::1737910318
+::res://Sprite/::1737915312
 ARALETE VENTOUSE.png::CompressedTexture2D::7468674297843106126::1737887567::1737887657::1::::<><>::
+BACKGROUND NIV2.jpeg::CompressedTexture2D::2543953910107174350::1737915312::1737915326::1::::<><>::
 BD BULLE.png::CompressedTexture2D::4312897314234962997::1737887567::1737887657::1::::<><>::
 birthday-cake-with-candles-png.webp::CompressedTexture2D::3639977491604119245::1737887570::1737887657::1::::<><>::
 BUBBLE ITEM.png::CompressedTexture2D::4354096982151897349::1737887567::1737887657::1::::<><>::
@@ -144,5 +145,8 @@ pilone.png::CompressedTexture2D::385289768205187621::1737904098::1737910318::1::
 PIOCHE2-removebg-preview.png::CompressedTexture2D::6209810993572612344::1737887570::1737887654::1::::<><>::
 PIOCHE.png::CompressedTexture2D::750210328316671108::1737887570::1737887654::1::::<><>::
 PLAINE.png::CompressedTexture2D::5227221973663637268::1737887570::1737887655::1::::<><>::
+PONT LEVI BASE.png::CompressedTexture2D::7091333279214673549::1737915312::1737915326::1::::<><>::
+PONT LEVI EXEMPLE.png::CompressedTexture2D::5087722355470814187::1737915312::1737915326::1::::<><>::
+PONT LEVI.png::CompressedTexture2D::6647968368912885009::1737915312::1737915326::1::::<><>::
 VENTOUSE.png::CompressedTexture2D::4432794734755424248::1737887570::1737887655::1::::<><>::
 WALK.png::CompressedTexture2D::8378065104872262541::1737887570::1737887655::1::::<><>::
