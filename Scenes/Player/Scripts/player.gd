@@ -26,7 +26,7 @@ var speed: float = 10.0
 var direction: Vector2 = Vector2.ZERO
 var Last_direction: Vector2 = Vector2.ZERO
 var is_stopped: bool = true
-
+signal peutclaw
 signal ilamange 
 
 var is_on_ground: bool = false
@@ -66,10 +66,12 @@ func _input(event: InputEvent) -> void:
 
 	if Input.is_action_just_pressed("Jump") and (is_on_wall_left):
 		print('sucess')
-		wall_jump()
+		if peutclaw:
+			wall_jump()
 	elif Input.is_action_just_pressed("Jump") and (is_on_wall_right):
 		print('sucess')
-		wall_jump()
+		if peutclaw:
+			wall_jump()
 	elif Input.is_action_just_pressed("Jump") and is_on_tree:
 		jump()
 
@@ -144,7 +146,7 @@ func move(delta: float) -> void:
 func check_if_on_ground():
 	if $RayCast2D.is_colliding():
 		var collider = $RayCast2D.get_collider()
-		print("RayCast collision avec :", collider)
+		#print("RayCast collision avec :", collider)
 		if collider and collider.is_in_group("ArbreMagique"):  # Vérifie le groupe
 			is_on_tree = true
 			return false
