@@ -9,11 +9,5 @@ res://Scenes/Main/main.tscn
 res://Scenes/Player/Scripts/player.gd
 res://Scenes/Item/ArbreMagique/arbre_magique.gd
 res://Scenes/Item/Bubble/Script/bubble.gd
-<<<<<<< HEAD
 res://Scenes/Item/stickgun/stickgun.tscn
 res://Scenes/Item/stickgun/stickgun.gd
-=======
-res://Scenes/Main/main.tscn
-res://Scenes/Player/Scripts/player.gd
-res://Scenes/Main/main.gd
->>>>>>> 4be33dffc665ba395590e4f8afc36a088e82231f
