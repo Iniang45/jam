@@ -11,7 +11,9 @@ func _process(delta: float) -> void:
 	
 	if Input.is_action_just_pressed("use") and objetPorte == "Pioche":
 		$cadre/Player/Pioche/Sprite2D.play()
-
+	if Input.is_action_just_pressed("camera2"):
+		$Camera2D.position.x = 1724
+		$Camera2D.position.y = 330
 func _on_pioche_bulle_pressed() -> void:
 	print("pioche")
 	$cadre/niveau1/piocheBulle.visible = false

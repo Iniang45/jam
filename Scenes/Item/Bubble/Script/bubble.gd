@@ -38,12 +38,10 @@ func _on_bubble_collided(other_area):
 	# Vérifier si l'autre zone est une autre bulle
 	if other_area.is_in_group("bubbles"):
 		# Supprimer les deux bulles
-		print("Bubble collided and will be removed!")
 		queue_free()  # Supprimer cette bulle
 
 
 func _on_area_entered(area: Area2D) -> void:
 	if area.is_in_group("bubbles"):
-		print("Collision avec une autre bulle !")
 		queue_free()
 		area.queue_free()
