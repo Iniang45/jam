@@ -10,21 +10,52 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_xu7f0"]
 radius = 84.006
 
+<<<<<<< HEAD
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_fsq7g"]
+a = Vector2(-68, 0)
+b = Vector2(80, 0)
+
+[node name="Control" type="Control"]
+=======
 [node name="Control2" type="Control"]
+>>>>>>> 404ffb043c0ebb95c0b59965b2b956a1135ea09b
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = 6.0
+offset_right = 1.0
+offset_bottom = 6.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_hm3nx")
 
 [node name="Player" parent="." instance=ExtResource("2_al0ut")]
+position = Vector2(791, 83)
+collision_mask = 14
+
+[node name="RayCast2D" type="RayCast2D" parent="Player" groups=["ArbreMagique"]]
+position = Vector2(0, -36)
+scale = Vector2(2, 2)
+target_position = Vector2(0, 20)
+collision_mask = 30
+
+[node name="Area2D" type="Area2D" parent="Player" groups=["ArbreMagique"]]
+collision_layer = 16
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Area2D" groups=["ArbreMagique"]]
+shape = SubResource("SegmentShape2D_fsq7g")
 
 [node name="Pioche" parent="Player" instance=ExtResource("3_roxj6")]
 position = Vector2(84, -146)
 script = ExtResource("4_f3q83")
 
+<<<<<<< HEAD
+[connection signal="area_entered" from="Player/Area2D" to="Player" method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Player/Area2D" to="Player" method="_on_area_2d_area_exited"]
+=======
 [node name="grosluffy" parent="." instance=ExtResource("4_nu1xi")]
 position = Vector2(121, 494)
 

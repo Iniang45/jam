@@ -1,9 +1,14 @@
+<<<<<<< HEAD
 TextureRect
 Control
+=======
+RayCast2D
+>>>>>>> fa928a16fe7af3a879a7e492d6d169c2c0077e7d
 CollisionShape2D
 Area2D
 Label
 TextureButton
+<<<<<<< HEAD
 Timer
 Sprite2D
 AnimatedSprite2D
@@ -11,3 +16,13 @@ StaticBody2D
 RigidBody2D
 ReferenceRect
 CanvasLayer
+=======
+Sprite2D
+StaticBody2D
+CharacterBody2D
+TextureRect
+AnimatedSprite2D
+TextureRect
+Timer
+Sprite2D
+>>>>>>> fa928a16fe7af3a879a7e492d6d169c2c0077e7d
