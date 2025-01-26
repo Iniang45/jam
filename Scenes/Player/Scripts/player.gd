@@ -20,7 +20,7 @@ class_name Player
 @export var barrier_min_x: float = 40  # Limite gauche de la barrière
 @export var barrier_max_x: float = 1100  # Limite droite de la barrière
 @export var barrier_min_y: float = 23  # Limite supérieure de la barrière
-@export var barrier_max_y: float = 471  # Limite inférieure de la barrière
+@export var barrier_max_y: float = 2000  # Limite inférieure de la barrière
 
 @export var growth_rate: float = 0.1  # Facteur de croissance
 @export var max_scale: float = 2.0  # Taille maximale du joueur
@@ -77,6 +77,7 @@ func _input(event: InputEvent) -> void:
 			print('sucess')
 			if peutclaw:
 				wall_jump()
+				$PlayerSprite.animation = "walk"
 	if Input.is_action_just_pressed("Jump") and is_on_tree:
 		jump()
 
@@ -125,7 +126,7 @@ func wall_jump() -> void:
 	
 	elif is_on_wall_right:
 		velocity = Vector2(-wall_jump_force.x, wall_jump_force.y)
-	
+	$PlayerSprite.animation = "walk"
 
 	is_on_wall_left = false
 	is_on_wall_right = false

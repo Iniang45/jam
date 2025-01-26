@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://dwo2gy8a48r18"]
+[gd_scene load_steps=35 format=3 uid="uid://dwo2gy8a48r18"]
 
 [ext_resource type="Script" path="res://Scenes/Main/main.gd" id="1_h7g0j"]
 [ext_resource type="Texture2D" uid="uid://dnj1in444uswr" path="res://Scenes/Bd/Sprites/Capture d’écran 2025-01-25 210305.png" id="1_mnbm2"]
@@ -26,13 +26,25 @@
 [ext_resource type="Texture2D" uid="uid://c34355x36oww0" path="res://key (1).png" id="19_34don"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nnuhi"]
-size = Vector2(71.5, 278.5)
+size = Vector2(71.5, 383.555)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lys67"]
+size = Vector2(1098, 148)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bysn2"]
+size = Vector2(880, 167.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5m4k5"]
 size = Vector2(128, 204)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jfy1v"]
 radius = 160.449
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_grj2v"]
+size = Vector2(791, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k3c1c"]
+size = Vector2(588, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wok0x"]
 size = Vector2(237.668, 593.235)
@@ -132,9 +144,32 @@ position = Vector2(1097, 230)
 collision_layer = 160
 collision_mask = 33
 
-[node name="CollisionMur" type="CollisionShape2D" parent="cadre/niveau1/StaticBody2D"]
-position = Vector2(-50.75, 76.25)
+[node name="CollisionMur2" type="CollisionShape2D" parent="cadre/niveau1/StaticBody2D"]
+position = Vector2(209.521, 260.813)
+rotation = 1.58628
 shape = SubResource("RectangleShape2D_nnuhi")
+
+[node name="CollisionMur2" type="CollisionShape2D" parent="cadre/niveau1/StaticBody2D/CollisionMur2"]
+position = Vector2(9.99191, -335.674)
+rotation = 3.08068
+shape = SubResource("RectangleShape2D_nnuhi")
+
+[node name="CollisionMur2" type="CollisionShape2D" parent="cadre/niveau1/StaticBody2D/CollisionMur2/CollisionMur2"]
+position = Vector2(9.99191, -335.674)
+rotation = 3.11375
+shape = SubResource("RectangleShape2D_nnuhi")
+
+[node name="CollisionMur" type="CollisionShape2D" parent="cadre/niveau1/StaticBody2D"]
+position = Vector2(-40, 74)
+shape = SubResource("RectangleShape2D_nnuhi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cadre/niveau1/StaticBody2D"]
+position = Vector2(-543, 297)
+shape = SubResource("RectangleShape2D_lys67")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="cadre/niveau1/StaticBody2D"]
+position = Vector2(718, 971.25)
+shape = SubResource("RectangleShape2D_bysn2")
 
 [node name="grosluffy" parent="cadre/niveau1" instance=ExtResource("7_mdvum")]
 visible = false
@@ -269,7 +304,7 @@ offset_bottom = 213.0
 texture = ExtResource("12_mctcu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="niveau2/cadre/bg/Area2D"]
-position = Vector2(-2, 68)
+position = Vector2(326, -520)
 shape = SubResource("CircleShape2D_jfy1v")
 
 [node name="grosluffyBulle" parent="niveau2" instance=ExtResource("8_1eftr")]
@@ -344,11 +379,23 @@ scale = Vector2(0.1, 0.1)
 
 [node name="Area2D" type="Area2D" parent="niveau2"]
 position = Vector2(-1156, 0)
+collision_layer = 32
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="niveau2/Area2D"]
+position = Vector2(1577.5, 485)
+shape = SubResource("RectangleShape2D_grj2v")
+
+[node name="Area2D2" type="Area2D" parent="niveau2"]
+collision_layer = 32
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="niveau2/Area2D2"]
+position = Vector2(1284, 485)
+shape = SubResource("RectangleShape2D_k3c1c")
 
 [node name="Player" parent="." instance=ExtResource("8_ki5ua")]
 z_index = 4
 position = Vector2(80, 471)
-collision_mask = 134
+collision_mask = 230
 
 [node name="Pioche" parent="Player" instance=ExtResource("7_kj7fc")]
 visible = false
