@@ -18,8 +18,9 @@ size = Vector2(175, 300)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t6y33"]
 size = Vector2(176, 499)
 
-[node name="ArbreMagique" type="Area2D"]
+[node name="ArbreMagique" type="StaticBody2D" groups=["ArbreMagique"]]
 collision_layer = 2
+collision_mask = 15
 script = ExtResource("1_4pw2p")
 
 [node name="Sprite_BIG" type="Sprite2D" parent="."]
@@ -45,16 +46,13 @@ position = Vector2(546, 541)
 shape = SubResource("RectangleShape2D_753bp")
 
 [node name="CollisionShape_SMALL" type="CollisionShape2D" parent="."]
-visible = false
 position = Vector2(551, 507)
 shape = SubResource("RectangleShape2D_y0jjl")
 
 [node name="CollisionShape_MEDIUM" type="CollisionShape2D" parent="."]
-visible = false
 position = Vector2(554, 446)
 shape = SubResource("RectangleShape2D_e15kt")
 
 [node name="CollisionShape_BIG" type="CollisionShape2D" parent="."]
-visible = false
 position = Vector2(550, 350)
 shape = SubResource("RectangleShape2D_t6y33")

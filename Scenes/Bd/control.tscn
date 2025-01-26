@@ -1,21 +1,45 @@
-[gd_scene load_steps=4 format=3 uid="uid://ts1pmad0bh3b"]
+[gd_scene load_steps=5 format=3 uid="uid://ts1pmad0bh3b"]
 
 [ext_resource type="Script" path="res://Scenes/Bd/control.gd" id="1_hm3nx"]
 [ext_resource type="PackedScene" uid="uid://d1gbr3rmcg65y" path="res://player.tscn" id="2_al0ut"]
 [ext_resource type="PackedScene" uid="uid://bovycgk6o6svj" path="res://Scenes/Item/ArbreMagique/ArbreMagique.tscn" id="3_tyakr"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_fsq7g"]
+a = Vector2(-68, 0)
+b = Vector2(80, 0)
 
 [node name="Control" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = 6.0
+offset_right = 1.0
+offset_bottom = 6.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_hm3nx")
 
 [node name="Player" parent="." instance=ExtResource("2_al0ut")]
+position = Vector2(791, 83)
+collision_mask = 14
+
+[node name="RayCast2D" type="RayCast2D" parent="Player" groups=["ArbreMagique"]]
+position = Vector2(0, -36)
+scale = Vector2(2, 2)
+target_position = Vector2(0, 20)
+collision_mask = 30
+
+[node name="Area2D" type="Area2D" parent="Player" groups=["ArbreMagique"]]
+collision_layer = 16
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Area2D" groups=["ArbreMagique"]]
+shape = SubResource("SegmentShape2D_fsq7g")
 
 [node name="ArbreMagique" parent="." instance=ExtResource("3_tyakr")]
 position = Vector2(237, 47)
 
-[connection signal="area_entered" from="ArbreMagique" to="Player" method="_on_arbre_magique_area_entered"]
+[connection signal="area_entered" from="Player/Area2D" to="Player" method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Player/Area2D" to="Player" method="_on_area_2d_area_exited"]
