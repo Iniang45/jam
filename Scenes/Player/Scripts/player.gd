@@ -2,6 +2,11 @@ extends CharacterBody2D
 
 class_name Player
 
+@onready var walk_sound = $run  # Référence au son des pas
+
+@onready var jump_sound = $jump # Référence au son du saut
+
+
 @export_range(0.0, 1.0) var accel_factor: float = 0.1
 @export_range(0.0, 1.0) var rotation_accel_factor: float = 0.1
 
@@ -111,6 +116,7 @@ func jump() -> void:
 	is_on_ground = false
 	is_on_tree = false
 	is_on_bubble = false
+	jump_sound.play()
 
 func wall_jump() -> void:
 	if is_on_wall_left:
@@ -135,8 +141,14 @@ func apply_gravity(delta: float) -> void:
 func move(delta: float) -> void:
 	if direction == Vector2.ZERO:
 		speed = lerp(speed, 0.0, accel_factor)
+		# Arrêter le son si le joueur s'arrête
+		if walk_sound.playing:
+			walk_sound.stop()
 	else:
 		speed = lerp(speed, max_speed, accel_factor)
+		# Jouer le son si le joueur commence à marcher
+		if is_on_ground and not walk_sound.playing:
+			walk_sound.play()
 
 	velocity.x = Last_direction.x * speed
 	move_and_slide()

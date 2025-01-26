@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://dwo2gy8a48r18"]
+[gd_scene load_steps=19 format=3 uid="uid://dwo2gy8a48r18"]
 
 [ext_resource type="Script" path="res://Scenes/Main/main.gd" id="1_h7g0j"]
 [ext_resource type="Texture2D" uid="uid://dnj1in444uswr" path="res://Scenes/Bd/Sprites/Capture d’écran 2025-01-25 210305.png" id="1_mnbm2"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://cxk6q5ppsubl0" path="res://Sprite/EXEMPLE BACKGROUND.jpeg" id="10_01s04"]
 [ext_resource type="Texture2D" uid="uid://vgeytfumrjyd" path="res://Sprite/look_to_the_horizon.png" id="11_7gm2m"]
 [ext_resource type="Texture2D" uid="uid://c8yk5afks4th0" path="res://stones.png" id="12_mctcu"]
+[ext_resource type="AudioStream" uid="uid://dkfdq2w6n1mp" path="res://audio/MUSIQUE JAM.wav" id="15_vg3wu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k2hvy"]
 size = Vector2(38, 155)
@@ -228,6 +229,9 @@ position = Vector2(90, -136)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(578, 326)
+
+[node name="BackgroundMusic" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("15_vg3wu")
 
 [connection signal="textChanged" from="cadre/niveau1" to="." method="_on_niveau_1_text_changed"]
 [connection signal="pressed" from="cadre/niveau1/piocheBulle" to="." method="_on_pioche_bulle_pressed"]
