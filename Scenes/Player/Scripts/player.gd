@@ -31,7 +31,7 @@ var speed: float = 10.0
 var direction: Vector2 = Vector2.ZERO
 var Last_direction: Vector2 = Vector2.ZERO
 var is_stopped: bool = true
-
+signal peutclaw
 signal ilamange 
 
 var is_on_ground: bool = false
@@ -71,10 +71,12 @@ func _input(event: InputEvent) -> void:
 
 	if Input.is_action_just_pressed("Jump") and (is_on_wall_left):
 		print('sucess')
-		wall_jump()
+		if peutclaw:
+			wall_jump()
 	elif Input.is_action_just_pressed("Jump") and (is_on_wall_right):
 		print('sucess')
-		wall_jump()
+		if peutclaw:
+			wall_jump()
 	elif Input.is_action_just_pressed("Jump") and is_on_tree:
 		jump()
 
@@ -116,7 +118,6 @@ func jump() -> void:
 	is_on_ground = false
 	is_on_tree = false
 	is_on_bubble = false
-	jump_sound.play()
 
 func wall_jump() -> void:
 	if is_on_wall_left:
@@ -142,13 +143,9 @@ func move(delta: float) -> void:
 	if direction == Vector2.ZERO:
 		speed = lerp(speed, 0.0, accel_factor)
 		# Arrêter le son si le joueur s'arrête
-		if walk_sound.playing:
-			walk_sound.stop()
 	else:
 		speed = lerp(speed, max_speed, accel_factor)
 		# Jouer le son si le joueur commence à marcher
-		if is_on_ground and not walk_sound.playing:
-			walk_sound.play()
 
 	velocity.x = Last_direction.x * speed
 	move_and_slide()
@@ -156,7 +153,7 @@ func move(delta: float) -> void:
 func check_if_on_ground():
 	if $RayCast2D.is_colliding():
 		var collider = $RayCast2D.get_collider()
-		print("RayCast collision avec :", collider)
+		#print("RayCast collision avec :", collider)
 		if collider and collider.is_in_group("ArbreMagique"):  # Vérifie le groupe
 			is_on_tree = true
 			return false

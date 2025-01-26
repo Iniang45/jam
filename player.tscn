@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://d1gbr3rmcg65y"]
+[gd_scene load_steps=19 format=3 uid="uid://d1gbr3rmcg65y"]
 
 [ext_resource type="Script" path="res://Scenes/Player/Scripts/player.gd" id="1_oahe0"]
 [ext_resource type="Texture2D" uid="uid://h1e0d2mxnag7" path="res://Sprite/IDLE.png" id="2_nithq"]
@@ -7,8 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://cpnic3d8nfdx5" path="res://Sprite/JUMP.png" id="3_r6m22"]
 [ext_resource type="Texture2D" uid="uid://drmnrjrlr0yfl" path="res://Sprite/WALK.png" id="4_1w03p"]
 [ext_resource type="Texture2D" uid="uid://bjmaoba8mfinp" path="res://Sprite/GROS CHEVALIER UPDATE.png" id="4_fq2xu"]
-[ext_resource type="AudioStream" uid="uid://bc51h4oescrjr" path="res://audio/run.mp3" id="8_a63v6"]
-[ext_resource type="AudioStream" uid="uid://mnee5au81j6s" path="res://audio/jump.wav" id="9_gnfps"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vinmq"]
 atlas = ExtResource("2_nithq")
@@ -114,7 +112,7 @@ b = Vector2(170, 28)
 [node name="Player" type="CharacterBody2D"]
 position = Vector2(554, 289)
 scale = Vector2(0.5, 0.5)
-collision_mask = 38
+collision_mask = 6
 script = ExtResource("1_oahe0")
 
 [node name="PlayerSprite" type="AnimatedSprite2D" parent="."]
@@ -139,21 +137,3 @@ position = Vector2(12, -26)
 target_position = Vector2(-2, 46)
 collision_mask = 7
 collide_with_areas = true
-
-<<<<<<< HEAD
-[node name="run" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("8_a63v6")
-volume_db = -7.429
-
-[node name="jump" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("9_gnfps")
-volume_db = -20.429
-=======
-[node name="RayCast2D_Left" type="RayCast2D" parent="."]
-position = Vector2(4, -78)
-target_position = Vector2(-52, 0)
-
-[node name="RayCast2D_Right" type="RayCast2D" parent="."]
-position = Vector2(6, -78)
-target_position = Vector2(60, 2)
->>>>>>> d34df79adacce421cd37a4fbc41ad895d72f2cfb
