@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://dwo2gy8a48r18"]
+[gd_scene load_steps=26 format=3 uid="uid://dwo2gy8a48r18"]
 
 [ext_resource type="Script" path="res://Scenes/Main/main.gd" id="1_h7g0j"]
 [ext_resource type="Texture2D" uid="uid://dnj1in444uswr" path="res://Scenes/Bd/Sprites/Capture d’écran 2025-01-25 210305.png" id="1_mnbm2"]
@@ -15,6 +15,10 @@
 [ext_resource type="Texture2D" uid="uid://vgeytfumrjyd" path="res://Sprite/look_to_the_horizon.png" id="11_7gm2m"]
 [ext_resource type="Texture2D" uid="uid://c8yk5afks4th0" path="res://stones.png" id="12_mctcu"]
 [ext_resource type="AudioStream" uid="uid://dkfdq2w6n1mp" path="res://audio/MUSIQUE JAM.wav" id="15_vg3wu"]
+[ext_resource type="Texture2D" uid="uid://cfr6rnmkyj0ea" path="res://Sprite/Gros luffy map1.png" id="16_e1544"]
+[ext_resource type="Texture2D" uid="uid://fqvwwd70ppqb" path="res://Sprite/pilone.png" id="17_d2w1a"]
+[ext_resource type="Texture2D" uid="uid://csox5mtuwk5e8" path="res://porteFermee.png" id="18_pbd25"]
+[ext_resource type="Texture2D" uid="uid://c34355x36oww0" path="res://key (1).png" id="19_34don"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k2hvy"]
 size = Vector2(38, 155)
@@ -24,6 +28,16 @@ size = Vector2(71.5, 278.5)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jfy1v"]
 radius = 160.449
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wok0x"]
+size = Vector2(237.668, 593.235)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0q7cg"]
+size = Vector2(71.7491, 117.745)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jg6dv"]
+radius = 12.6226
+height = 45.1355
 
 [node name="main" type="Control"]
 layout_mode = 3
@@ -142,9 +156,8 @@ position = Vector2(942, 80)
 [node name="niveau2" type="Control" parent="."]
 anchors_preset = 0
 offset_left = 1156.0
-offset_top = 2.0
 offset_right = 2302.0
-offset_bottom = 650.0
+offset_bottom = 648.0
 
 [node name="cadre" type="TextureRect" parent="niveau2"]
 layout_mode = 1
@@ -220,7 +233,7 @@ position = Vector2(-2, 68)
 shape = SubResource("CircleShape2D_jfy1v")
 
 [node name="Player" parent="." instance=ExtResource("8_ki5ua")]
-z_index = 2
+z_index = 4
 position = Vector2(80, 471)
 
 [node name="Pioche" parent="Player" instance=ExtResource("7_kj7fc")]
@@ -232,6 +245,139 @@ position = Vector2(578, 326)
 
 [node name="BackgroundMusic" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("15_vg3wu")
+
+[node name="niveau 3" type="Control" parent="."]
+layout_mode = 1
+anchor_left = 1.194
+anchor_top = 1.017
+anchor_right = 1.998
+anchor_bottom = 2.017
+offset_left = -0.488037
+offset_top = -0.0160522
+offset_right = 0.303711
+offset_bottom = -0.0161133
+
+[node name="cadre" type="TextureRect" parent="niveau 3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_mnbm2")
+
+[node name="bg" type="TextureRect" parent="niveau 3/cadre"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = -7.0
+offset_right = 1470.0
+offset_bottom = 593.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.446, 0.51)
+texture = ExtResource("16_e1544")
+
+[node name="Area2D" type="Area2D" parent="niveau 3/cadre/bg"]
+position = Vector2(40.3587, 898.039)
+
+[node name="pilone" type="TextureRect" parent="niveau 3/cadre/bg/Area2D"]
+offset_left = 419.283
+offset_top = -549.02
+offset_right = 880.283
+offset_bottom = 43.9803
+scale = Vector2(-1, 1)
+texture = ExtResource("17_d2w1a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="niveau 3/cadre/bg/Area2D"]
+position = Vector2(71.7493, -248.48)
+shape = SubResource("RectangleShape2D_wok0x")
+
+[node name="Area2D2" type="Area2D" parent="niveau 3/cadre/bg"]
+position = Vector2(31.3901, 331.373)
+
+[node name="porte" type="TextureRect" parent="niveau 3/cadre/bg/Area2D2"]
+offset_left = -47.0853
+offset_top = -107.843
+offset_right = 39.9147
+offset_bottom = 32.1568
+texture = ExtResource("18_pbd25")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="niveau 3/cadre/bg/Area2D2"]
+position = Vector2(-2.24219, -37.2064)
+shape = SubResource("RectangleShape2D_0q7cg")
+
+[node name="Area2D3" type="Area2D" parent="niveau 3/cadre/bg"]
+position = Vector2(1062.78, 1017.65)
+
+[node name="clé" type="TextureRect" parent="niveau 3/cadre/bg/Area2D3"]
+offset_left = -26.9058
+offset_top = -23.5295
+offset_right = 211.094
+offset_bottom = 190.47
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("19_34don")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="niveau 3/cadre/bg/Area2D3"]
+position = Vector2(-4.4843, -1.96078)
+rotation = 0.560251
+shape = SubResource("CapsuleShape2D_jg6dv")
+
+[node name="niveau 4" type="Control" parent="."]
+layout_mode = 1
+anchor_top = 1.017
+anchor_right = 1.185
+anchor_bottom = 2.017
+offset_left = 6.0
+offset_top = -0.0160522
+offset_right = -0.120117
+offset_bottom = -0.0161133
+
+[node name="cadre" type="TextureRect" parent="niveau 4"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_mnbm2")
+
+[node name="niveau 5" type="Control" parent="."]
+layout_mode = 1
+anchor_top = 2.031
+anchor_right = 0.904
+anchor_bottom = 3.031
+offset_left = 7.0
+offset_top = -0.0881348
+offset_right = -0.408081
+offset_bottom = -0.0881348
+
+[node name="cadre" type="TextureRect" parent="niveau 5"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_mnbm2")
+
+[node name="niveau 6" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 1051.0
+offset_top = 1317.0
+offset_right = 2302.0
+offset_bottom = 1965.0
+
+[node name="TextureRect" type="TextureRect" parent="niveau 6"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_mnbm2")
 
 [connection signal="textChanged" from="cadre/niveau1" to="." method="_on_niveau_1_text_changed"]
 [connection signal="pressed" from="cadre/niveau1/piocheBulle" to="." method="_on_pioche_bulle_pressed"]
