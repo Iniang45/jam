@@ -1,7 +1,17 @@
+<<<<<<< HEAD
 RayCast2D
+=======
+<<<<<<< HEAD
+Sprite2D
+CollisionShape2D
+Area2D
+StaticBody2D
+=======
+>>>>>>> ddc1fa447ae19f833c3d1d0f552b4507a7d48a89
 StaticBody2D
 CollisionShape2D
 Area2D
+>>>>>>> e76c6d1b8b9c3478c40c4836453f5bd6151c01a4
 Camera2D
 CollisionShape2D
 TextureRect

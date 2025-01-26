@@ -9,6 +9,8 @@ extends StaticBody2D
 var time_passed: float = 0.0
 
 func _ready():
+	# Assurez-vous que Sprite2D est masqué par défaut
+	$Sprite2D.visible = false
 	# Convertir l'angle en vitesse horizontale
 	horizontal_speed += tan(deg_to_rad(angle_offset)) * vertical_speed
 	time_passed = 0.0
@@ -37,11 +39,23 @@ func _process(delta):
 func _on_bubble_collided(other_area):
 	# Vérifier si l'autre zone est une autre bulle
 	if other_area.is_in_group("bubbles"):
-		# Supprimer les deux bulles
-		queue_free()  # Supprimer cette bulle
+		# Désactiver la texture normale (BubbleSprite) et activer le sprite "explosé" (Sprite2D)
+		$BubbleSprite.visible = false
+		$Sprite2D.visible = true
+		
+		# Supprimer après un court délai pour afficher l'état "explosé"
+		await get_tree().create_timer(0.2).timeout
+		queue_free()
+
 
 
 func _on_area_entered(area: Area2D) -> void:
 	if area.is_in_group("bubbles"):
+		# Désactiver la texture normale (BubbleSprite) et activer le sprite "explosé" (Sprite2D)
+		$BubbleSprite.visible = false
+		$Sprite2D.visible = true
+		
+		# Supprimer après un court délai pour afficher l'état "explosé"
+		await get_tree().create_timer(0.2).timeout
 		queue_free()
 		area.queue_free()

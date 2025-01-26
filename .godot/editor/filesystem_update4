@@ -1,11 +1,8 @@
-res://Scenes/Test/Test.tscn
 res://player.tscn
 res://Scenes/grosluffy.tscn
 res://Scenes/Item/Pioche/Pioche.tscn
 res://Scenes/Item/ArbreMagique/ArbreMagique.tscn
 res://Scenes/Item/BubbleSpawner/BubbleSpawner.tscn
+res://Scenes/Test/Test.tscn
 res://Scenes/Item/Bubble/Bubble.tscn
-res://Scenes/Main/main.tscn
-res://Scenes/Player/Scripts/player.gd
-res://Scenes/Item/ArbreMagique/arbre_magique.gd
 res://Scenes/Item/Bubble/Script/bubble.gd
