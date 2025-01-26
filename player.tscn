@@ -112,7 +112,7 @@ b = Vector2(170, 28)
 [node name="Player" type="CharacterBody2D"]
 position = Vector2(554, 289)
 scale = Vector2(0.5, 0.5)
-collision_mask = 6
+collision_mask = 38
 script = ExtResource("1_oahe0")
 
 [node name="PlayerSprite" type="AnimatedSprite2D" parent="."]
@@ -137,3 +137,11 @@ position = Vector2(12, -26)
 target_position = Vector2(-2, 46)
 collision_mask = 7
 collide_with_areas = true
+
+[node name="RayCast2D_Left" type="RayCast2D" parent="."]
+position = Vector2(4, -78)
+target_position = Vector2(-52, 0)
+
+[node name="RayCast2D_Right" type="RayCast2D" parent="."]
+position = Vector2(6, -78)
+target_position = Vector2(60, 2)

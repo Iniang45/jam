@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://d145t4welyq2v"]
+[gd_scene load_steps=6 format=3 uid="uid://d145t4welyq2v"]
 
-[ext_resource type="Texture2D" uid="uid://bgcugepmdusao" path="res://Scenes/Item/Bubble/Sprite/cercle.png" id="1_amrtd"]
 [ext_resource type="Script" path="res://Scenes/Item/Bubble/Script/bubble.gd" id="1_c2chy"]
+[ext_resource type="Texture2D" uid="uid://dh8urodsobqea" path="res://Sprite/BUBLLE.png" id="2_i4quu"]
+[ext_resource type="Texture2D" uid="uid://dlny8vnkx4dpu" path="res://Sprite/BUBBLE POP.png" id="3_ubvps"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8px7s"]
 radius = 79.0
@@ -16,8 +17,8 @@ script = ExtResource("1_c2chy")
 
 [node name="BubbleSprite" type="Sprite2D" parent="."]
 position = Vector2(492.75, 341)
-scale = Vector2(0.344726, 0.316406)
-texture = ExtResource("1_amrtd")
+scale = Vector2(0.1, 0.092)
+texture = ExtResource("2_i4quu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(492, 341)
@@ -28,5 +29,10 @@ shape = SubResource("CapsuleShape2D_8px7s")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(491, 336)
 shape = SubResource("CircleShape2D_qgiid")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(497, 340)
+scale = Vector2(0.11, 0.11)
+texture = ExtResource("3_ubvps")
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

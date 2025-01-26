@@ -2,6 +2,7 @@ res://player.tscn
 res://Scenes/Bd/control.tscn
 res://Scenes/grosluffy.tscn
 res://Scenes/Item/Pioche/Pioche.tscn
+<<<<<<< HEAD
 res://Scenes/Main/main.tscn
 res://Scenes/Main/narrateur.tscn
 res://Scenes/Main/piocheBulle.tscn
@@ -14,3 +15,10 @@ res://Scenes/Item/ArbreMagique/ArbreMagique.tscn
 res://Scenes/Main/narrateur.gd
 res://Scenes/Main/niveau_1.gd
 res://Scenes/Test/Test.tscn
+=======
+res://Scenes/Item/ArbreMagique/ArbreMagique.tscn
+res://Scenes/Item/BubbleSpawner/BubbleSpawner.tscn
+res://Scenes/Test/Test.tscn
+res://Scenes/Item/Bubble/Bubble.tscn
+res://Scenes/Item/Bubble/Script/bubble.gd
+>>>>>>> e2204627a1f1f34ed1b87a6d1c31ee9a748bc1b1
