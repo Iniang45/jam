@@ -1,7 +1,13 @@
+res://Scenes/Test/Test.tscn
 res://player.tscn
-res://Scenes/Bd/control.tscn
 res://Scenes/grosluffy.tscn
 res://Scenes/Item/Pioche/Pioche.tscn
+<<<<<<< HEAD
+=======
+res://Scenes/Item/ArbreMagique/ArbreMagique.tscn
+res://Scenes/Item/BubbleSpawner/BubbleSpawner.tscn
+res://Scenes/Item/Bubble/Bubble.tscn
+>>>>>>> 7547d4fb9b493bf955fa21c3ab60a1529d1815f0
 res://Scenes/Main/main.tscn
 res://Scenes/Main/narrateur.tscn
 res://Scenes/Main/piocheBulle.tscn
