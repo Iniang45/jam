@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://d1gbr3rmcg65y"]
+[gd_scene load_steps=19 format=3 uid="uid://d1gbr3rmcg65y"]
 
 [ext_resource type="Script" path="res://Scenes/Player/Scripts/player.gd" id="1_oahe0"]
 [ext_resource type="Texture2D" uid="uid://h1e0d2mxnag7" path="res://Sprite/IDLE.png" id="2_nithq"]
@@ -105,6 +105,10 @@ animations = [{
 radius = 58.0
 height = 192.0
 
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_o2xva"]
+a = Vector2(-86, 26)
+b = Vector2(170, 28)
+
 [node name="Player" type="CharacterBody2D"]
 position = Vector2(554, 289)
 scale = Vector2(0.5, 0.5)
@@ -120,3 +124,12 @@ animation = &"gros"
 [node name="hitboxPlayer" type="CollisionShape2D" parent="."]
 position = Vector2(2, -114)
 shape = SubResource("CapsuleShape2D_s3tls")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("SegmentShape2D_o2xva")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2(2, -36)
+target_position = Vector2(-2, 46)

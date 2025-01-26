@@ -1,23 +1,13 @@
+RayCast2D
+CollisionShape2D
+Area2D
 Label
 TextureButton
-CollisionShape2D
-<<<<<<< HEAD
-Area2D
 Sprite2D
-RayCast2D
 StaticBody2D
 CharacterBody2D
 TextureRect
 AnimatedSprite2D
-=======
 TextureRect
 Timer
 Sprite2D
-Area2D
->>>>>>> 404ffb043c0ebb95c0b59965b2b956a1135ea09b
-AnimatedSprite2D
-Control
-StaticBody2D
-RigidBody2D
-ReferenceRect
-CanvasLayer
