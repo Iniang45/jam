@@ -16,7 +16,7 @@ class_name Player
 @export var barrier_min_x: float = 40  # Limite gauche de la barrière
 @export var barrier_max_x: float = 1100  # Limite droite de la barrière
 @export var barrier_min_y: float = 23  # Limite supérieure de la barrière
-@export var barrier_max_y: float = 623  # Limite inférieure de la barrière
+@export var barrier_max_y: float = 471  # Limite inférieure de la barrière
 
 @export var growth_rate: float = 0.1  # Facteur de croissance
 @export var max_scale: float = 2.0  # Taille maximale du joueur
@@ -27,7 +27,7 @@ var direction: Vector2 = Vector2.ZERO
 var Last_direction: Vector2 = Vector2.ZERO
 var velocity: Vector2 = Vector2.ZERO
 var is_stopped: bool = true
-
+signal ilamange 
 # Variable pour savoir si le joueur est au sol ou contre un mur
 var is_on_ground: bool = false
 var is_on_wall_left: bool = false
@@ -37,7 +37,7 @@ var current_direction: int = 0  # Indice de la direction sélectionnée
 var stick_instance: Area2D = null  # Référence à la ventouse active (si existante)
 
 func _ready() -> void:
-	pass
+	$PlayerSprite.animation = "idle"
 
 func _physics_process(delta: float) -> void:
 	
@@ -162,3 +162,11 @@ func _on_arbre_magique_area_entered(area: Area2D) -> void:
 func _on_arbre_magique_area_exited(area: Area2D) -> void:
 	is_stopped = true #Debloque joueur
 	print("Est bloquer NON")
+
+
+func _on_grosluffy_area_entered(area: Area2D) -> void:
+	print("Le joueur mange un gâteau !")
+	$PlayerSprite.animation = "gros"
+	$PlayerSprite.play()
+	ilamange.emit()
+	

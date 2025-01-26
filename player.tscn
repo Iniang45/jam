@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://d1gbr3rmcg65y"]
+[gd_scene load_steps=18 format=3 uid="uid://d1gbr3rmcg65y"]
 
 [ext_resource type="Script" path="res://Scenes/Player/Scripts/player.gd" id="1_oahe0"]
 [ext_resource type="Texture2D" uid="uid://h1e0d2mxnag7" path="res://Sprite/IDLE.png" id="2_nithq"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bd4udq4wl7meh" path="res://Sprite/GROS CHEVALIER.png" id="3_lel7g"]
 [ext_resource type="Texture2D" uid="uid://cpnic3d8nfdx5" path="res://Sprite/JUMP.png" id="3_r6m22"]
 [ext_resource type="Texture2D" uid="uid://drmnrjrlr0yfl" path="res://Sprite/WALK.png" id="4_1w03p"]
+[ext_resource type="Texture2D" uid="uid://bjmaoba8mfinp" path="res://Sprite/GROS CHEVALIER UPDATE.png" id="4_fq2xu"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vinmq"]
 atlas = ExtResource("2_nithq")
@@ -52,6 +53,9 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("3_lel7g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_fq2xu")
 }],
 "loop": true,
 "name": &"gros",
@@ -111,7 +115,7 @@ script = ExtResource("1_oahe0")
 position = Vector2(10, -124)
 scale = Vector2(0.563542, 0.541667)
 sprite_frames = SubResource("SpriteFrames_je1g4")
-animation = &"idle"
+animation = &"gros"
 
 [node name="hitboxPlayer" type="CollisionShape2D" parent="."]
 position = Vector2(2, -114)

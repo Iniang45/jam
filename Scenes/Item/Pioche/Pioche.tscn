@@ -1,48 +1,52 @@
-[gd_scene load_steps=6 format=3 uid="uid://drs1w0hshmjl0"]
+[gd_scene load_steps=5 format=3 uid="uid://drs1w0hshmjl0"]
 
-[ext_resource type="Texture2D" uid="uid://bjfaub21bbiv1" path="res://Iron_Pickaxe_JE3_BE2.webp" id="1_0radm"]
-[ext_resource type="Texture2D" uid="uid://blk3auwmgfq1m" path="res://pioche2-removebg-preview.png" id="2_qe8ey"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_emj2y"]
-atlas = ExtResource("1_0radm")
-region = Rect2(0, 0, 160, 160)
+[ext_resource type="Texture2D" uid="uid://kxn4b2jqkdjw" path="res://Sprite/PIOCHE.png" id="1_5g0ws"]
+[ext_resource type="Texture2D" uid="uid://cuqcxd33n8v3u" path="res://Sprite/PIOCHE2-removebg-preview.png" id="2_6783f"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_y1oon"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_emj2y")
+"texture": ExtResource("1_5g0ws")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_qe8ey")
+"texture": ExtResource("2_6783f")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_emj2y")
+"texture": ExtResource("1_5g0ws")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_qe8ey")
+"texture": ExtResource("2_6783f")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_emj2y")
+"texture": ExtResource("1_5g0ws")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_6783f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_5g0ws")
 }],
 "loop": false,
 "name": &"default",
-"speed": 5.0
+"speed": 3.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6tw2g"]
-radius = 70.2538
-height = 144.499
+radius = 20.757
+height = 129.376
 
 [node name="Pioche" type="Area2D"]
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-1, 2)
+scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_y1oon")
-frame = 1
-frame_progress = 0.628287
+frame = 6
+frame_progress = 1.0
+flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 3)
+position = Vector2(3, -16)
 rotation = -0.842994
 shape = SubResource("CapsuleShape2D_6tw2g")
