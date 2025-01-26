@@ -1,14 +1,23 @@
+<<<<<<< HEAD
 [gd_scene load_steps=5 format=3 uid="uid://ts1pmad0bh3b"]
+=======
+[gd_scene load_steps=5 format=3 uid="uid://rgrhrsct7roi"]
+>>>>>>> 404ffb043c0ebb95c0b59965b2b956a1135ea09b
 
 [ext_resource type="Script" path="res://Scenes/Bd/control.gd" id="1_hm3nx"]
 [ext_resource type="PackedScene" uid="uid://d1gbr3rmcg65y" path="res://player.tscn" id="2_al0ut"]
 [ext_resource type="PackedScene" uid="uid://bovycgk6o6svj" path="res://Scenes/Item/ArbreMagique/ArbreMagique.tscn" id="3_tyakr"]
+[ext_resource type="PackedScene" uid="uid://pqit2ie7qbu8" path="res://Scenes/grosluffy.tscn" id="4_nu1xi"]
 
+<<<<<<< HEAD
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_fsq7g"]
 a = Vector2(-68, 0)
 b = Vector2(80, 0)
 
 [node name="Control" type="Control"]
+=======
+[node name="Control2" type="Control"]
+>>>>>>> 404ffb043c0ebb95c0b59965b2b956a1135ea09b
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -41,5 +50,14 @@ shape = SubResource("SegmentShape2D_fsq7g")
 [node name="ArbreMagique" parent="." instance=ExtResource("3_tyakr")]
 position = Vector2(237, 47)
 
+<<<<<<< HEAD
 [connection signal="area_entered" from="Player/Area2D" to="Player" method="_on_area_2d_area_entered"]
 [connection signal="area_exited" from="Player/Area2D" to="Player" method="_on_area_2d_area_exited"]
+=======
+[node name="grosluffy" parent="." instance=ExtResource("4_nu1xi")]
+position = Vector2(121, 494)
+
+[connection signal="area_entered" from="ArbreMagique" to="Player" method="_on_arbre_magique_area_entered"]
+[connection signal="area_entered" from="grosluffy" to="." method="_on_grosluffy_area_entered"]
+[connection signal="area_entered" from="grosluffy" to="Player" method="_on_grosluffy_area_entered"]
+>>>>>>> 404ffb043c0ebb95c0b59965b2b956a1135ea09b

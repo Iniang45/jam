@@ -12,10 +12,10 @@ class_name Player
 @export var jump_force: float = 400.0  # Force appliquée au saut
 @export var wall_jump_force: Vector2 = Vector2(300, -350)  # Force appliquée au wall jump
 
-@export var barrier_min_x: float = 0  # Limite gauche de la barrière
-@export var barrier_max_x: float = 1152  # Limite droite de la barrière
-@export var barrier_min_y: float = 0.0  # Limite supérieure de la barrière
-@export var barrier_max_y: float = 648  # Limite inférieure de la barrière
+@export var barrier_min_x: float = 40  # Limite gauche de la barrière
+@export var barrier_max_x: float = 1100  # Limite droite de la barrière
+@export var barrier_min_y: float = 23  # Limite supérieure de la barrière
+@export var barrier_max_y: float = 471  # Limite inférieure de la barrière
 
 @export var growth_rate: float = 0.1  # Facteur de croissance
 @export var max_scale: float = 2.0  # Taille maximale du joueur
@@ -26,8 +26,13 @@ var speed: float = 10.0
 var direction: Vector2 = Vector2.ZERO
 var Last_direction: Vector2 = Vector2.ZERO
 var is_stopped: bool = true
+<<<<<<< HEAD
 
 # Variables pour savoir si le joueur est au sol ou contre un mur
+=======
+signal ilamange 
+# Variable pour savoir si le joueur est au sol ou contre un mur
+>>>>>>> 404ffb043c0ebb95c0b59965b2b956a1135ea09b
 var is_on_ground: bool = false
 var is_on_wall_left: bool = false
 var is_on_wall_right: bool = false
@@ -36,9 +41,13 @@ var is_on_tree: bool = false  # Nouveau booléen pour savoir si le joueur est su
 @onready var area = $Area2D  # Référence à l'Area2D pour détecter les arbres
 
 func _ready() -> void:
+<<<<<<< HEAD
 	$RayCast2D.enabled = true  # Active le RayCast2D
 	area.connect("area_entered", Callable(self, "_on_area_entered"))
 	area.connect("area_exited", Callable(self, "_on_area_exited"))
+=======
+	$PlayerSprite.animation = "idle"
+>>>>>>> 404ffb043c0ebb95c0b59965b2b956a1135ea09b
 
 func _physics_process(delta: float) -> void:
 	check_if_on_ground()
@@ -57,11 +66,17 @@ func _input(event: InputEvent) -> void:
 		wall_jump()
 	elif Input.is_action_just_pressed("Jump") and is_on_tree:
 		jump()
+<<<<<<< HEAD
 	elif Input.is_action_just_pressed("Jump") and is_on_ground :
 		jump()
 
 	if speed > 0 and direction.x == 1:
 		$PlayerSprite.animation = "walk"
+=======
+		
+	if speed > 0  and direction[0] == 1 and is_on_ground:
+		$PlayerSprite.animation =  "walk"
+>>>>>>> 404ffb043c0ebb95c0b59965b2b956a1135ea09b
 		$PlayerSprite.play()
 	elif speed > 0 and direction.x == -1 and is_on_ground:
 		$PlayerSprite.animation = "walk"
@@ -79,6 +94,10 @@ func _input(event: InputEvent) -> void:
 		$PlayerSprite.animation = "idle"
 		$PlayerSprite.play()
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 404ffb043c0ebb95c0b59965b2b956a1135ea09b
 func jump() -> void:
 	velocity.y = -jump_force
 	is_on_ground = false
@@ -138,6 +157,7 @@ func clamp_position() -> void:
 
 
 
+<<<<<<< HEAD
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	if area.is_in_group("ArbreMagique"):
 		is_on_tree = true
@@ -146,3 +166,27 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 func _on_area_2d_area_exited(area: Area2D) -> void:
 	if area.is_in_group("ArbreMagique"):
 		is_on_tree = false
+=======
+
+
+
+
+
+func _on_arbre_magique_area_entered(area: Area2D) -> void:
+	is_stopped = false  # Bloque le joueur
+	print("Est bloquer")
+	
+
+
+func _on_arbre_magique_area_exited(area: Area2D) -> void:
+	is_stopped = true #Debloque joueur
+	print("Est bloquer NON")
+
+
+func _on_grosluffy_area_entered(area: Area2D) -> void:
+	print("Le joueur mange un gâteau !")
+	$PlayerSprite.animation = "gros"
+	$PlayerSprite.play()
+	ilamange.emit()
+	
+>>>>>>> 404ffb043c0ebb95c0b59965b2b956a1135ea09b

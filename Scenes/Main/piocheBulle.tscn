@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=3 uid="uid://bhjj23gnrfygc"]
+
+[ext_resource type="Texture2D" uid="uid://xgwd4b5ieil6" path="res://Sprite/BULLE RONDE.png" id="1_6pavk"]
+
+[node name="piocheBulle" type="TextureButton"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 430.0
+offset_top = 79.0
+offset_right = 1377.0
+offset_bottom = 1529.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.05, 0.05)
+texture_normal = ExtResource("1_6pavk")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 600.0
+offset_top = 780.0
+offset_right = 1530.0
+offset_bottom = 930.0
+scale = Vector2(12, 12)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Pioche"
