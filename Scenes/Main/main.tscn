@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://dwo2gy8a48r18"]
+[gd_scene load_steps=18 format=3 uid="uid://dwo2gy8a48r18"]
 
 [ext_resource type="Script" path="res://Scenes/Main/main.gd" id="1_h7g0j"]
 [ext_resource type="Texture2D" uid="uid://dnj1in444uswr" path="res://Scenes/Bd/Sprites/Capture d’écran 2025-01-25 210305.png" id="1_mnbm2"]
@@ -13,12 +13,16 @@
 [ext_resource type="PackedScene" uid="uid://d26ciriyv0xlb" path="res://Scenes/Main/narrateur.tscn" id="9_34tiq"]
 [ext_resource type="Texture2D" uid="uid://cxk6q5ppsubl0" path="res://Sprite/EXEMPLE BACKGROUND.jpeg" id="10_01s04"]
 [ext_resource type="Texture2D" uid="uid://vgeytfumrjyd" path="res://Sprite/look_to_the_horizon.png" id="11_7gm2m"]
+[ext_resource type="Texture2D" uid="uid://c8yk5afks4th0" path="res://stones.png" id="12_mctcu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k2hvy"]
 size = Vector2(38, 155)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nnuhi"]
 size = Vector2(71.5, 278.5)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jfy1v"]
+radius = 160.449
 
 [node name="main" type="Control"]
 layout_mode = 3
@@ -198,6 +202,20 @@ text = "what deja le niveau 2
 i used to pray for time like this"
 autowrap_mode = 2
 
+[node name="Area2D" type="Area2D" parent="niveau2/cadre/bg"]
+position = Vector2(1766, 828)
+
+[node name="TextureRect" type="TextureRect" parent="niveau2/cadre/bg/Area2D"]
+offset_left = -164.0
+offset_top = -104.0
+offset_right = 153.0
+offset_bottom = 213.0
+texture = ExtResource("12_mctcu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="niveau2/cadre/bg/Area2D"]
+position = Vector2(-2, 68)
+shape = SubResource("CircleShape2D_jfy1v")
+
 [node name="Player" parent="." instance=ExtResource("8_ki5ua")]
 z_index = 2
 position = Vector2(80, 471)
@@ -205,6 +223,9 @@ position = Vector2(80, 471)
 [node name="Pioche" parent="Player" instance=ExtResource("7_kj7fc")]
 visible = false
 position = Vector2(90, -136)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(578, 326)
 
 [connection signal="textChanged" from="cadre/niveau1" to="." method="_on_niveau_1_text_changed"]
 [connection signal="pressed" from="cadre/niveau1/piocheBulle" to="." method="_on_pioche_bulle_pressed"]

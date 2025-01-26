@@ -18,7 +18,7 @@ size = Vector2(175, 300)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t6y33"]
 size = Vector2(176, 499)
 
-[node name="ArbreMagique" type="Area2D"]
+[node name="ArbreMagique" type="StaticBody2D"]
 collision_layer = 2
 script = ExtResource("1_4pw2p")
 

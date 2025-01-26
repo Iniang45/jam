@@ -9,6 +9,8 @@ layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_bfxd5")
 
+[node name="Camera2D" type="Camera2D" parent="."]
+
 [node name="Player" parent="." instance=ExtResource("2_ew3d1")]
 
 [node name="ArbreMagique" parent="." instance=ExtResource("3_p8xag")]
